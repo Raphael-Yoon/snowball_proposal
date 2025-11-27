@@ -1,87 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ITGC 전문 인력 부재와 수동 관리의 비효율성을 동시에 해결하는 Snowball 솔루션">
   <title>Snowball - 내부통제 솔루션</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Fullpage Scroll Snap Effect */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      height: 100vh;
-    }
-
-    /* Each section snaps to viewport */
-    section {
-      scroll-snap-align: start;
-      scroll-snap-stop: always;
-      min-height: 100vh;
-      position: relative;
-    }
-
-    /* Ensure content is centered vertically in sections */
-    section > div {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    /* Custom Snowball color palette matching the system */
-    .bg-snowball-primary {
-      background-color: #3d7490;
-    }
-    .bg-snowball-dark {
-      background-color: #2d5670;
-    }
-    .text-snowball-primary {
-      color: #3d7490;
-    }
-    .border-snowball-primary {
-      border-color: #3d7490;
-    }
-    .hover\:bg-snowball-light:hover {
-      background-color: #e8f3f7;
-    }
-    .hover\:text-snowball-primary:hover {
-      color: #3d7490;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="antialiased">
 
-  <!-- Navigation -->
   <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
-        <!-- Logo -->
         <div class="flex-shrink-0">
-          <a href="#" class="text-2xl font-bold text-snowball-primary">
+          <a href="#" class="text-2xl font-bold text-[#2c5265]">
             Snowball
           </a>
         </div>
 
-        <!-- Desktop Navigation -->
         <div class="hidden md:flex space-x-8">
-          <a href="#home" class="text-gray-700 hover:text-snowball-primary transition-colors">Home</a>
-          <a href="#track-a" class="text-gray-700 hover:text-snowball-primary transition-colors">Track A</a>
-          <a href="#track-b" class="text-gray-700 hover:text-snowball-primary transition-colors">Track B</a>
-          <a href="#benefits" class="text-gray-700 hover:text-snowball-primary transition-colors">Benefits</a>
-          <a href="#contact" class="text-gray-700 hover:text-snowball-primary transition-colors">Contact</a>
+          <a href="#home" class="text-gray-800 hover:text-[#2c5265] transition-colors">Home</a>
+          <a href="#track-a" class="text-gray-800 hover:text-[#2c5265] transition-colors">Track A</a>
+          <a href="#track-b" class="text-gray-800 hover:text-[#2c5265] transition-colors">Track B</a>
+          <a href="#benefits" class="text-gray-800 hover:text-[#2c5265] transition-colors">Benefits</a>
+          <a href="#contact" class="text-gray-800 hover:text-[#2c5265] transition-colors">Contact</a>
         </div>
 
-        <!-- Mobile menu button -->
         <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-700 hover:text-snowball-primary focus:outline-none">
+          <button id="mobile-menu-button" class="text-gray-800 hover:text-[#2c5265] focus:outline-none">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -90,22 +39,20 @@
       </div>
     </div>
 
-    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Home</a>
-        <a href="#track-a" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Track A</a>
-        <a href="#track-b" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Track B</a>
-        <a href="#benefits" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Benefits</a>
-        <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Contact</a>
+        <a href="#home" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Home</a>
+        <a href="#track-a" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Track A</a>
+        <a href="#track-b" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Track B</a>
+        <a href="#benefits" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Benefits</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="pt-24 pb-20 bg-gradient-to-br from-snowball-primary to-snowball-dark text-white">
+  <section id="home" class="pt-24 pb-20 bg-gradient-to-br from-[#2c5265] to-[#1a3c4d] text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
         복잡한 내부통제, Snowball과 함께 해결하세요
       </h1>
 
@@ -115,103 +62,103 @@
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-        <a
-          href="#track-a"
-          class="px-8 py-4 bg-white text-snowball-primary font-semibold rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105"
-        >
+        <a href="#track-a"
+          class="px-8 py-4 bg-white text-[#2c5265] font-semibold rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105">
           Track A 보기
         </a>
-        <a
-          href="#track-b"
-          class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-snowball-primary transition-all transform hover:scale-105"
-        >
+        <a href="#track-b"
+          class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#2c5265] transition-all transform hover:scale-105">
           Track B 보기
         </a>
-        <a
-          href="#contact"
-          class="px-8 py-4 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600 transition-all transform hover:scale-105"
-        >
+        <a href="#contact"
+          class="px-8 py-4 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600 transition-all transform hover:scale-105">
           상담 신청
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Problem Section -->
   <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
-        현황 분석: 내부통제 실무의 두 가지 난관
+        현재 내부통제 운영의 Pain Point
       </h2>
 
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Card 1: IT 전문 인력 부재 -->
-        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-          <div class="text-5xl mb-4">👤</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">IT 전문 인력 부재</h3>
-          <p class="text-gray-600 leading-relaxed">
-            내부통제팀 내 ITGC 전담 전문가를 채용하고 유지하는 데 큰 어려움이 있습니다.
-            전문성을 갖춘 인력을 확보하기 어렵고, 유지 비용도 부담스럽습니다.
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-3">📝</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">엑셀 기반 수동 관리</h3>
+          <p class="text-gray-700 leading-relaxed text-sm">
+            엑셀 기반 수동 관리 및 문서/증적 수동 취합으로 인한 버전 관리 오류가 빈발합니다.
           </p>
         </div>
 
-        <!-- Card 2: 업무 비효율성 -->
-        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-          <div class="text-5xl mb-4">⚙️</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">업무 비효율성</h3>
-          <p class="text-gray-600 leading-relaxed">
-            엑셀 기반의 수동 관리 및 반복적 행정 업무로 인해 핵심 관리 감독에 집중할 수 없습니다.
-            시간과 리소스가 낭비되고 있습니다.
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-3">⚠️</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">현황 파악 어려움</h3>
+          <p class="text-gray-700 leading-relaxed text-sm">
+            평가 진행률, 결함 현황 등 실시간 모니터링이 불가능하여 현황 파악이 어렵습니다.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-3">⏰</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">감사 대응 부담</h3>
+          <p class="text-gray-700 leading-relaxed text-sm">
+            표준화되지 않은 조서로 외부 감사 대응에 많은 시간이 소요되어 부담이 큽니다.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-3">👤</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">IT 전문 인력 부재</h3>
+          <p class="text-gray-700 leading-relaxed text-sm">
+            내부통제팀 내 ITGC 전담 전문가를 채용하고 유지하는 데 어려움이 있으며, 유지 비용도 부담스럽습니다.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Solutions Section -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
         Snowball의 두 가지 솔루션
       </h2>
 
-      <!-- Track A -->
-      <div id="track-a" class="mb-16 scroll-mt-20">
+      <div id="track-a" class="scroll-mt-20">
         <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
           <div class="flex items-center mb-6">
-            <span class="bg-snowball-primary text-white px-4 py-2 rounded-lg font-bold mr-4">Track A</span>
+            <span class="bg-[#2c5265] text-white px-4 py-2 rounded-lg font-bold mr-4">Track A</span>
             <h3 class="text-2xl md:text-3xl font-bold text-gray-900">PA 서비스</h3>
           </div>
 
-          <p class="text-lg text-gray-700 mb-8">
+          <p class="text-lg text-gray-800 mb-8">
             ITGC 전담 인력처럼 RCM 설계부터 평가, 감사 대응, 역량 내재화까지 ITGC 업무 전 과정을 상시적으로 수행합니다.
           </p>
 
           <div class="grid md:grid-cols-3 gap-6">
-            <!-- Module 1 -->
             <div class="bg-white rounded-lg p-6 shadow">
-              <h4 class="font-bold text-lg mb-3 text-snowball-primary">1. RCM 설계 및 표준화</h4>
-              <ul class="text-gray-600 space-y-2 text-sm">
+              <h4 class="font-bold text-lg mb-3 text-[#2c5265]">1. RCM 설계 및 표준화</h4>
+              <ul class="text-gray-700 space-y-2 text-sm">
                 <li>• ITGC RCM 최신화/표준화</li>
                 <li>• 설계평가 수행</li>
                 <li>• 통제 매뉴얼 작성 지원</li>
               </ul>
             </div>
 
-            <!-- Module 2 -->
             <div class="bg-white rounded-lg p-6 shadow">
-              <h4 class="font-bold text-lg mb-3 text-snowball-primary">2. 운영평가 대행 및 증적 관리</h4>
-              <ul class="text-gray-600 space-y-2 text-sm">
+              <h4 class="font-bold text-lg mb-3 text-[#2c5265]">2. 운영평가 대행 및 증적 관리</h4>
+              <ul class="text-gray-700 space-y-2 text-sm">
                 <li>• 평가 계획 및 샘플링</li>
                 <li>• 증적 취합 및 검증</li>
                 <li>• 결함 발견 및 분석</li>
               </ul>
             </div>
 
-            <!-- Module 3 -->
             <div class="bg-white rounded-lg p-6 shadow">
-              <h4 class="font-bold text-lg mb-3 text-snowball-primary">3. 보고서 및 조서 산출</h4>
-              <ul class="text-gray-600 space-y-2 text-sm">
+              <h4 class="font-bold text-lg mb-3 text-[#2c5265]">3. 보고서 및 조서 산출</h4>
+              <ul class="text-gray-700 space-y-2 text-sm">
                 <li>• 표준화된 평가 조서 작성</li>
                 <li>• 결함 시정 조치 보고</li>
                 <li>• 감사 대응 지원</li>
@@ -224,130 +171,147 @@
             <div class="grid md:grid-cols-3 gap-4">
               <div class="flex items-center">
                 <span class="text-green-500 mr-2">✓</span>
-                <span class="text-gray-700">ITGC 업무 부담 제로</span>
+                <span class="text-gray-800">ITGC 업무 부담 제로</span>
               </div>
               <div class="flex items-center">
                 <span class="text-green-500 mr-2">✓</span>
-                <span class="text-gray-700">규제 준수 및 안정성</span>
+                <span class="text-gray-800">규제 준수 및 안정성</span>
               </div>
               <div class="flex items-center">
                 <span class="text-green-500 mr-2">✓</span>
-                <span class="text-gray-700">내부 역량 강화</span>
+                <span class="text-gray-800">내부 역량 강화</span>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Track B -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div id="track-b" class="scroll-mt-20">
         <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
           <div class="flex items-center mb-6">
             <span class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold mr-4">Track B</span>
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Snowball 시스템</h3>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Snowball 시스템 개요</h3>
           </div>
 
-          <p class="text-lg text-gray-700 mb-8">
-            직관적인 UI/UX로 설계된 내부통제 플랫폼. 고객사의 보안 정책, 예산, 인프라에 따라 최적 도입 방식 선택 가능합니다.
+          <p class="text-lg text-gray-800 mb-8">
+            내부통제 전 영역(ELC, TLC, ITGC)을 하나의 플랫폼에서 통합 관리하는 솔루션입니다. 고객사의 보안 정책, 예산, 인프라에 따라 최적 도입 방식 선택 가능합니다.
           </p>
 
-          <!-- Deployment Options -->
-          <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="grid md:grid-cols-2 gap-6 mb-10">
             <div class="bg-white rounded-lg p-6 shadow">
-              <h4 class="font-bold text-lg mb-3 text-green-600">Cloud (구독형, SaaS)</h4>
-              <ul class="text-gray-600 space-y-2 text-sm">
-                <li>• SaaS 방식 (가입형)</li>
-                <li>• 인프라 구축 없이 즉시 도입</li>
-                <li>• 초기 비용 및 유지보수 비용 절감</li>
+              <h4 class="font-bold text-xl mb-3 text-green-600">Cloud (구독형, SaaS)</h4>
+              <ul class="text-gray-700 space-y-2 text-sm">
+                <li>• <span class="font-semibold">경제성:</span> 초기 투자 부담 최소화 (월/연 구독)</li>
+                <li>• <span class="font-semibold">신속성:</span> 인프라 구축 없이 즉시 운영 가능</li>
+                <li>• <span class="font-semibold">자동 업데이트:</span> 기능 업데이트 및 유지보수 자동 적용</li>
               </ul>
             </div>
 
             <div class="bg-white rounded-lg p-6 shadow">
-              <h4 class="font-bold text-lg mb-3 text-green-600">On-Premise (구축형)</h4>
-              <ul class="text-gray-600 space-y-2 text-sm">
-                <li>• 고객사 내부 설치</li>
-                <li>• 내부망 운영으로 보안 준수</li>
-                <li>• 기존 레거시 시스템 연동</li>
+              <h4 class="font-bold text-xl mb-3 text-green-600">On-Premise (구축형)</h4>
+              <ul class="text-gray-700 space-y-2 text-sm">
+                <li>• <span class="font-semibold">보안성:</span> 내부망 운영으로 보안 정책 준수</li>
+                <li>• <span class="font-semibold">연동성:</span> 기존 ERP/레거시 시스템 직접 연계</li>
+                <li>• <span class="font-semibold">커스터마이징:</span> 회사 상황에 맞춘 맞춤형 구성</li>
               </ul>
             </div>
           </div>
 
-          <!-- Core Features -->
           <div class="bg-white rounded-lg p-6">
-            <h4 class="font-bold mb-4 text-gray-900">4가지 핵심 기능</h4>
-            <div class="grid md:grid-cols-2 gap-4">
+            <h4 class="font-bold mb-4 text-gray-900 text-2xl">Snowball 시스템 핵심 모듈</h4>
+            <div class="grid md:grid-cols-2 gap-6">
               <div>
-                <h5 class="font-semibold text-gray-800 mb-2">1. ICFR 전체 통제 문서 중앙 관리</h5>
-                <p class="text-sm text-gray-600">RCM 통합 업로드 및 관리, 전 영역 관리 범위 (ELC, TLC, ITGC)</p>
+                <h5 class="font-semibold text-gray-800 mb-2 flex items-center">
+                  <span class="text-[#2c5265] mr-2">●</span> 1. Dashboard 및 현황
+                </h5>
+                <p class="text-sm text-gray-700 pl-4">
+                  ELC, TLC, ITGC 평가 결과를 통합 조회하고 종합 리포트를 생성합니다. 회사별/통제 영역별 평가 현황을 한눈에 파악할 수 있습니다.
+                </p>
               </div>
               <div>
-                <h5 class="font-semibold text-gray-800 mb-2">2. 평가 자동화 및 워크플로우</h5>
-                <p class="text-sm text-gray-600">설계/운영평가 연계, 자동 샘플링, 증적 업로드, 엑셀 조서 다운로드</p>
+                <h5 class="font-semibold text-gray-800 mb-2 flex items-center">
+                  <span class="text-[#2c5265] mr-2">●</span> 2. RCM 관리 및 평가 연계
+                </h5>
+                <p class="text-sm text-gray-700 pl-4">
+                  위험통제매트릭스(RCM) 데이터를 중앙 관리하며, 엑셀 기반 파일 업로드 및 버전 관리를 지원합니다. 평가 진행과 자동 연계됩니다.
+                </p>
               </div>
               <div>
-                <h5 class="font-semibold text-gray-800 mb-2">3. 운영 투명성 및 가시성</h5>
-                <p class="text-sm text-gray-600">실시간 대시보드, 통제 수행 현황 및 결함 추이 파악</p>
+                <h5 class="font-semibold text-gray-800 mb-2 flex items-center">
+                  <span class="text-[#2c5265] mr-2">●</span> 3. 통제 설계평가
+                </h5>
+                <p class="text-sm text-gray-700 pl-4">
+                  통제활동 설명 검토, 현실 반영도 평가 후 증빙 및 결과를 입력하여 설계 효과성을 종합 판정합니다. 평가 기준 팝업을 제공합니다.
+                </p>
               </div>
               <div>
-                <h5 class="font-semibold text-gray-800 mb-2">4. 업무 연속성 보장</h5>
-                <p class="text-sm text-gray-600">자동화된 워크플로우, 중앙 관리 시스템으로 일관성 유지</p>
+                <h5 class="font-semibold text-gray-800 mb-2 flex items-center">
+                  <span class="text-[#2c5265] mr-2">●</span> 4. 통제 운영평가
+                </h5>
+                <p class="text-sm text-gray-700 pl-4">
+                  테스트 절차 자동 생성, 통제 주기에 따른 표본 크기 자동 계산, 표본별 증빙 및 결과 입력 후 전체 결론(Effective/Exception)을 자동 산출합니다.
+                </p>
               </div>
             </div>
+          </div>
+
+          <div class="mt-12 text-center">
+            <h4 class="font-bold mb-4 text-gray-900 text-2xl">Snowball 시스템 아키텍처 및 주요 기능</h4>
+            <img src="https://i.ibb.co/6N1c1x8/Snowball-Architecture.png" alt="Snowball 시스템 아키텍처 및 주요 기능"
+              class="max-w-full h-auto mx-auto rounded-lg shadow-xl border border-gray-200" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Benefits Section -->
   <section id="benefits" class="py-20 bg-gray-50 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
-        Snowball 도입의 실질적 이점
+        Snowball 도입의 실질적 이점 (도입 기대 효과)
       </h2>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Benefit 1 -->
         <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-          <div class="text-4xl mb-4">👥</div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900">인력 투입 최소화</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            반복적인 행정 업무를 자동화하여 내부 담당자의 업무 부담 및 인력 투입을 획기적으로 절감합니다.
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">업무 효율화</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            반복적 수동 업무를 제거하고 자동화하여, 빠르고 정확한 평가 결과를 도출합니다.
           </p>
         </div>
 
-        <!-- Benefit 2 -->
         <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-          <div class="text-4xl mb-4">✅</div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900">감사 수용성 극대화</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            표준화된 평가 조서 및 상세한 통제 이력 관리를 통해 외부 감사인의 수용도를 높이고 감사 대응 시간을 단축합니다.
+          <div class="text-4xl mb-4">🛡️</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">감사 대응력 강화</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            표준화된 조서를 자동으로 생성하여 외부 감사 대응 시간을 대폭 단축하고 수용도를 높입니다.
           </p>
         </div>
 
-        <!-- Benefit 3 -->
         <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
           <div class="text-4xl mb-4">📊</div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900">운영 투명성 및 가시성 확보</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            실시간 대시보드 및 리포팅 기능을 통해 ICFR 전 영역의 통제 수행 현황과 결함 추이를 경영진이 명확하게 파악할 수 있습니다.
+          <h3 class="text-xl font-bold mb-3 text-gray-900">운영 가시성 확보</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            실시간 대시보드를 제공하여 ICFR 전 영역의 통제 수행 현황 및 결함 현황을 즉시 파악할 수 있습니다.
           </p>
         </div>
 
-        <!-- Benefit 4 -->
         <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-          <div class="text-4xl mb-4">🔄</div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900">업무 연속성 보장</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            자동화된 워크플로우와 중앙 관리 시스템으로 담당자 변경 시에도 업무의 연속성과 일관성을 유지합니다.
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">리스크 관리 강화</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            체계적인 결함 추적과 시정 조치 관리를 통해 내부통제 역량을 극대화합니다.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-20 bg-gradient-to-br from-snowball-primary to-snowball-dark text-white">
+  <section class="py-20 bg-gradient-to-br from-[#2c5265] to-[#1a3c4d] text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">
         지금 바로 Snowball의 효과를 경험해보세요
@@ -359,27 +323,21 @@
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="#contact"
-          class="px-8 py-4 bg-white text-snowball-primary font-semibold rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105"
-        >
+        <a href="#contact"
+          class="px-8 py-4 bg-white text-[#2c5265] font-semibold rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105">
           상담 신청하기
         </a>
-        <a
-          href="mailto:snowball1566@gmail.com"
-          class="px-8 py-4 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600 transition-all transform hover:scale-105"
-        >
+        <a href="mailto:snowball1566@gmail.com"
+          class="px-8 py-4 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600 transition-all transform hover:scale-105">
           이메일 문의
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer id="contact" class="bg-gray-900 text-white py-12 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Company Info -->
         <div>
           <h3 class="text-2xl font-bold mb-4">Snowball</h3>
           <p class="text-gray-400">
@@ -387,26 +345,26 @@
           </p>
         </div>
 
-        <!-- Contact Info -->
         <div>
           <h4 class="text-lg font-semibold mb-4">연락처</h4>
           <div class="space-y-2 text-gray-400">
             <p class="flex items-center">
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               snowball1566@gmail.com
             </p>
             <p class="flex items-center">
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 019-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
               www.snowball1566.com
             </p>
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div>
           <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
           <div class="space-y-2">
@@ -448,4 +406,5 @@
   </script>
 
 </body>
+
 </html>

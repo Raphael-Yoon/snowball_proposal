@@ -1,0 +1,34 @@
+/* Smooth scroll & Scroll Snap */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #1f2937;
+}
+
+/* Scroll Snap Sections */
+section,
+footer {
+    scroll-snap-align: start;
+    scroll-margin-top: 64px;
+    /* Height of the fixed header */
+    min-height: 100vh;
+    /* Make each section at least full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically if it's short */
+}
+
+/* Footer might not need to be full height, but let's keep it consistent or adjust */
+footer {
+    min-height: auto;
+    /* Footer doesn't strictly need to be 100vh, but can snap */
+    scroll-snap-align: end;
+    /* Snap to the bottom for footer */
+}
