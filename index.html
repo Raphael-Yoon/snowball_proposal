@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ITGC 전문 인력 부재와 수동 관리의 비효율성을 동시에 해결하는 Snowball 솔루션">
+  <title>Snowball - 내부통제 솔루션</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fullpage Scroll Snap Effect */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100vh;
+    }
+
+    /* Each section snaps to viewport */
+    section {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Ensure content is centered vertically in sections */
+    section > div {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Custom Snowball color palette matching the system */
+    .bg-snowball-primary {
+      background-color: #3d7490;
+    }
+    .bg-snowball-dark {
+      background-color: #2d5670;
+    }
+    .text-snowball-primary {
+      color: #3d7490;
+    }
+    .border-snowball-primary {
+      border-color: #3d7490;
+    }
+    .hover\:bg-snowball-light:hover {
+      background-color: #e8f3f7;
+    }
+    .hover\:text-snowball-primary:hover {
+      color: #3d7490;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="text-2xl font-bold text-snowball-primary">
+            Snowball
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-snowball-primary transition-colors">Home</a>
+          <a href="#track-a" class="text-gray-700 hover:text-snowball-primary transition-colors">Track A</a>
+          <a href="#track-b" class="text-gray-700 hover:text-snowball-primary transition-colors">Track B</a>
+          <a href="#benefits" class="text-gray-700 hover:text-snowball-primary transition-colors">Benefits</a>
+          <a href="#contact" class="text-gray-700 hover:text-snowball-primary transition-colors">Contact</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-700 hover:text-snowball-primary focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Home</a>
+        <a href="#track-a" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Track A</a>
+        <a href="#track-b" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Track B</a>
+        <a href="#benefits" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Benefits</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-snowball-light rounded-md">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-24 pb-20 bg-gradient-to-br from-snowball-primary to-snowball-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        복잡한 내부통제, Snowball과 함께 해결하세요
+      </h1>
+
+      <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+        ITGC 전문 인력 부재? 수동 관리의 비효율성?<br />
+        Snowball은 두 가지 난관을 동시에 해결합니다.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+        <a
+          href="#track-a"
+          class="px-8 py-4 bg-white text-snowball-primary font-semibold rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105"
+        >
+          Track A 보기
+        </a>
+        <a
+          href="#track-b"
+          class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-snowball-primary transition-all transform hover:scale-105"
+        >
+          Track B 보기
+        </a>
+        <a
+          href="#contact"
+          class="px-8 py-4 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600 transition-all transform hover:scale-105"
+        >
+          상담 신청
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+        현황 분석: 내부통제 실무의 두 가지 난관
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Card 1: IT 전문 인력 부재 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="text-5xl mb-4">👤</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">IT 전문 인력 부재</h3>
+          <p class="text-gray-600 leading-relaxed">
+            내부통제팀 내 ITGC 전담 전문가를 채용하고 유지하는 데 큰 어려움이 있습니다.
+            전문성을 갖춘 인력을 확보하기 어렵고, 유지 비용도 부담스럽습니다.
+          </p>
+        </div>
+
+        <!-- Card 2: 업무 비효율성 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="text-5xl mb-4">⚙️</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">업무 비효율성</h3>
+          <p class="text-gray-600 leading-relaxed">
+            엑셀 기반의 수동 관리 및 반복적 행정 업무로 인해 핵심 관리 감독에 집중할 수 없습니다.
+            시간과 리소스가 낭비되고 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+        Snowball의 두 가지 솔루션
+      </h2>
+
+      <!-- Track A -->
+      <div id="track-a" class="mb-16 scroll-mt-20">
+        <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
+          <div class="flex items-center mb-6">
+            <span class="bg-snowball-primary text-white px-4 py-2 rounded-lg font-bold mr-4">Track A</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900">PA 서비스</h3>
+          </div>
+
+          <p class="text-lg text-gray-700 mb-8">
+            ITGC 전담 인력처럼 RCM 설계부터 평가, 감사 대응, 역량 내재화까지 ITGC 업무 전 과정을 상시적으로 수행합니다.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Module 1 -->
+            <div class="bg-white rounded-lg p-6 shadow">
+              <h4 class="font-bold text-lg mb-3 text-snowball-primary">1. RCM 설계 및 표준화</h4>
+              <ul class="text-gray-600 space-y-2 text-sm">
+                <li>• ITGC RCM 최신화/표준화</li>
+                <li>• 설계평가 수행</li>
+                <li>• 통제 매뉴얼 작성 지원</li>
+              </ul>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="bg-white rounded-lg p-6 shadow">
+              <h4 class="font-bold text-lg mb-3 text-snowball-primary">2. 운영평가 대행 및 증적 관리</h4>
+              <ul class="text-gray-600 space-y-2 text-sm">
+                <li>• 평가 계획 및 샘플링</li>
+                <li>• 증적 취합 및 검증</li>
+                <li>• 결함 발견 및 분석</li>
+              </ul>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="bg-white rounded-lg p-6 shadow">
+              <h4 class="font-bold text-lg mb-3 text-snowball-primary">3. 보고서 및 조서 산출</h4>
+              <ul class="text-gray-600 space-y-2 text-sm">
+                <li>• 표준화된 평가 조서 작성</li>
+                <li>• 결함 시정 조치 보고</li>
+                <li>• 감사 대응 지원</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-white rounded-lg p-6">
+            <h4 class="font-bold mb-3 text-gray-900">주요 이점</h4>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="flex items-center">
+                <span class="text-green-500 mr-2">✓</span>
+                <span class="text-gray-700">ITGC 업무 부담 제로</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-green-500 mr-2">✓</span>
+                <span class="text-gray-700">규제 준수 및 안정성</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-green-500 mr-2">✓</span>
+                <span class="text-gray-700">내부 역량 강화</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track B -->
+      <div id="track-b" class="scroll-mt-20">
+        <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
+          <div class="flex items-center mb-6">
+            <span class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold mr-4">Track B</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Snowball 시스템</h3>
+          </div>
+
+          <p class="text-lg text-gray-700 mb-8">
+            직관적인 UI/UX로 설계된 내부통제 플랫폼. 고객사의 보안 정책, 예산, 인프라에 따라 최적 도입 방식 선택 가능합니다.
+          </p>
+
+          <!-- Deployment Options -->
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-lg p-6 shadow">
+              <h4 class="font-bold text-lg mb-3 text-green-600">Cloud (구독형, SaaS)</h4>
+              <ul class="text-gray-600 space-y-2 text-sm">
+                <li>• SaaS 방식 (가입형)</li>
+                <li>• 인프라 구축 없이 즉시 도입</li>
+                <li>• 초기 비용 및 유지보수 비용 절감</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow">
+              <h4 class="font-bold text-lg mb-3 text-green-600">On-Premise (구축형)</h4>
+              <ul class="text-gray-600 space-y-2 text-sm">
+                <li>• 고객사 내부 설치</li>
+                <li>• 내부망 운영으로 보안 준수</li>
+                <li>• 기존 레거시 시스템 연동</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Core Features -->
+          <div class="bg-white rounded-lg p-6">
+            <h4 class="font-bold mb-4 text-gray-900">4가지 핵심 기능</h4>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <h5 class="font-semibold text-gray-800 mb-2">1. ICFR 전체 통제 문서 중앙 관리</h5>
+                <p class="text-sm text-gray-600">RCM 통합 업로드 및 관리, 전 영역 관리 범위 (ELC, TLC, ITGC)</p>
+              </div>
+              <div>
+                <h5 class="font-semibold text-gray-800 mb-2">2. 평가 자동화 및 워크플로우</h5>
+                <p class="text-sm text-gray-600">설계/운영평가 연계, 자동 샘플링, 증적 업로드, 엑셀 조서 다운로드</p>
+              </div>
+              <div>
+                <h5 class="font-semibold text-gray-800 mb-2">3. 운영 투명성 및 가시성</h5>
+                <p class="text-sm text-gray-600">실시간 대시보드, 통제 수행 현황 및 결함 추이 파악</p>
+              </div>
+              <div>
+                <h5 class="font-semibold text-gray-800 mb-2">4. 업무 연속성 보장</h5>
+                <p class="text-sm text-gray-600">자동화된 워크플로우, 중앙 관리 시스템으로 일관성 유지</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="py-20 bg-gray-50 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+        Snowball 도입의 실질적 이점
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Benefit 1 -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4">👥</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">인력 투입 최소화</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            반복적인 행정 업무를 자동화하여 내부 담당자의 업무 부담 및 인력 투입을 획기적으로 절감합니다.
+          </p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4">✅</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">감사 수용성 극대화</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            표준화된 평가 조서 및 상세한 통제 이력 관리를 통해 외부 감사인의 수용도를 높이고 감사 대응 시간을 단축합니다.
+          </p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">운영 투명성 및 가시성 확보</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            실시간 대시보드 및 리포팅 기능을 통해 ICFR 전 영역의 통제 수행 현황과 결함 추이를 경영진이 명확하게 파악할 수 있습니다.
+          </p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4">🔄</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">업무 연속성 보장</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            자동화된 워크플로우와 중앙 관리 시스템으로 담당자 변경 시에도 업무의 연속성과 일관성을 유지합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-snowball-primary to-snowball-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        지금 바로 Snowball의 효과를 경험해보세요
+      </h2>
+
+      <p class="text-xl mb-10 text-gray-100">
+        ITGC 전문가의 1:1 상담을 통해<br />
+        당신의 상황에 맞는 최적의 솔루션을 찾아보세요
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#contact"
+          class="px-8 py-4 bg-white text-snowball-primary font-semibold rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105"
+        >
+          상담 신청하기
+        </a>
+        <a
+          href="mailto:snowball1566@gmail.com"
+          class="px-8 py-4 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600 transition-all transform hover:scale-105"
+        >
+          이메일 문의
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-white py-12 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Snowball</h3>
+          <p class="text-gray-400">
+            ITGC 내부통제 전문 솔루션
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">연락처</h4>
+          <div class="space-y-2 text-gray-400">
+            <p class="flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              snowball1566@gmail.com
+            </p>
+            <p class="flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+              www.snowball1566.com
+            </p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <div class="space-y-2">
+            <a href="#home" class="block text-gray-400 hover:text-white transition-colors">Home</a>
+            <a href="#track-a" class="block text-gray-400 hover:text-white transition-colors">Track A</a>
+            <a href="#track-b" class="block text-gray-400 hover:text-white transition-colors">Track B</a>
+            <a href="#benefits" class="block text-gray-400 hover:text-white transition-colors">Benefits</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Snowball. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Close mobile menu after click
+          mobileMenu?.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
