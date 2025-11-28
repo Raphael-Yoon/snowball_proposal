@@ -64,14 +64,19 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#home" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Home</a>
-        <a href="#track-a" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Track A - PA 서비스</a>
-        <a href="#track-b" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Track B - Snowball
-          시스템</a>
-        <a href="#benefits" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Benefits</a>
-        <a href="#contact" class="block px-3 py-2 text-gray-800 hover:bg-[#e0eff5] rounded-md">Contact</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+      <div class="px-4 pt-2 pb-4 space-y-1">
+        <a href="#home"
+          class="block px-3 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-lg font-medium">Home</a>
+        <a href="#track-a"
+          class="block px-3 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-lg font-medium">Track A -
+          PA 서비스</a>
+        <a href="#track-b"
+          class="block px-3 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-lg font-medium">Track B -
+          Snowball 시스템</a>
+        <a href="#benefits"
+          class="block px-3 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-lg font-medium">Benefits</a>
+        <a href="#contact" class="block px-3 py-3 text-[#2c5265] font-bold hover:bg-slate-50 rounded-lg">Contact</a>
       </div>
     </div>
   </nav>
@@ -306,17 +311,23 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div id="track-b" class="scroll-mt-20">
-        <div
-          class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 md:p-12 border border-green-100 shadow-md">
-          <div class="flex items-center mb-6">
-            <span class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold mr-4">Track B</span>
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Snowball 시스템</h3>
+      <div id="track-b" class="scroll-mt-24">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
+          <div
+            class="bg-gradient-to-r from-emerald-600 to-teal-600 p-6 md:p-10 text-white flex flex-col md:flex-row items-start md:items-center justify-between">
+            <div>
+              <div class="flex items-center gap-4 mb-2">
+                <span class="bg-white/20 backdrop-blur px-4 py-1.5 rounded-lg font-bold text-sm">Track B</span>
+                <h3 class="text-2xl md:text-3xl font-bold">Snowball 시스템</h3>
+              </div>
+              <p class="text-emerald-50 text-lg max-w-2xl">
+                내부통제 전 영역(ELC, TLC, ITGC)을 하나의 플랫폼에서 통합 관리하는 솔루션입니다.
+              </p>
+            </div>
+            <div class="mt-6 md:mt-0">
+              <span class="text-5xl opacity-20">💻</span>
+            </div>
           </div>
 
           <div class="p-6 md:p-12">
@@ -350,49 +361,58 @@
               </div>
             </div>
 
-            <div class="bg-white/80 backdrop-blur rounded-lg p-6 shadow-sm">
-              <h4 class="font-bold mb-8 text-gray-900 text-2xl">시스템 주요 기능 및 화면</h4>
-              <div class="space-y-12">
-                <div>
-                  <h5 class="font-semibold text-xl text-gray-800 mb-4 flex items-center">
-                    <span class="text-[#2c5265] mr-2">●</span> 1. 종합 대시보드
-                  </h5>
-                  <img src="img/dashboard.png" alt="대시보드"
-                    class="w-full rounded-lg shadow-lg border border-gray-200 mb-3">
-                  <p class="text-gray-600 text-sm pl-1">
+            <div class="border-t border-slate-100 pt-10">
+              <h4 class="font-bold mb-8 text-slate-900 text-2xl text-center">시스템 주요 기능 미리보기</h4>
+              <div class="grid md:grid-cols-2 gap-10">
+                <div class="group">
+                  <div
+                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-4 bg-slate-100 aspect-video relative">
+                    <img src="img/dashboard.png" alt="대시보드"
+                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                  </div>
+                  <h5 class="font-bold text-lg text-slate-800 mb-2">1. 종합 대시보드</h5>
+                  <p class="text-slate-600 text-sm leading-relaxed">
                     ELC, TLC, ITGC 평가 결과를 통합 조회하고 종합 리포트를 생성합니다. 회사별/통제 영역별 평가 현황을 한눈에 파악할 수 있습니다.
                   </p>
                 </div>
 
-                <div>
-                  <h5 class="font-semibold text-xl text-gray-800 mb-4 flex items-center">
-                    <span class="text-[#2c5265] mr-2">●</span> 2. RCM 관리
-                  </h5>
-                  <img src="img/rcm.png" alt="RCM 관리" class="w-full rounded-lg shadow-lg border border-gray-200 mb-3">
-                  <p class="text-gray-600 text-sm pl-1">
-                    위험통제매트릭스(RCM) 데이터를 중앙 관리하며, 엑셀 기반 파일 업로드 및 버전 관리를 지원합니다. 평가 진행과 자동 연계됩니다.
+                <div class="group">
+                  <div
+                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-4 bg-slate-100 aspect-video relative">
+                    <img src="img/rcm.png" alt="RCM 관리"
+                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                  </div>
+                  <h5 class="font-bold text-lg text-slate-800 mb-2">2. RCM 관리</h5>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    위험통제매트릭스(RCM) 데이터를 중앙 관리하며, 엑셀 기반 파일 업로드 및 버전 관리를 지원합니다.
                   </p>
                 </div>
 
-                <div>
-                  <h5 class="font-semibold text-xl text-gray-800 mb-4 flex items-center">
-                    <span class="text-[#2c5265] mr-2">●</span> 3. 설계 평가
-                  </h5>
-                  <img src="img/design_test.png" alt="설계 평가"
-                    class="w-full rounded-lg shadow-lg border border-gray-200 mb-3">
-                  <p class="text-gray-600 text-sm pl-1">
+                <div class="group">
+                  <div
+                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-4 bg-slate-100 aspect-video relative">
+                    <img src="img/design_test.png" alt="설계 평가"
+                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                  </div>
+                  <h5 class="font-bold text-lg text-slate-800 mb-2">3. 설계 평가</h5>
+                  <p class="text-slate-600 text-sm leading-relaxed">
                     통제활동 설명 검토, 현실 반영도 평가 후 증빙 및 결과를 입력하여 설계 효과성을 종합 판정합니다.
                   </p>
                 </div>
 
-                <div>
-                  <h5 class="font-semibold text-xl text-gray-800 mb-4 flex items-center">
-                    <span class="text-[#2c5265] mr-2">●</span> 4. 운영 평가
-                  </h5>
-                  <img src="img/operation_test.png" alt="운영 평가"
-                    class="w-full rounded-lg shadow-lg border border-gray-200 mb-3">
-                  <p class="text-gray-600 text-sm pl-1">
-                    테스트 절차 자동 생성, 통제 주기에 따른 표본 크기 자동 계산, 표본별 증빙 및 결과 입력 후 전체 결론을 자동 산출합니다.
+                <div class="group">
+                  <div
+                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-4 bg-slate-100 aspect-video relative">
+                    <img src="img/operation_test.png" alt="운영 평가"
+                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                  </div>
+                  <h5 class="font-bold text-lg text-slate-800 mb-2">4. 운영 평가</h5>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    테스트 절차 자동 생성, 표본 크기 자동 계산, 표본별 증빙 및 결과 입력 후 전체 결론을 자동 산출합니다.
                   </p>
                 </div>
               </div>
@@ -400,6 +420,7 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
 
   <section id="benefits" class="py-16 md:py-24 bg-white scroll-mt-24">
@@ -452,9 +473,11 @@
       </div>
     </div>
   </section>
-  <section class="py-20 bg-gradient-to-br from-[#2c5265] to-[#1a3c4d] text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+
+  <section class="py-16 md:py-24 bg-[#1a3c4d] text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('img/pattern.png')] opacity-5"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-tight">
         지금 바로 Snowball의 효과를 경험해보세요
       </h2>
 
@@ -499,11 +522,14 @@
               snowball1566@gmail.com
             </a>
             <a href="http://www.snowball1566.com" target="_blank" rel="noopener noreferrer"
-              class="flex items-center hover:text-white transition-colors">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 019-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-              </svg>
+              class="flex items-center hover:text-white transition-colors group">
+              <div
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 group-hover:bg-slate-700 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 019-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
               www.snowball1566.com
             </a>
           </div>
