@@ -31,3 +31,8 @@ body {
         scroll-snap-align: end;
     }
 }
+
+.bg-pattern {
+    background-image: radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 20px 20px;
+}
