@@ -8,6 +8,7 @@ body {
     padding: 0;
     background-color: white;
     color: #1f2937;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Scroll Snap only on Desktop (768px and above) */
@@ -35,4 +36,17 @@ body {
 .bg-pattern {
     background-image: radial-gradient(#ffffff 1px, transparent 1px);
     background-size: 20px 20px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #2c5265 0%, #1a3c4d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
