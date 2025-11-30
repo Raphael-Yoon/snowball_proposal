@@ -50,3 +50,135 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* ==== Snowball Design System ==== */
+
+/* Color tokens */
+:root {
+  --sb-primary: #2c5265;
+  --sb-primary-dark: #1a3c4d;
+  --sb-secondary: #059669;
+  --sb-accent: #38bdf8;
+  --sb-bg-soft: #f8fafc;
+  --sb-border-soft: #e2e8f0;
+}
+
+/* Global sections */
+.sb-section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .sb-section {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
+/* Cards */
+.sb-card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid var(--sb-border-soft);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .sb-card {
+    padding: 2rem;
+  }
+}
+
+.sb-card:hover {
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.4); /* blue-ish */
+}
+
+.sb-card-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  font-size: 1.75rem;
+}
+
+/* Buttons */
+.sb-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.5rem;
+  border-radius: 0.9rem;
+  font-weight: 700;
+  background-color: var(--sb-primary);
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.2);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.sb-btn-primary:hover {
+  background-color: var(--sb-primary-dark);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+  transform: translateY(-2px);
+}
+
+.sb-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.5rem;
+  border-radius: 0.9rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.sb-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Ghost / text button (if needed) */
+.sb-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.8rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid var(--sb-border-soft);
+  color: var(--sb-primary);
+  background-color: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.sb-btn-ghost:hover {
+  background-color: #e5f0f7;
+  border-color: #cbd5e1;
+}
+
+/* Hero background refinement */
+.sb-hero-gradient {
+  background-image:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.35), transparent 60%),
+    linear-gradient(135deg, #2c5265, #152a38);
+}
+
+/* Navbar scrolled state */
+.sb-nav-scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
