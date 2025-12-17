@@ -287,8 +287,8 @@
             <!-- Pricing Structure -->
             <div class="mb-12">
               <h4 class="text-xl font-bold text-slate-900 mb-4">요금 체계</h4>
-              <p class="text-slate-600 mb-4 text-sm">요금은 <strong class="text-slate-900">계약 시점의 인스코프(In-Scope) 시스템
-                  수</strong>를 기준으로 산정됩니다.
+              <p class="text-slate-600 mb-4 text-sm">요금은 <strong class="text-slate-900">계약 시점의 In-Scope 시스템 수</strong>를
+                기준으로 산정됩니다.
 
               <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm hidden md:block">
                 <table class="w-full text-left border-collapse">
@@ -310,20 +310,26 @@
                     <tr class="border-b border-slate-100 hover:bg-slate-50">
                       <td class="p-4 font-bold text-[#2c5265]">Standard</td>
                       <td class="p-4">2~4개</td>
-                      <td class="p-4">별도 문의</td>
-                      <td class="p-4">별도 문의</td>
+                      <td class="p-4"><span class="secret-price" data-tier="standard" data-type="monthly">별도 문의</span>
+                      </td>
+                      <td class="p-4"><span class="secret-price" data-tier="standard" data-type="yearly">별도 문의</span>
+                      </td>
                     </tr>
                     <tr class="border-b border-slate-100 hover:bg-slate-50">
                       <td class="p-4 font-bold text-[#2c5265]">Premium</td>
                       <td class="p-4">5~8개</td>
-                      <td class="p-4">별도 문의</td>
-                      <td class="p-4">별도 문의</td>
+                      <td class="p-4"><span class="secret-price" data-tier="premium" data-type="monthly">별도 문의</span>
+                      </td>
+                      <td class="p-4"><span class="secret-price" data-tier="premium" data-type="yearly">별도 문의</span>
+                      </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
                       <td class="p-4 font-bold text-[#2c5265]">Enterprise</td>
                       <td class="p-4">9개 이상</td>
-                      <td class="p-4">별도 문의</td>
-                      <td class="p-4">별도 문의</td>
+                      <td class="p-4"><span class="secret-price" data-tier="enterprise" data-type="monthly">별도 문의</span>
+                      </td>
+                      <td class="p-4"><span class="secret-price" data-tier="enterprise" data-type="yearly">별도 문의</span>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -354,8 +360,17 @@
                     <h5 class="font-bold text-lg text-[#2c5265]">Standard</h5>
                     <span class="text-sm text-slate-500">2~4개 시스템</span>
                   </div>
-                  <div class="border-t border-slate-100 pt-2">
-                    <p class="text-sm text-slate-600">별도 문의</p>
+                  <div class="border-t border-slate-100 pt-2 space-y-1">
+                    <div class="flex justify-between text-sm">
+                      <span class="text-slate-600">월 비용:</span>
+                      <span class="font-semibold text-slate-800 secret-price" data-tier="standard"
+                        data-type="monthly">별도 문의</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                      <span class="text-slate-600">연 비용:</span>
+                      <span class="font-semibold text-slate-800 secret-price" data-tier="standard" data-type="yearly">별도
+                        문의</span>
+                    </div>
                   </div>
                 </div>
                 <!-- Premium -->
@@ -364,8 +379,17 @@
                     <h5 class="font-bold text-lg text-[#2c5265]">Premium</h5>
                     <span class="text-sm text-slate-500">5~8개 시스템</span>
                   </div>
-                  <div class="border-t border-slate-100 pt-2">
-                    <p class="text-sm text-slate-600">별도 문의</p>
+                  <div class="border-t border-slate-100 pt-2 space-y-1">
+                    <div class="flex justify-between text-sm">
+                      <span class="text-slate-600">월 비용:</span>
+                      <span class="font-semibold text-slate-800 secret-price" data-tier="premium" data-type="monthly">별도
+                        문의</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                      <span class="text-slate-600">연 비용:</span>
+                      <span class="font-semibold text-slate-800 secret-price" data-tier="premium" data-type="yearly">별도
+                        문의</span>
+                    </div>
                   </div>
                 </div>
                 <!-- Enterprise -->
@@ -374,8 +398,17 @@
                     <h5 class="font-bold text-lg text-[#2c5265]">Enterprise</h5>
                     <span class="text-sm text-slate-500">9개 이상</span>
                   </div>
-                  <div class="border-t border-slate-100 pt-2">
-                    <p class="text-sm text-slate-600">별도 문의</p>
+                  <div class="border-t border-slate-100 pt-2 space-y-1">
+                    <div class="flex justify-between text-sm">
+                      <span class="text-slate-600">월 비용:</span>
+                      <span class="font-semibold text-slate-800 secret-price" data-tier="enterprise"
+                        data-type="monthly">별도 문의</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                      <span class="text-slate-600">연 비용:</span>
+                      <span class="font-semibold text-slate-800 secret-price" data-tier="enterprise"
+                        data-type="yearly">별도 문의</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -691,6 +724,102 @@
       class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-md text-white font-medium transition-colors duration-300">동의합니다</button>
   </div>
 
+  <div id="price-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-[2000] backdrop-blur-sm">
+    <div class="bg-white rounded-2xl p-8 max-w-sm w-full mx-4 shadow-2xl transform transition-all">
+      <h3 class="text-xl font-bold mb-4 text-slate-900">접근 권한 확인</h3>
+      <p class="text-slate-600 mb-6 text-sm">상세 견적 확인을 위한 인증 코드를 입력해 주세요.</p>
+      <input type="password" id="price-password"
+        class="w-full px-4 py-3 border border-slate-300 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-[#2c5265] focus:border-transparent transition-all"
+        placeholder="Code 입력" onkeyup="if(window.event.keyCode==13){checkPricePassword()}">
+      <div class="flex gap-3">
+        <button onclick="closePriceModal()"
+          class="flex-1 px-4 py-2.5 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 font-medium transition-colors">취소</button>
+        <button onclick="checkPricePassword()"
+          class="flex-1 px-4 py-2.5 bg-[#2c5265] text-white rounded-lg hover:bg-[#1f3a48] font-medium transition-colors">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Hidden Prices Configuration
+    const HIDDEN_PRICES = {
+      standard: {
+        monthly: '300만 원',
+        yearly: '3,600만 원'
+      },
+      premium: {
+        monthly: '400만 원',
+        yearly: '4,800만 원'
+      },
+      enterprise: {
+        monthly: '별도 협의',
+        yearly: '별도 협의'
+      }
+    };
+
+    // UI Interaction Logic
+    let isPriceRevealed = false;
+    const priceElements = document.querySelectorAll('.secret-price');
+    const priceModal = document.getElementById('price-modal');
+    const passwordInput = document.getElementById('price-password');
+
+    // Add click listeners to all secret price elements
+    priceElements.forEach(el => {
+      el.addEventListener('click', () => {
+        if (!isPriceRevealed) {
+          openPriceModal();
+        }
+      });
+      // Add visual hint
+      el.classList.add('cursor-pointer', 'decoration-dotted', 'underline', 'underline-offset-4', 'decoration-slate-400', 'hover:text-blue-600', 'transition-colors');
+      el.setAttribute('title', '상세 정보 확인 (클릭)');
+    });
+
+    function openPriceModal() {
+      priceModal.classList.remove('hidden');
+      priceModal.classList.add('flex');
+      setTimeout(() => passwordInput.focus(), 100);
+    }
+
+    function closePriceModal() {
+      priceModal.classList.add('hidden');
+      priceModal.classList.remove('flex');
+      passwordInput.value = '';
+    }
+
+    function checkPricePassword() {
+      const password = passwordInput.value;
+      if (password === '1566') { // Simple password
+        revealPrices();
+        closePriceModal();
+      } else {
+        alert('코드가 일치하지 않습니다.');
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    }
+
+    function revealPrices() {
+      isPriceRevealed = true;
+      priceElements.forEach(el => {
+        const tier = el.dataset.tier;
+        const type = el.dataset.type;
+
+        if (HIDDEN_PRICES[tier] && HIDDEN_PRICES[tier][type]) {
+          // Animation effect
+          el.style.opacity = '0';
+          setTimeout(() => {
+            el.innerHTML = `<span class="font-bold text-blue-600">${HIDDEN_PRICES[tier][type]}</span>`;
+            el.classList.remove('decoration-dotted', 'underline');
+            el.style.opacity = '1';
+          }, 200);
+        }
+      });
+
+      // Update toggle state or visual indicator if needed
+      // alert('가격 정보가 잠금 해제되었습니다.');
+    }
+  </script>
 </body>
 
 </html>
