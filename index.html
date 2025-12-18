@@ -892,55 +892,69 @@
       </p>
 
       <!-- 상담 신청 폼 -->
-      <form name="consultation" method="POST" data-netlify="true" class="max-w-2xl mx-auto text-left">
+      <form id="consultation-form" name="consultation" method="POST" data-netlify="true"
+        class="max-w-2xl mx-auto text-left">
         <input type="hidden" name="form-name" value="consultation">
 
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <input type="text" name="name" placeholder="이름 *" required
-              class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all">
+        <div id="form-fields">
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <input type="text" name="name" placeholder="이름 *" required
+                class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all">
+            </div>
+            <div>
+              <input type="text" name="company" placeholder="회사명 *" required
+                class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all">
+            </div>
           </div>
-          <div>
-            <input type="text" name="company" placeholder="회사명 *" required
-              class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all">
-          </div>
-        </div>
 
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <input type="tel" name="phone" placeholder="연락처 *" required
-              class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all">
-          </div>
-          <div>
-            <div class="relative">
-              <select name="systems"
-                class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all appearance-none cursor-pointer">
-                <option value="" class="text-slate-800">인스코프 시스템 수</option>
-                <option value="1" class="text-slate-800">1개</option>
-                <option value="2-3" class="text-slate-800">2~3개</option>
-                <option value="4-6" class="text-slate-800">4~6개</option>
-                <option value="7+" class="text-slate-800">7개 이상</option>
-                <option value="unknown" class="text-slate-800">잘 모르겠음</option>
-              </select>
-              <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-white/50">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <input type="tel" name="phone" placeholder="연락처 *" required
+                class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all">
+            </div>
+            <div>
+              <div class="relative">
+                <select name="systems"
+                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all appearance-none cursor-pointer">
+                  <option value="" class="text-slate-800">In-Scope 시스템 수</option>
+                  <option value="1" class="text-slate-800">1개</option>
+                  <option value="2-3" class="text-slate-800">2~3개</option>
+                  <option value="4-6" class="text-slate-800">4~6개</option>
+                  <option value="7+" class="text-slate-800">7개 이상</option>
+                  <option value="unknown" class="text-slate-800">잘 모르겠음</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-white/50">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="mb-6">
+            <textarea name="message" placeholder="문의 내용 (선택사항)" rows="4"
+              class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all resize-none"></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" id="submit-btn"
+              class="w-full md:w-auto px-12 py-4 bg-green-500 text-white font-bold rounded-xl shadow-lg hover:bg-green-600 transition-all transform hover:scale-105 active:scale-95">
+              상담 신청하기
+            </button>
+          </div>
         </div>
 
-        <div class="mb-6">
-          <textarea name="message" placeholder="문의 내용 (선택사항)" rows="4"
-            class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all resize-none"></textarea>
-        </div>
-
-        <div class="text-center">
-          <button type="submit"
-            class="w-full md:w-auto px-12 py-4 bg-green-500 text-white font-bold rounded-xl shadow-lg hover:bg-green-600 transition-all transform hover:scale-105 active:scale-95">
-            상담 신청하기
-          </button>
+        <!-- 성공 메시지 (초기 숨김) -->
+        <div id="success-message" class="hidden text-center py-8">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">신청이 완료되었습니다!</h3>
+          <p class="text-slate-300">내부통제 전문가가 확인 후 빠른 시일 내에 연락드리겠습니다.</p>
         </div>
       </form>
     </div>
@@ -1143,6 +1157,38 @@
         }
       });
     }
+    // Netlify Form Submission
+    const consultationForm = document.getElementById('consultation-form');
+    const formFields = document.getElementById('form-fields');
+    const successMessage = document.getElementById('success-message');
+    const submitBtn = document.getElementById('submit-btn');
+
+    consultationForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(consultationForm);
+
+      // Update UI to loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<svg class="animate-spin h-5 w-5 mr-3 inline-block" viewBox="0 0 24 24">...</svg> 전송 중...';
+
+      fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      })
+        .then(() => {
+          formFields.classList.add('hidden');
+          successMessage.classList.remove('hidden');
+          consultationForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch((error) => {
+          alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+          console.error('Form submission error:', error);
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '상담 신청하기';
+        });
+    });
   </script>
 </body>
 
