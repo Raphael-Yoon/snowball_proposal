@@ -242,60 +242,116 @@
           <div class="p-6 md:p-12">
             <!-- Service Overview -->
             <div class="mb-12">
-              <h4 class="text-xl font-bold text-slate-900 mb-4">서비스 개요</h4>
-              <div class="bg-slate-50 rounded-xl p-6 md:p-8 border border-slate-100 relative overflow-hidden">
-                <!-- Highlight Badge -->
+              <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <span class="w-1 h-6 bg-[#2c5265] rounded-full"></span>
+                서비스 개요
+              </h4>
+
+              <div class="relative">
+                <!-- Main Message -->
                 <div
-                  class="absolute top-0 right-0 bg-red-500 text-white px-4 py-1.5 text-xs font-bold rounded-bl-xl shadow-md">
-                  Cost Efficiency 75%↑
+                  class="bg-white rounded-2xl p-6 md:p-10 border border-slate-100 shadow-sm mb-6 relative overflow-hidden">
+                  <div
+                    class="absolute top-0 right-0 bg-red-500 text-white px-4 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider rounded-bl-xl shadow-sm">
+                    Cost Efficiency 75%↑
+                  </div>
+                  <h5 class="text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-2 pr-12 md:pr-0">
+                    "해결하기 어려운 <span class="text-red-500 text-nowrap">IT 인력난</span>과 <span
+                      class="text-red-500 text-nowrap">고비용</span>,<br class="hidden md:block"> 이제 Snowball로 대체하세요."
+                  </h5>
+                  <p class="text-slate-500 text-sm md:text-base font-light">
+                    내부통제팀의 가장 큰 고민인 전문 인력 확보와 유지 비용 문제를 한 번에 해결해 드립니다.
+                  </p>
                 </div>
 
-                <h5 class="text-xl font-bold text-slate-800 mb-5 text-center md:text-left leading-tight">
-                  "매년 1억 원 이상의 인건비와 채용 리스크,<br class="hidden md:block"> 이제 Snowball이 대신 해결해 드립니다."
-                </h5>
-
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                  <div class="space-y-4">
-                    <p class="font-bold text-red-600 flex items-center gap-2">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                      </svg>
-                      자체 채용의 한계
-                    </p>
-                    <ul class="space-y-3 text-slate-600">
-                      <li class="flex items-start"><span class="text-slate-400 mr-2">•</span> <strong>높은 연봉:</strong>
-                        ITGC 전담자 채용 시 연 0.8억~1.2억 원 소요</li>
-                      <li class="flex items-start"><span class="text-slate-400 mr-2">•</span> <strong>채용난:</strong> IT와
-                        회계 지식을 겸비한 희소 인력 확보 불투명</li>
-                      <li class="flex items-start"><span class="text-slate-400 mr-2">•</span> <strong>유지 리스크:</strong>
-                        잦은 이직으로 인한 업무 중단 및 보안 사고 위험</li>
+                <!-- Comparison Cards -->
+                <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                  <!-- Problem Card -->
+                  <div class="bg-slate-50 rounded-2xl p-5 md:p-8 border border-slate-200/50">
+                    <div class="flex items-center gap-2 mb-5">
+                      <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <span class="font-bold text-slate-800 text-lg">자체 채용의 한계</span>
+                    </div>
+                    <ul class="space-y-4">
+                      <li class="flex gap-3">
+                        <span
+                          class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">1</span>
+                        <div class="text-sm md:text-base text-slate-600">
+                          <strong class="text-slate-900 block mb-0.5">높은 고정비 지출</strong>
+                          전담 인력 채용 시 연 1억 원 내외의 높은 인건비 발생
+                        </div>
+                      </li>
+                      <li class="flex gap-3">
+                        <span
+                          class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">2</span>
+                        <div class="text-sm md:text-base text-slate-600">
+                          <strong class="text-slate-900 block mb-0.5">인력 확보의 어려움</strong>
+                          IT와 감사를 동시에 이해하는 희소 전문가 확보의 불확실성
+                        </div>
+                      </li>
+                      <li class="flex gap-3">
+                        <span
+                          class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">3</span>
+                        <div class="text-sm md:text-base text-slate-600">
+                          <strong class="text-slate-900 block mb-0.5">유지 및 이직 리스크</strong>
+                          잦은 이직으로 인한 업무 흐름 단절 및 노하우 유실
+                        </div>
+                      </li>
                     </ul>
                   </div>
-                  <div class="space-y-4">
-                    <p class="font-bold text-blue-600 flex items-center gap-2">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Snowball의 대안
-                    </p>
-                    <ul class="space-y-3 text-slate-600">
-                      <li class="flex items-start"><span class="text-slate-400 mr-2">•</span> <strong>비용 혁신:</strong> 자체
-                        채용 대비 최대 1/5 수준의 합리적 비용</li>
-                      <li class="flex items-start"><span class="text-slate-400 mr-2">•</span> <strong>전문성 상주:</strong>
-                        Big 4 출신의 검증된 인력이 전담 매니저로 배정</li>
-                      <li class="flex items-start"><span class="text-slate-400 mr-2">•</span> <strong>영속성 보장:</strong>
-                        인력 변동과 무관하게 안정적인 관리 체계 유지</li>
+
+                  <!-- Solution Card -->
+                  <div class="bg-blue-50/50 rounded-2xl p-5 md:p-8 border border-[#2c5265]/10">
+                    <div class="flex items-center gap-2 mb-5">
+                      <div
+                        class="w-8 h-8 rounded-full bg-[#2c5265] flex items-center justify-center text-white shadow-md">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span class="font-bold text-[#2c5265] text-lg">Snowball의 대안</span>
+                    </div>
+                    <ul class="space-y-4">
+                      <li class="flex gap-3">
+                        <span
+                          class="shrink-0 w-6 h-6 rounded-full bg-[#2c5265] flex items-center justify-center text-[10px] font-bold text-white shadow-sm">1</span>
+                        <div class="text-sm md:text-base text-slate-700">
+                          <strong class="text-[#2c5265] block mb-0.5">비용의 효율화</strong>
+                          월 구독형 서비스로 자체 채용 대비 약 25% 수준 비용
+                        </div>
+                      </li>
+                      <li class="flex gap-3">
+                        <span
+                          class="shrink-0 w-6 h-6 rounded-full bg-[#2c5265] flex items-center justify-center text-[10px] font-bold text-white shadow-sm">2</span>
+                        <div class="text-sm md:text-base text-slate-700">
+                          <strong class="text-[#2c5265] block mb-0.5">즉시 투입 가능한 전문가</strong>
+                          별도 교육 없이 바로 현장 대응 가능한 Big 4 출신 배정
+                        </div>
+                      </li>
+                      <li class="flex gap-3">
+                        <span
+                          class="shrink-0 w-6 h-6 rounded-full bg-[#2c5265] flex items-center justify-center text-[10px] font-bold text-white shadow-sm">3</span>
+                        <div class="text-sm md:text-base text-slate-700">
+                          <strong class="text-[#2c5265] block mb-0.5">운영의 영속성 보장</strong>
+                          개인 이직과 상관없이 법인 차원의 지속적인 관리 지원
+                        </div>
+                      </li>
                     </ul>
                   </div>
                 </div>
 
-                <div class="bg-white p-4 rounded-lg border border-slate-200 text-center">
-                  <p class="text-slate-800 font-medium">
-                    단순한 PA 대행을 넘어, <span
-                      class="text-[#2c5265] font-bold underline decoration-blue-500 underline-offset-4">귀사의 내부통제팀 IT 전담
-                      포지션</span>을 완벽히 대체합니다.
+                <!-- Final Callout -->
+                <div
+                  class="mt-6 bg-gradient-to-r from-[#2c5265] to-[#1a3c4d] rounded-2xl p-6 md:p-8 text-white text-center shadow-xl">
+                  <p class="text-sm md:text-lg font-medium leading-relaxed">
+                    단순 대행이 아닙니다. <br class="md:hidden"> <span
+                      class="text-blue-200 font-bold underline underline-offset-4 decoration-blue-400">"귀사 내부통제팀의 실질적인
+                      IT 담당자"</span>가 되어드립니다.
                   </p>
                 </div>
               </div>
