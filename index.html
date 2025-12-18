@@ -16,12 +16,12 @@
 </head>
 
 <body class="antialiased text-slate-800 bg-slate-50">
-  <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 transition-all duration-300">
+  <nav id="navbar" class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
+      <div class="flex justify-between items-center h-16 md:h-20 transition-all duration-300">
         <div class="flex-shrink-0">
-          <a href="#" class="flex items-center text-2xl font-bold text-[#2c5265] tracking-tight">
-            <img src="img/favicon.ico" alt="Snowball Logo" class="w-8 h-8 mr-3">
+          <a href="#" class="flex items-center text-xl md:text-2xl font-bold text-[#2c5265] tracking-tight">
+            <img src="img/favicon.ico" alt="Snowball Logo" class="w-7 h-7 md:w-8 md:h-8 mr-2 md:mr-3">
             Snowball
           </a>
         </div>
@@ -36,34 +36,42 @@
         </div>
 
         <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-slate-600 hover:text-[#2c5265] focus:outline-none p-2">
+          <button id="mobile-menu-button"
+            class="text-slate-600 hover:text-[#2c5265] focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
-      <div class="px-4 pt-2 pb-4 space-y-1">
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full transition-all duration-300 ease-in-out opacity-0 -translate-y-2">
+      <div class="px-4 pt-2 pb-6 space-y-1">
         <a href="#home"
-          class="block px-3 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-lg font-medium">Home</a>
+          class="block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-xl font-medium transition-colors">Home</a>
         <a href="#track-a"
-          class="block px-3 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-lg font-medium">Track A -
+          class="block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-xl font-medium transition-colors">Track
+          A -
           PA 서비스</a>
         <a href="#track-b"
-          class="block px-3 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-lg font-medium">Track B -
+          class="block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-xl font-medium transition-colors">Track
+          B -
           Snowball 시스템</a>
         <a href="#benefits"
-          class="block px-3 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-lg font-medium">Benefits</a>
-        <a href="#contact" class="block px-3 py-3 text-[#2c5265] font-bold hover:bg-slate-50 rounded-lg">Contact</a>
+          class="block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-xl font-medium transition-colors">Benefits</a>
+        <div class="pt-2">
+          <a href="#contact"
+            class="block px-4 py-3.5 bg-[#2c5265] text-white text-center font-bold rounded-xl shadow-md">상담 신청하기</a>
+        </div>
       </div>
     </div>
   </nav>
 
   <section id="home"
-    class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-[#2c5265] via-[#234557] to-[#152a38] text-white relative overflow-hidden">
+    class="pt-28 pb-16 md:pt-40 md:pb-32 bg-gradient-to-br from-[#2c5265] via-[#234557] to-[#152a38] text-white relative overflow-hidden">
     <!-- Decorative elements -->
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
       <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-white blur-3xl"></div>
@@ -72,32 +80,32 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <span
-        class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-6 backdrop-blur-sm">
+        class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-xs md:text-sm font-medium mb-6 backdrop-blur-sm">
         Internal Control Solution
       </span>
-      <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 md:mb-8 leading-tight tracking-tight">
-        복잡한 내부통제,<br />
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 md:mb-8 leading-[1.2] tracking-tight">
+        복잡한 내부통제,<br class="hidden sm:block" />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Snowball</span>과 함께 해결하세요
       </h1>
 
       <p
-        class="text-lg md:text-xl lg:text-2xl mb-10 md:mb-12 text-slate-200 max-w-3xl mx-auto font-light leading-relaxed">
-        IT 전문 인력 부재와 수동 관리의 비효율성.<br />
+        class="text-base md:text-xl lg:text-2xl mb-10 md:mb-12 text-slate-200 max-w-3xl mx-auto font-light leading-relaxed px-4 md:px-0">
+        IT 전문 인력 부재와 수동 관리의 비효율성.<br class="hidden md:block" />
         Snowball은 이 두 가지 난관을 동시에 해결하는 최적의 파트너입니다.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6 md:mt-8">
+      <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mt-6 md:mt-8 px-4 md:px-0">
         <a href="#track-a"
-          class="px-6 py-3.5 md:px-8 md:py-4 bg-white text-[#2c5265] font-bold rounded-xl shadow-xl hover:shadow-2xl hover:bg-blue-50 transition-all transform hover:-translate-y-1 text-center">
+          class="px-6 py-4 md:px-8 md:py-4 bg-white text-[#2c5265] font-bold rounded-xl shadow-xl hover:shadow-2xl hover:bg-blue-50 transition-all transform hover:-translate-y-1 text-center">
           Track A (Consulting) 보기
         </a>
         <a href="#track-b"
-          class="px-6 py-3.5 md:px-8 md:py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold rounded-xl hover:bg-white/20 transition-all transform hover:-translate-y-1 text-center">
+          class="px-6 py-4 md:px-8 md:py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold rounded-xl hover:bg-white/20 transition-all transform hover:-translate-y-1 text-center">
           Track B (System) 보기
         </a>
       </div>
 
-      <div class="mt-16 animate-bounce text-white/50">
+      <div class="mt-12 md:mt-20 animate-bounce text-white/30">
         <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
@@ -116,14 +124,14 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto">
         <div
           class="group bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
           <div
-            class="w-14 h-14 md:w-16 md:h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-5 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+            class="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-xl md:text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">
             👤</div>
-          <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-slate-900">IT 전문 인력 부재</h3>
-          <p class="text-slate-600 leading-relaxed text-base md:text-lg">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900">IT 전문 인력 부재</h3>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-lg">
             내부통제팀 내 IT 전담인원을 채용하고 유지하는 데 어려움이 있으며, 높은 인건비와 이직률로 인한 업무 공백이 발생합니다.
           </p>
         </div>
@@ -131,10 +139,10 @@
         <div
           class="group bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
           <div
-            class="w-14 h-14 md:w-16 md:h-16 bg-red-100 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-5 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+            class="w-12 h-12 md:w-16 md:h-16 bg-red-100 rounded-2xl flex items-center justify-center text-xl md:text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">
             ⏰</div>
-          <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-slate-900">비효율적 수동 관리</h3>
-          <p class="text-slate-600 leading-relaxed text-base md:text-lg">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900">비효율적 수동 관리</h3>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-lg">
             엑셀 기반의 수동 관리와 문서 취합 과정에서 버전 관리 오류가 빈발하며, 단순 반복 업무로 인해 핵심 리스크 관리에 집중하기 어렵습니다.
           </p>
         </div>
@@ -157,9 +165,8 @@
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
           왜 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Snowball</span>이어야 할까요?
         </h2>
-        <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light">
-          PA 서비스만 제공하거나 시스템만 구축하는 회사는 많습니다.<br />
-          하지만 Snowball은 다릅니다.
+        <p class="text-base md:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+          PA 서비스만 제공하거나 시스템만 구축하는 회사는 많습니다. Snowball은 컨설팅과 시스템을 결합하여 기업의 페인 포인트를 실질적으로 해결하는 전문 파트너입니다.
         </p>
       </div>
 
@@ -173,11 +180,10 @@
               💎
             </div>
             <div>
-              <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-white">유일무이한 하이브리드 솔루션</h3>
-              <p class="text-slate-300 leading-relaxed mb-3 md:mb-4 text-sm md:text-base">
-                "시스템 따로, 인력 따로?"<br />
-                Snowball은 <span class="text-white font-bold">컨설팅</span>과 <span class="text-white font-bold">시스템</span>을
-                완벽하게 결합하여 제공하는 유일한 파트너입니다.
+              <h3 class="text-xl md:text-2xl font-bold mb-2 text-white">유일무이한 하이브리드 솔루션</h3>
+              <p class="text-slate-300 leading-relaxed mb-4 text-sm md:text-base">
+                시스템 따로, 인력 따로? Snowball은 <span class="text-white font-bold">컨설팅</span>과 <span
+                  class="text-white font-bold">시스템</span>을 완벽하게 결합하여 제공하는 유일한 파트너입니다.
               </p>
               <ul class="space-y-1.5 md:space-y-2 text-xs md:text-sm text-slate-400">
                 <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span>시스템 구축과 운영 인력 동시 해결</li>
@@ -196,10 +202,9 @@
               🎓
             </div>
             <div>
-              <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-white">검증된 전문가 그룹</h3>
-              <p class="text-slate-300 leading-relaxed mb-3 md:mb-4 text-sm md:text-base">
-                이론과 현장을 모두 경험한 전문가가 만났습니다.<br />
-                <span class="text-white font-bold">대기업 IT 현장과 Big 4 회계법인을 모두 경험한 전문가</span>가 직접 설계하고 서비스합니다.
+              <h3 class="text-xl md:text-2xl font-bold mb-2 text-white">검증된 전문가 그룹</h3>
+              <p class="text-slate-300 leading-relaxed mb-4 text-sm md:text-base">
+                이론과 현장을 모두 경험한 전문가가 만났습니다. 대기업 IT 현장과 Big 4 회계법인을 거친 전문가가 직접 설계하고 서비스를 제공합니다.
               </p>
               <ul class="space-y-1.5 md:space-y-2 text-xs md:text-sm text-slate-400">
                 <li class="flex items-center"><span class="text-emerald-400 mr-2">✓</span>IT 실무와 회계 감사의 완벽한 이해</li>
@@ -291,7 +296,7 @@
                           class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">2</span>
                         <div class="text-sm md:text-base text-slate-600">
                           <strong class="text-slate-900 block mb-0.5">인력 확보의 어려움</strong>
-                          IT와 감사를 동시에 이해하는 희소 전문가 확보의 불확실성
+                          IT와 감사를 동시에 이해하는 전문가 확보의 불확실성
                         </div>
                       </li>
                       <li class="flex gap-3">
@@ -359,25 +364,40 @@
 
             <!-- Service Scope -->
             <div class="mb-12">
-              <h4 class="text-xl font-bold text-slate-900 mb-4">서비스 범위</h4>
-              <div class="grid md:grid-cols-2 gap-4">
-                <div class="flex items-center p-3 bg-white border border-slate-200 rounded-lg shadow-sm">
-                  <span class="text-blue-500 mr-3">✓</span> 연간 감사 계획 수립 및 리스크 평가
+              <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <span class="w-1 h-6 bg-[#2c5265] rounded-full"></span>
+                서비스 범위
+              </h4>
+              <div class="grid sm:grid-cols-2 gap-3 md:gap-4">
+                <div
+                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                  <span class="text-sm md:text-base text-slate-700">연간 감사 계획 수립 및 리스크 평가</span>
                 </div>
-                <div class="flex items-center p-3 bg-white border border-slate-200 rounded-lg shadow-sm">
-                  <span class="text-blue-500 mr-3">✓</span> IT일반통제(ITGC) 설계 및 운영 평가
+                <div
+                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                  <span class="text-sm md:text-base text-slate-700">IT일반통제(ITGC) 설계 및 운영 평가</span>
                 </div>
-                <div class="flex items-center p-3 bg-white border border-slate-200 rounded-lg shadow-sm">
-                  <span class="text-blue-500 mr-3">✓</span> 통제 모니터링 및 이슈 대응
+                <div
+                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                  <span class="text-sm md:text-base text-slate-700">통제 모니터링 및 이슈 대응</span>
                 </div>
-                <div class="flex items-center p-3 bg-white border border-slate-200 rounded-lg shadow-sm">
-                  <span class="text-blue-500 mr-3">✓</span> 외부감사 대응 지원
+                <div
+                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                  <span class="text-sm md:text-base text-slate-700">외부감사 대응 지원</span>
                 </div>
-                <div class="flex items-center p-3 bg-white border border-slate-200 rounded-lg shadow-sm">
-                  <span class="text-blue-500 mr-3">✓</span> 미비점 관리 및 개선과제 추진
+                <div
+                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                  <span class="text-sm md:text-base text-slate-700">미비점 관리 및 개선과제 추진</span>
                 </div>
-                <div class="flex items-center p-3 bg-white border border-slate-200 rounded-lg shadow-sm">
-                  <span class="text-blue-500 mr-3">✓</span> 내부통제 체계 고도화 자문
+                <div
+                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                  <span class="text-sm md:text-base text-slate-700">내부통제 체계 고도화 자문</span>
                 </div>
               </div>
             </div>
@@ -597,8 +617,8 @@
             </div>
 
             <div class="border-t border-slate-100 pt-10">
-              <h4 class="font-bold mb-8 text-slate-900 text-2xl text-center">시스템 주요 기능</h4>
-              <div class="grid md:grid-cols-2 gap-10">
+              <h4 class="font-bold mb-8 text-slate-900 text-xl md:text-2xl text-center">시스템 주요 기능</h4>
+              <div class="grid md:grid-cols-2 gap-6 md:gap-10">
                 <div class="group">
                   <div
                     class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
@@ -640,13 +660,13 @@
 
                 <div class="group">
                   <div
-                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
+                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-4 bg-slate-100 aspect-video relative">
                     <img src="img/operation_test.png" alt="운영 평가" loading="lazy"
                       class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
                   </div>
-                  <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2">4. 운영 평가</h5>
-                  <p class="text-slate-600 text-base md:text-sm leading-relaxed">
+                  <h5 class="font-bold text-lg text-slate-800 mb-2">4. 운영 평가</h5>
+                  <p class="text-slate-600 text-sm leading-relaxed">
                     테스트 절차 자동 생성, 표본 크기 자동 계산, 표본별 증빙 및 결과 입력 후 전체 결론을 자동 산출합니다.
                   </p>
                 </div>
@@ -670,38 +690,46 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         <div
-          class="bg-slate-50 rounded-2xl p-5 md:p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100">
-          <div class="text-3xl md:text-4xl mb-4 md:mb-6">🛡️</div>
-          <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3 text-slate-900">감사 대응력 강화</h3>
+          class="bg-slate-50 rounded-2xl p-6 md:p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group">
+          <div
+            class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+            🛡️</div>
+          <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">감사 대응력 강화</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             전문가의 감사 이슈 대응 및 지원으로 외부 감사 시 발생하는 질의와 이슈를 신속하게 해결합니다.
           </p>
         </div>
 
         <div
-          class="bg-slate-50 rounded-2xl p-5 md:p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100">
-          <div class="text-3xl md:text-4xl mb-4 md:mb-6">🚀</div>
-          <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3 text-slate-900">업무 효율화</h3>
+          class="bg-slate-50 rounded-2xl p-6 md:p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group">
+          <div
+            class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+            🚀</div>
+          <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">업무 효율화</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             반복적 수동 업무를 제거하고 자동화하여, 빠르고 정확한 평가 결과를 도출합니다.
           </p>
         </div>
 
         <div
-          class="bg-slate-50 rounded-2xl p-5 md:p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100">
-          <div class="text-3xl md:text-4xl mb-4 md:mb-6">📊</div>
-          <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3 text-slate-900">운영 가시성 확보</h3>
+          class="bg-slate-50 rounded-2xl p-6 md:p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group">
+          <div
+            class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+            📊</div>
+          <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">운영 가시성 확보</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             실시간 대시보드를 제공하여 ICFR 전 영역의 통제 수행 현황 및 결함 현황을 즉시 파악할 수 있습니다.
           </p>
         </div>
 
         <div
-          class="bg-slate-50 rounded-2xl p-5 md:p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100">
-          <div class="text-3xl md:text-4xl mb-4 md:mb-6">🎯</div>
-          <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3 text-slate-900">리스크 관리 강화</h3>
+          class="bg-slate-50 rounded-2xl p-6 md:p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group">
+          <div
+            class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+            🎯</div>
+          <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">리스크 관리 강화</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             체계적인 결함 추적과 시정 조치 관리를 통해 내부통제 역량을 극대화하고 리스크를 최소화합니다.
           </p>
@@ -749,24 +777,24 @@
           <div class="space-y-4">
             <a href="mailto:snowball1566@gmail.com" class="flex items-center hover:text-white transition-colors group">
               <div
-                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 group-hover:bg-slate-700 transition-colors">
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 shrink-0 group-hover:bg-slate-700 transition-colors">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              snowball1566@gmail.com
+              <span class="text-sm md:text-base break-all">snowball1566@gmail.com</span>
             </a>
             <a href="http://www.snowball1566.com" target="_blank" rel="noopener noreferrer"
               class="flex items-center hover:text-white transition-colors group">
               <div
-                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 group-hover:bg-slate-700 transition-colors">
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 shrink-0 group-hover:bg-slate-700 transition-colors">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 019-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
               </div>
-              www.snowball1566.com
+              <span class="text-sm md:text-base break-all">www.snowball1566.com</span>
             </a>
           </div>
         </div>
@@ -782,9 +810,28 @@
     // Mobile menu toggle
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
 
     menuButton?.addEventListener('click', () => {
-      mobileMenu?.classList.toggle('hidden');
+      const isHidden = mobileMenu.classList.contains('hidden');
+
+      if (isHidden) {
+        // Open
+        mobileMenu.classList.remove('hidden');
+        // Trigger reflow
+        void mobileMenu.offsetWidth;
+        mobileMenu.classList.remove('opacity-0', '-translate-y-2');
+        mobileMenu.classList.add('opacity-100', 'translate-y-0');
+        menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Change to X icon
+      } else {
+        // Close
+        mobileMenu.classList.add('opacity-0', '-translate-y-2');
+        mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+        menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Change back to Hamburger
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+        }, 300);
+      }
     });
 
     // Smooth scroll
@@ -794,8 +841,16 @@
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Close mobile menu after click
-          mobileMenu?.classList.add('hidden');
+
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('opacity-0', '-translate-y-2');
+            mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+            menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+          }
         }
       });
     });
