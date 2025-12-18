@@ -226,471 +226,495 @@
         </h2>
       </div>
 
-      <div id="track-a" class="scroll-mt-24 mb-20">
-        <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
-          <div
-            class="bg-[#2c5265] p-6 md:p-10 text-white flex flex-col md:flex-row items-start md:items-center justify-between">
-            <div>
-              <div class="flex items-center gap-4 mb-2">
-                <span class="bg-white/20 backdrop-blur px-4 py-1.5 rounded-lg font-bold text-sm">Track A</span>
-                <h3 class="text-2xl md:text-3xl font-bold">Snowball 컨설팅 서비스</h3>
+      <!-- 모바일 탭 버튼 (md 이상에서 숨김) -->
+      <div class="md:hidden flex mb-8 bg-white rounded-xl p-1 border border-slate-200 shadow-sm relative z-20">
+        <button id="tab-btn-a"
+          class="track-tab flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all bg-[#2c5265] text-white"
+          onclick="switchTrack('a')">
+          Track A · Consulting
+        </button>
+        <button id="tab-btn-b"
+          class="track-tab flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all text-slate-500"
+          onclick="switchTrack('b')">
+          Track B · System
+        </button>
+      </div>
+
+      <!-- Track A 컨텐츠 -->
+      <div id="track-a-content" class="track-content mb-20 md:mb-20">
+
+        <div id="track-a" class="scroll-mt-24 mb-20">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
+            <div
+              class="bg-[#2c5265] p-6 md:p-10 text-white flex flex-col md:flex-row items-start md:items-center justify-between">
+              <div>
+                <div class="flex items-center gap-4 mb-2">
+                  <span class="bg-white/20 backdrop-blur px-4 py-1.5 rounded-lg font-bold text-sm">Track A</span>
+                  <h3 class="text-2xl md:text-3xl font-bold">Snowball 컨설팅 서비스</h3>
+                </div>
+                <p class="text-blue-100 text-lg max-w-2xl mt-4">
+                  "내부통제팀의 IT담당자가 되어드립니다."
+                </p>
               </div>
-              <p class="text-blue-100 text-lg max-w-2xl mt-4">
-                "내부통제팀의 IT담당자가 되어드립니다."
-              </p>
+              <div class="mt-6 md:mt-0">
+                <span class="text-5xl opacity-20">🤝</span>
+              </div>
             </div>
-            <div class="mt-6 md:mt-0">
-              <span class="text-5xl opacity-20">🤝</span>
-            </div>
-          </div>
 
-          <div class="p-6 md:p-12">
-            <!-- Service Overview -->
-            <div class="mb-12">
-              <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <span class="w-1 h-6 bg-[#2c5265] rounded-full"></span>
-                서비스 개요
-              </h4>
+            <div class="p-6 md:p-12">
+              <!-- Service Overview -->
+              <div class="mb-12">
+                <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                  <span class="w-1 h-6 bg-[#2c5265] rounded-full"></span>
+                  서비스 개요
+                </h4>
 
-              <div class="relative">
-                <!-- Main Message -->
-                <div
-                  class="bg-white rounded-2xl p-6 md:p-10 border border-slate-100 shadow-sm mb-6 relative overflow-hidden">
+                <div class="relative">
+                  <!-- Main Message -->
                   <div
-                    class="absolute top-0 right-0 bg-red-500 text-white px-4 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider rounded-bl-xl shadow-sm">
-                    Cost Efficiency 75%↑
+                    class="bg-white rounded-2xl p-6 md:p-10 border border-slate-100 shadow-sm mb-6 relative overflow-hidden">
+                    <div
+                      class="absolute top-0 right-0 bg-red-500 text-white px-4 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider rounded-bl-xl shadow-sm">
+                      Cost Efficiency 75%↑
+                    </div>
+                    <h5 class="text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-2 pr-12 md:pr-0">
+                      "해결하기 어려운 <span class="text-red-500 text-nowrap">IT 인력난</span>과 <span
+                        class="text-red-500 text-nowrap">고비용</span>,<br class="hidden md:block"> 이제 Snowball로 대체하세요."
+                    </h5>
+                    <p class="text-slate-500 text-sm md:text-base font-light">
+                      내부통제팀의 가장 큰 고민인 전문 인력 확보와 유지 비용 문제를 한 번에 해결해 드립니다.
+                    </p>
                   </div>
-                  <h5 class="text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-2 pr-12 md:pr-0">
-                    "해결하기 어려운 <span class="text-red-500 text-nowrap">IT 인력난</span>과 <span
-                      class="text-red-500 text-nowrap">고비용</span>,<br class="hidden md:block"> 이제 Snowball로 대체하세요."
-                  </h5>
-                  <p class="text-slate-500 text-sm md:text-base font-light">
-                    내부통제팀의 가장 큰 고민인 전문 인력 확보와 유지 비용 문제를 한 번에 해결해 드립니다.
-                  </p>
-                </div>
 
-                <!-- Comparison Cards -->
-                <div class="grid md:grid-cols-2 gap-4 md:gap-6">
-                  <!-- Problem Card -->
-                  <div class="bg-slate-50 rounded-2xl p-5 md:p-8 border border-slate-200/50">
-                    <div class="flex items-center gap-2 mb-5">
-                      <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                  <!-- Comparison Cards -->
+                  <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                    <!-- Problem Card -->
+                    <div class="bg-slate-50 rounded-2xl p-5 md:p-8 border border-slate-200/50">
+                      <div class="flex items-center gap-2 mb-5">
+                        <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </div>
+                        <span class="font-bold text-slate-800 text-lg">자체 채용의 한계</span>
                       </div>
-                      <span class="font-bold text-slate-800 text-lg">자체 채용의 한계</span>
+                      <ul class="space-y-4">
+                        <li class="flex gap-3">
+                          <span
+                            class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">1</span>
+                          <div class="text-sm md:text-base text-slate-600">
+                            <strong class="text-slate-900 block mb-0.5">높은 고정비 지출</strong>
+                            전담 인력 채용 시 연 1억 원 내외의 높은 인건비 발생
+                          </div>
+                        </li>
+                        <li class="flex gap-3">
+                          <span
+                            class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">2</span>
+                          <div class="text-sm md:text-base text-slate-600">
+                            <strong class="text-slate-900 block mb-0.5">인력 확보의 어려움</strong>
+                            IT와 감사를 동시에 이해하는 전문가 확보의 불확실성
+                          </div>
+                        </li>
+                        <li class="flex gap-3">
+                          <span
+                            class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">3</span>
+                          <div class="text-sm md:text-base text-slate-600">
+                            <strong class="text-slate-900 block mb-0.5">유지 및 이직 리스크</strong>
+                            잦은 이직으로 인한 업무 흐름 단절 및 노하우 유실
+                          </div>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="space-y-4">
-                      <li class="flex gap-3">
-                        <span
-                          class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">1</span>
-                        <div class="text-sm md:text-base text-slate-600">
-                          <strong class="text-slate-900 block mb-0.5">높은 고정비 지출</strong>
-                          전담 인력 채용 시 연 1억 원 내외의 높은 인건비 발생
-                        </div>
-                      </li>
-                      <li class="flex gap-3">
-                        <span
-                          class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">2</span>
-                        <div class="text-sm md:text-base text-slate-600">
-                          <strong class="text-slate-900 block mb-0.5">인력 확보의 어려움</strong>
-                          IT와 감사를 동시에 이해하는 전문가 확보의 불확실성
-                        </div>
-                      </li>
-                      <li class="flex gap-3">
-                        <span
-                          class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">3</span>
-                        <div class="text-sm md:text-base text-slate-600">
-                          <strong class="text-slate-900 block mb-0.5">유지 및 이직 리스크</strong>
-                          잦은 이직으로 인한 업무 흐름 단절 및 노하우 유실
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
 
-                  <!-- Solution Card -->
-                  <div class="bg-blue-50/50 rounded-2xl p-5 md:p-8 border border-[#2c5265]/10">
-                    <div class="flex items-center gap-2 mb-5">
-                      <div
-                        class="w-8 h-8 rounded-full bg-[#2c5265] flex items-center justify-center text-white shadow-md">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
+                    <!-- Solution Card -->
+                    <div class="bg-blue-50/50 rounded-2xl p-5 md:p-8 border border-[#2c5265]/10">
+                      <div class="flex items-center gap-2 mb-5">
+                        <div
+                          class="w-8 h-8 rounded-full bg-[#2c5265] flex items-center justify-center text-white shadow-md">
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <span class="font-bold text-[#2c5265] text-lg">Snowball의 대안</span>
                       </div>
-                      <span class="font-bold text-[#2c5265] text-lg">Snowball의 대안</span>
-                    </div>
-                    <ul class="space-y-4">
-                      <li class="flex gap-3">
-                        <span
-                          class="shrink-0 w-6 h-6 rounded-full bg-[#2c5265] flex items-center justify-center text-[10px] font-bold text-white shadow-sm">1</span>
-                        <div class="text-sm md:text-base text-slate-700">
-                          <strong class="text-[#2c5265] block mb-0.5">비용의 효율화</strong>
-                          월 구독형 서비스로 자체 채용 대비 약 25% 수준 비용
-                        </div>
-                      </li>
-                      <li class="flex gap-3">
-                        <span
-                          class="shrink-0 w-6 h-6 rounded-full bg-[#2c5265] flex items-center justify-center text-[10px] font-bold text-white shadow-sm">2</span>
-                        <div class="text-sm md:text-base text-slate-700">
-                          <strong class="text-[#2c5265] block mb-0.5">즉시 투입 가능한 전문가</strong>
-                          별도 교육 없이 바로 현장 대응 가능한 Big 4 출신 배정
-                        </div>
-                      </li>
-                      <li class="flex gap-3">
-                        <span
-                          class="shrink-0 w-6 h-6 rounded-full bg-[#2c5265] flex items-center justify-center text-[10px] font-bold text-white shadow-sm">3</span>
-                        <div class="text-sm md:text-base text-slate-700">
-                          <strong class="text-[#2c5265] block mb-0.5">운영의 영속성 보장</strong>
-                          개인 이직과 상관없이 법인 차원의 지속적인 관리 지원
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- Final Callout -->
-                <div
-                  class="mt-6 bg-gradient-to-r from-[#2c5265] to-[#1a3c4d] rounded-2xl p-6 md:p-8 text-white text-center shadow-xl">
-                  <p class="text-sm md:text-lg font-medium leading-relaxed">
-                    단순 대행이 아닙니다. <br class="md:hidden"> <span
-                      class="text-blue-200 font-bold underline underline-offset-4 decoration-blue-400">"귀사 내부통제팀의 실질적인
-                      IT 담당자"</span>가 되어드립니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- PA vs Snowball 비교 -->
-            <div class="mb-12">
-              <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <span class="w-1 h-6 bg-[#2c5265] rounded-full"></span>
-                기존 PA 서비스와 무엇이 다른가요?
-              </h4>
-
-              <!-- 데스크톱 테이블 -->
-              <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm hidden md:block">
-                <table class="w-full text-left border-collapse">
-                  <thead>
-                    <tr class="bg-slate-50 text-slate-700 text-sm uppercase tracking-wider">
-                      <th class="p-4 border-b border-slate-200">구분</th>
-                      <th class="p-4 border-b border-slate-200">기존 PA 서비스</th>
-                      <th class="p-4 border-b border-slate-200 bg-[#2c5265]/10">Snowball 컨설팅</th>
-                    </tr>
-                  </thead>
-                  <tbody class="text-slate-600 text-sm md:text-base">
-                    <tr class="border-b border-slate-100 hover:bg-slate-50">
-                      <td class="p-4 font-medium text-slate-800">투입 시점</td>
-                      <td class="p-4">내부평가 시즌만</td>
-                      <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">연중 상시</td>
-                    </tr>
-                    <tr class="border-b border-slate-100 hover:bg-slate-50">
-                      <td class="p-4 font-medium text-slate-800">서비스 범위</td>
-                      <td class="p-4">테스트 수행/결과 정리</td>
-                      <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">감사 계획 ~ 종료까지 전 과정</td>
-                    </tr>
-                    <tr class="border-b border-slate-100 hover:bg-slate-50">
-                      <td class="p-4 font-medium text-slate-800">역할</td>
-                      <td class="p-4">내부 평가자</td>
-                      <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">내부통제팀 IT담당자</td>
-                    </tr>
-                    <tr class="border-b border-slate-100 hover:bg-slate-50">
-                      <td class="p-4 font-medium text-slate-800">외부감사 대응</td>
-                      <td class="p-4">별도</td>
-                      <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">포함</td>
-                    </tr>
-                    <tr class="border-b border-slate-100 hover:bg-slate-50">
-                      <td class="p-4 font-medium text-slate-800">이슈 발생 시</td>
-                      <td class="p-4">추가 계약 필요</td>
-                      <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">즉시 대응</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                      <td class="p-4 font-medium text-slate-800">비용 구조</td>
-                      <td class="p-4">프로젝트 단위</td>
-                      <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">월 정액 (예측 가능)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <!-- 모바일 카드형 -->
-              <div class="md:hidden space-y-4">
-                <!-- 각 항목을 카드로 표현 -->
-                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                  <div class="text-sm font-bold text-slate-800 mb-3">투입 시점</div>
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-slate-50 rounded-lg p-3">
-                      <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                      <div class="text-sm text-slate-700">내부평가 시즌만</div>
-                    </div>
-                    <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                      <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                      <div class="text-sm font-medium text-[#2c5265]">연중 상시</div>
+                      <ul class="space-y-4">
+                        <li class="flex gap-3">
+                          <span
+                            class="shrink-0 w-6 h-6 rounded-full bg-[#2c5265] flex items-center justify-center text-[10px] font-bold text-white shadow-sm">1</span>
+                          <div class="text-sm md:text-base text-slate-700">
+                            <strong class="text-[#2c5265] block mb-0.5">비용의 효율화</strong>
+                            월 구독형 서비스로 자체 채용 대비 약 25% 수준 비용
+                          </div>
+                        </li>
+                        <li class="flex gap-3">
+                          <span
+                            class="shrink-0 w-6 h-6 rounded-full bg-[#2c5265] flex items-center justify-center text-[10px] font-bold text-white shadow-sm">2</span>
+                          <div class="text-sm md:text-base text-slate-700">
+                            <strong class="text-[#2c5265] block mb-0.5">즉시 투입 가능한 전문가</strong>
+                            별도 교육 없이 바로 현장 대응 가능한 Big 4 출신 배정
+                          </div>
+                        </li>
+                        <li class="flex gap-3">
+                          <span
+                            class="shrink-0 w-6 h-6 rounded-full bg-[#2c5265] flex items-center justify-center text-[10px] font-bold text-white shadow-sm">3</span>
+                          <div class="text-sm md:text-base text-slate-700">
+                            <strong class="text-[#2c5265] block mb-0.5">운영의 영속성 보장</strong>
+                            개인 이직과 상관없이 법인 차원의 지속적인 관리 지원
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                  <div class="text-sm font-bold text-slate-800 mb-3">서비스 범위</div>
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-slate-50 rounded-lg p-3">
-                      <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                      <div class="text-sm text-slate-700">테스트 수행/결과 정리</div>
-                    </div>
-                    <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                      <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                      <div class="text-sm font-medium text-[#2c5265]">감사 계획 ~ 종료까지</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                  <div class="text-sm font-bold text-slate-800 mb-3">역할</div>
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-slate-50 rounded-lg p-3">
-                      <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                      <div class="text-sm text-slate-700">내부 평가자</div>
-                    </div>
-                    <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                      <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                      <div class="text-sm font-medium text-[#2c5265]">내부통제팀 IT담당자</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                  <div class="text-sm font-bold text-slate-800 mb-3">외부감사 대응</div>
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-slate-50 rounded-lg p-3">
-                      <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                      <div class="text-sm text-slate-700">별도</div>
-                    </div>
-                    <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                      <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                      <div class="text-sm font-medium text-[#2c5265]">포함</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                  <div class="text-sm font-bold text-slate-800 mb-3">이슈 발생 시</div>
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-slate-50 rounded-lg p-3">
-                      <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                      <div class="text-sm text-slate-700">추가 계약 필요</div>
-                    </div>
-                    <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                      <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                      <div class="text-sm font-medium text-[#2c5265]">즉시 대응</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                  <div class="text-sm font-bold text-slate-800 mb-3">비용 구조</div>
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-slate-50 rounded-lg p-3">
-                      <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                      <div class="text-sm text-slate-700">프로젝트 단위</div>
-                    </div>
-                    <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                      <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                      <div class="text-sm font-medium text-[#2c5265]">월 정액 (예측 가능)</div>
-                    </div>
+                  <!-- Final Callout -->
+                  <div
+                    class="mt-6 bg-gradient-to-r from-[#2c5265] to-[#1a3c4d] rounded-2xl p-6 md:p-8 text-white text-center shadow-xl">
+                    <p class="text-sm md:text-lg font-medium leading-relaxed">
+                      단순 대행이 아닙니다. <br class="md:hidden"> <span
+                        class="text-blue-200 font-bold underline underline-offset-4 decoration-blue-400">"귀사 내부통제팀의 실질적인
+                        IT 담당자"</span>가 되어드립니다.
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Service Scope -->
-            <div class="mb-12">
-              <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <span class="w-1 h-6 bg-[#2c5265] rounded-full"></span>
-                서비스 범위
-              </h4>
-              <div class="grid sm:grid-cols-2 gap-3 md:gap-4">
-                <div
-                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
-                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
-                  <span class="text-sm md:text-base text-slate-700">연간 감사 계획 수립 및 리스크 평가</span>
-                </div>
-                <div
-                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
-                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
-                  <span class="text-sm md:text-base text-slate-700">IT일반통제(ITGC) 설계 및 운영 평가</span>
-                </div>
-                <div
-                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
-                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
-                  <span class="text-sm md:text-base text-slate-700">통제 모니터링 및 이슈 대응</span>
-                </div>
-                <div
-                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
-                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
-                  <span class="text-sm md:text-base text-slate-700">외부감사 대응 지원</span>
-                </div>
-                <div
-                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
-                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
-                  <span class="text-sm md:text-base text-slate-700">미비점 관리 및 개선과제 추진</span>
-                </div>
-                <div
-                  class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
-                  <span class="text-blue-500 mr-3 shrink-0">✓</span>
-                  <span class="text-sm md:text-base text-slate-700">내부통제 체계 고도화 자문</span>
-                </div>
-              </div>
-            </div>
+              <!-- PA vs Snowball 비교 -->
+              <div class="mb-12">
+                <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                  <span class="w-1 h-6 bg-[#2c5265] rounded-full"></span>
+                  기존 PA 서비스와 무엇이 다른가요?
+                </h4>
 
-            <!-- Pricing Structure -->
-            <div class="mb-12">
-              <h4 class="text-xl font-bold text-slate-900 mb-4">요금 체계</h4>
-              <p class="text-slate-600 mb-4 text-sm">요금은 <strong class="text-slate-900">계약 시점의 In-Scope 시스템 수</strong>를
-                기준으로 산정됩니다.
+                <!-- 데스크톱 테이블 -->
+                <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm hidden md:block">
+                  <table class="w-full text-left border-collapse">
+                    <thead>
+                      <tr class="bg-slate-50 text-slate-700 text-sm uppercase tracking-wider">
+                        <th class="p-4 border-b border-slate-200">구분</th>
+                        <th class="p-4 border-b border-slate-200">기존 PA 서비스</th>
+                        <th class="p-4 border-b border-slate-200 bg-[#2c5265]/10">Snowball 컨설팅</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-slate-600 text-sm md:text-base">
+                      <tr class="border-b border-slate-100 hover:bg-slate-50">
+                        <td class="p-4 font-medium text-slate-800">투입 시점</td>
+                        <td class="p-4">내부평가 시즌만</td>
+                        <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">연중 상시</td>
+                      </tr>
+                      <tr class="border-b border-slate-100 hover:bg-slate-50">
+                        <td class="p-4 font-medium text-slate-800">서비스 범위</td>
+                        <td class="p-4">테스트 수행/결과 정리</td>
+                        <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">감사 계획 ~ 종료까지 전 과정</td>
+                      </tr>
+                      <tr class="border-b border-slate-100 hover:bg-slate-50">
+                        <td class="p-4 font-medium text-slate-800">역할</td>
+                        <td class="p-4">내부 평가자</td>
+                        <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">내부통제팀 IT담당자</td>
+                      </tr>
+                      <tr class="border-b border-slate-100 hover:bg-slate-50">
+                        <td class="p-4 font-medium text-slate-800">외부감사 대응</td>
+                        <td class="p-4">별도</td>
+                        <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">포함</td>
+                      </tr>
+                      <tr class="border-b border-slate-100 hover:bg-slate-50">
+                        <td class="p-4 font-medium text-slate-800">이슈 발생 시</td>
+                        <td class="p-4">추가 계약 필요</td>
+                        <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">즉시 대응</td>
+                      </tr>
+                      <tr class="hover:bg-slate-50">
+                        <td class="p-4 font-medium text-slate-800">비용 구조</td>
+                        <td class="p-4">프로젝트 단위</td>
+                        <td class="p-4 bg-[#2c5265]/5 font-medium text-[#2c5265]">월 정액 (예측 가능)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
-              <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm hidden md:block">
-                <table class="w-full text-left border-collapse">
-                  <thead>
-                    <tr class="bg-slate-50 text-slate-700 text-sm uppercase tracking-wider">
-                      <th class="p-4 border-b border-slate-200">티어</th>
-                      <th class="p-4 border-b border-slate-200">In-Scope 시스템</th>
-                      <th class="p-4 border-b border-slate-200">월 비용</th>
-                      <th class="p-4 border-b border-slate-200">연 비용</th>
-                    </tr>
-                  </thead>
-                  <tbody class="text-slate-600 text-sm md:text-base">
-                    <tr class="border-b border-slate-100 hover:bg-slate-50">
-                      <td class="p-4 font-bold text-[#2c5265]">Basic</td>
-                      <td class="p-4">1개</td>
-                      <td class="p-4">200만 원</td>
-                      <td class="p-4">2,400만 원</td>
-                    </tr>
-                    <tr class="border-b border-slate-100 hover:bg-slate-50">
-                      <td class="p-4 font-bold text-[#2c5265]">Standard</td>
-                      <td class="p-4">2~3개</td>
-                      <td class="p-4"><span class="secret-price" data-tier="standard" data-type="monthly">별도 문의</span>
-                      </td>
-                      <td class="p-4"><span class="secret-price" data-tier="standard" data-type="yearly">별도 문의</span>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-slate-100 hover:bg-slate-50">
-                      <td class="p-4 font-bold text-[#2c5265]">Premium</td>
-                      <td class="p-4">4~6개</td>
-                      <td class="p-4"><span class="secret-price" data-tier="premium" data-type="monthly">별도 문의</span>
-                      </td>
-                      <td class="p-4"><span class="secret-price" data-tier="premium" data-type="yearly">별도 문의</span>
-                      </td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                      <td class="p-4 font-bold text-[#2c5265]">Enterprise</td>
-                      <td class="p-4">7개 이상</td>
-                      <td class="p-4"><span class="secret-price" data-tier="enterprise" data-type="monthly">별도 문의</span>
-                      </td>
-                      <td class="p-4"><span class="secret-price" data-tier="enterprise" data-type="yearly">별도 문의</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                <!-- 모바일 카드형 -->
+                <div class="md:hidden space-y-4">
+                  <!-- 각 항목을 카드로 표현 -->
+                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                    <div class="text-sm font-bold text-slate-800 mb-3">투입 시점</div>
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="bg-slate-50 rounded-lg p-3">
+                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
+                        <div class="text-sm text-slate-700">내부평가 시즌만</div>
+                      </div>
+                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
+                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
+                        <div class="text-sm font-medium text-[#2c5265]">연중 상시</div>
+                      </div>
+                    </div>
+                  </div>
 
-              <!-- Mobile Card Layout -->
-              <div class="grid grid-cols-1 gap-4 md:hidden">
-                <!-- Basic -->
-                <div class="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
-                  <div class="flex justify-between items-center mb-2">
-                    <h5 class="font-bold text-lg text-[#2c5265]">Basic</h5>
-                    <span class="text-sm text-slate-500">1개 시스템</span>
-                  </div>
-                  <div class="border-t border-slate-100 pt-2">
-                    <div class="flex justify-between text-sm">
-                      <span class="text-slate-600">월 비용:</span>
-                      <span class="font-semibold text-slate-800">200만 원</span>
-                    </div>
-                    <div class="flex justify-between text-sm mt-1">
-                      <span class="text-slate-600">연 비용:</span>
-                      <span class="font-semibold text-slate-800">2,400만 원</span>
+                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                    <div class="text-sm font-bold text-slate-800 mb-3">서비스 범위</div>
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="bg-slate-50 rounded-lg p-3">
+                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
+                        <div class="text-sm text-slate-700">테스트 수행/결과 정리</div>
+                      </div>
+                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
+                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
+                        <div class="text-sm font-medium text-[#2c5265]">감사 계획 ~ 종료까지</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- Standard -->
-                <div class="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
-                  <div class="flex justify-between items-center mb-2">
-                    <h5 class="font-bold text-lg text-[#2c5265]">Standard</h5>
-                    <span class="text-sm text-slate-500">2~3개 시스템</span>
-                  </div>
-                  <div class="border-t border-slate-100 pt-2 space-y-1">
-                    <div class="flex justify-between text-sm">
-                      <span class="text-slate-600">월 비용:</span>
-                      <span class="font-semibold text-slate-800 secret-price" data-tier="standard"
-                        data-type="monthly">별도 문의</span>
-                    </div>
-                    <div class="flex justify-between text-sm">
-                      <span class="text-slate-600">연 비용:</span>
-                      <span class="font-semibold text-slate-800 secret-price" data-tier="standard" data-type="yearly">별도
-                        문의</span>
+
+                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                    <div class="text-sm font-bold text-slate-800 mb-3">역할</div>
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="bg-slate-50 rounded-lg p-3">
+                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
+                        <div class="text-sm text-slate-700">내부 평가자</div>
+                      </div>
+                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
+                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
+                        <div class="text-sm font-medium text-[#2c5265]">내부통제팀 IT담당자</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- Premium -->
-                <div class="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
-                  <div class="flex justify-between items-center mb-2">
-                    <h5 class="font-bold text-lg text-[#2c5265]">Premium</h5>
-                    <span class="text-sm text-slate-500">4~6개 시스템</span>
-                  </div>
-                  <div class="border-t border-slate-100 pt-2 space-y-1">
-                    <div class="flex justify-between text-sm">
-                      <span class="text-slate-600">월 비용:</span>
-                      <span class="font-semibold text-slate-800 secret-price" data-tier="premium" data-type="monthly">별도
-                        문의</span>
-                    </div>
-                    <div class="flex justify-between text-sm">
-                      <span class="text-slate-600">연 비용:</span>
-                      <span class="font-semibold text-slate-800 secret-price" data-tier="premium" data-type="yearly">별도
-                        문의</span>
+
+                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                    <div class="text-sm font-bold text-slate-800 mb-3">외부감사 대응</div>
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="bg-slate-50 rounded-lg p-3">
+                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
+                        <div class="text-sm text-slate-700">별도</div>
+                      </div>
+                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
+                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
+                        <div class="text-sm font-medium text-[#2c5265]">포함</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- Enterprise -->
-                <div class="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
-                  <div class="flex justify-between items-center mb-2">
-                    <h5 class="font-bold text-lg text-[#2c5265]">Enterprise</h5>
-                    <span class="text-sm text-slate-500">7개 이상</span>
-                  </div>
-                  <div class="border-t border-slate-100 pt-2 space-y-1">
-                    <div class="flex justify-between text-sm">
-                      <span class="text-slate-600">월 비용:</span>
-                      <span class="font-semibold text-slate-800 secret-price" data-tier="enterprise"
-                        data-type="monthly">별도 문의</span>
+
+                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                    <div class="text-sm font-bold text-slate-800 mb-3">이슈 발생 시</div>
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="bg-slate-50 rounded-lg p-3">
+                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
+                        <div class="text-sm text-slate-700">추가 계약 필요</div>
+                      </div>
+                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
+                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
+                        <div class="text-sm font-medium text-[#2c5265]">즉시 대응</div>
+                      </div>
                     </div>
-                    <div class="flex justify-between text-sm">
-                      <span class="text-slate-600">연 비용:</span>
-                      <span class="font-semibold text-slate-800 secret-price" data-tier="enterprise"
-                        data-type="yearly">별도 문의</span>
+                  </div>
+
+                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                    <div class="text-sm font-bold text-slate-800 mb-3">비용 구조</div>
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="bg-slate-50 rounded-lg p-3">
+                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
+                        <div class="text-sm text-slate-700">프로젝트 단위</div>
+                      </div>
+                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
+                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
+                        <div class="text-sm font-medium text-[#2c5265]">월 정액 (예측 가능)</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Pricing Policy -->
-            <div>
-              <h4 class="text-xl font-bold text-slate-900 mb-4">요금 정책</h4>
-              <div class="grid md:grid-cols-3 gap-4">
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                  <h5 class="font-bold text-slate-800 mb-1">결제 방식</h5>
-                  <p class="text-slate-600 text-sm">월 단위 정액 결제 (급여 형태)</p>
+              <!-- Service Scope -->
+              <div class="mb-12">
+                <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                  <span class="w-1 h-6 bg-[#2c5265] rounded-full"></span>
+                  서비스 범위
+                </h4>
+                <div class="grid sm:grid-cols-2 gap-3 md:gap-4">
+                  <div
+                    class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                    <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                    <span class="text-sm md:text-base text-slate-700">연간 감사 계획 수립 및 리스크 평가</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                    <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                    <span class="text-sm md:text-base text-slate-700">IT일반통제(ITGC) 설계 및 운영 평가</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                    <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                    <span class="text-sm md:text-base text-slate-700">통제 모니터링 및 이슈 대응</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                    <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                    <span class="text-sm md:text-base text-slate-700">외부감사 대응 지원</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                    <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                    <span class="text-sm md:text-base text-slate-700">미비점 관리 및 개선과제 추진</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3.5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-200 transition-colors">
+                    <span class="text-blue-500 mr-3 shrink-0">✓</span>
+                    <span class="text-sm md:text-base text-slate-700">내부통제 체계 고도화 자문</span>
+                  </div>
                 </div>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                  <h5 class="font-bold text-slate-800 mb-1">요금 산정 기준</h5>
-                  <p class="text-slate-600 text-sm">계약 시점의 In-Scope 시스템 수 기준<br><span
-                      class="text-xs text-slate-500">(서비스 수행
-                      중 회사의 요청에 따른 Scope 조정 시 변동 가능)</span></p>
+              </div>
+
+              <!-- Pricing Structure -->
+              <div class="mb-12">
+                <h4 class="text-xl font-bold text-slate-900 mb-4">요금 체계</h4>
+                <p class="text-slate-600 mb-4 text-sm">요금은 <strong class="text-slate-900">계약 시점의 In-Scope 시스템
+                    수</strong>를
+                  기준으로 산정됩니다.
+
+                <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm hidden md:block">
+                  <table class="w-full text-left border-collapse">
+                    <thead>
+                      <tr class="bg-slate-50 text-slate-700 text-sm uppercase tracking-wider">
+                        <th class="p-4 border-b border-slate-200">티어</th>
+                        <th class="p-4 border-b border-slate-200">In-Scope 시스템</th>
+                        <th class="p-4 border-b border-slate-200">월 비용</th>
+                        <th class="p-4 border-b border-slate-200">연 비용</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-slate-600 text-sm md:text-base">
+                      <tr class="border-b border-slate-100 hover:bg-slate-50">
+                        <td class="p-4 font-bold text-[#2c5265]">Basic</td>
+                        <td class="p-4">1개</td>
+                        <td class="p-4">200만 원</td>
+                        <td class="p-4">2,400만 원</td>
+                      </tr>
+                      <tr class="border-b border-slate-100 hover:bg-slate-50">
+                        <td class="p-4 font-bold text-[#2c5265]">Standard</td>
+                        <td class="p-4">2~3개</td>
+                        <td class="p-4"><span class="secret-price" data-tier="standard" data-type="monthly">별도 문의</span>
+                        </td>
+                        <td class="p-4"><span class="secret-price" data-tier="standard" data-type="yearly">별도 문의</span>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-slate-100 hover:bg-slate-50">
+                        <td class="p-4 font-bold text-[#2c5265]">Premium</td>
+                        <td class="p-4">4~6개</td>
+                        <td class="p-4"><span class="secret-price" data-tier="premium" data-type="monthly">별도 문의</span>
+                        </td>
+                        <td class="p-4"><span class="secret-price" data-tier="premium" data-type="yearly">별도 문의</span>
+                        </td>
+                      </tr>
+                      <tr class="hover:bg-slate-50">
+                        <td class="p-4 font-bold text-[#2c5265]">Enterprise</td>
+                        <td class="p-4">7개 이상</td>
+                        <td class="p-4"><span class="secret-price" data-tier="enterprise" data-type="monthly">별도
+                            문의</span>
+                        </td>
+                        <td class="p-4"><span class="secret-price" data-tier="enterprise" data-type="yearly">별도
+                            문의</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                  <h5 class="font-bold text-slate-800 mb-1">계약 기간</h5>
-                  <p class="text-slate-600 text-sm">기본 1년 단위 계약<br><span class="text-xs text-slate-500">(프로젝트 상황 및 성격에
-                      따라 유연한 협의 가능)</span></p>
+
+                <!-- Mobile Card Layout -->
+                <div class="grid grid-cols-1 gap-4 md:hidden">
+                  <!-- Basic -->
+                  <div class="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                      <h5 class="font-bold text-lg text-[#2c5265]">Basic</h5>
+                      <span class="text-sm text-slate-500">1개 시스템</span>
+                    </div>
+                    <div class="border-t border-slate-100 pt-2">
+                      <div class="flex justify-between text-sm">
+                        <span class="text-slate-600">월 비용:</span>
+                        <span class="font-semibold text-slate-800">200만 원</span>
+                      </div>
+                      <div class="flex justify-between text-sm mt-1">
+                        <span class="text-slate-600">연 비용:</span>
+                        <span class="font-semibold text-slate-800">2,400만 원</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Standard -->
+                  <div class="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                      <h5 class="font-bold text-lg text-[#2c5265]">Standard</h5>
+                      <span class="text-sm text-slate-500">2~3개 시스템</span>
+                    </div>
+                    <div class="border-t border-slate-100 pt-2 space-y-1">
+                      <div class="flex justify-between text-sm">
+                        <span class="text-slate-600">월 비용:</span>
+                        <span class="font-semibold text-slate-800 secret-price" data-tier="standard"
+                          data-type="monthly">별도 문의</span>
+                      </div>
+                      <div class="flex justify-between text-sm">
+                        <span class="text-slate-600">연 비용:</span>
+                        <span class="font-semibold text-slate-800 secret-price" data-tier="standard"
+                          data-type="yearly">별도
+                          문의</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Premium -->
+                  <div class="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                      <h5 class="font-bold text-lg text-[#2c5265]">Premium</h5>
+                      <span class="text-sm text-slate-500">4~6개 시스템</span>
+                    </div>
+                    <div class="border-t border-slate-100 pt-2 space-y-1">
+                      <div class="flex justify-between text-sm">
+                        <span class="text-slate-600">월 비용:</span>
+                        <span class="font-semibold text-slate-800 secret-price" data-tier="premium"
+                          data-type="monthly">별도
+                          문의</span>
+                      </div>
+                      <div class="flex justify-between text-sm">
+                        <span class="text-slate-600">연 비용:</span>
+                        <span class="font-semibold text-slate-800 secret-price" data-tier="premium"
+                          data-type="yearly">별도
+                          문의</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Enterprise -->
+                  <div class="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                      <h5 class="font-bold text-lg text-[#2c5265]">Enterprise</h5>
+                      <span class="text-sm text-slate-500">7개 이상</span>
+                    </div>
+                    <div class="border-t border-slate-100 pt-2 space-y-1">
+                      <div class="flex justify-between text-sm">
+                        <span class="text-slate-600">월 비용:</span>
+                        <span class="font-semibold text-slate-800 secret-price" data-tier="enterprise"
+                          data-type="monthly">별도 문의</span>
+                      </div>
+                      <div class="flex justify-between text-sm">
+                        <span class="text-slate-600">연 비용:</span>
+                        <span class="font-semibold text-slate-800 secret-price" data-tier="enterprise"
+                          data-type="yearly">별도 문의</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pricing Policy -->
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-4">요금 정책</h4>
+                <div class="grid md:grid-cols-3 gap-4">
+                  <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <h5 class="font-bold text-slate-800 mb-1">결제 방식</h5>
+                    <p class="text-slate-600 text-sm">월 단위 정액 결제 (급여 형태)</p>
+                  </div>
+                  <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <h5 class="font-bold text-slate-800 mb-1">요금 산정 기준</h5>
+                    <p class="text-slate-600 text-sm">계약 시점의 In-Scope 시스템 수 기준<br><span
+                        class="text-xs text-slate-500">(서비스 수행
+                        중 회사의 요청에 따른 Scope 조정 시 변동 가능)</span></p>
+                  </div>
+                  <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <h5 class="font-bold text-slate-800 mb-1">계약 기간</h5>
+                    <p class="text-slate-600 text-sm">기본 1년 단위 계약<br><span class="text-xs text-slate-500">(프로젝트 상황 및 성격에
+                        따라 유연한 협의 가능)</span></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -698,250 +722,258 @@
         </div>
       </div>
 
-      <div id="track-b" class="scroll-mt-24">
-        <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
-          <div
-            class="bg-gradient-to-r from-emerald-600 to-teal-600 p-6 md:p-10 text-white flex flex-col md:flex-row items-start md:items-center justify-between">
-            <div>
-              <div class="flex items-center gap-4 mb-2">
-                <span class="bg-white/20 backdrop-blur px-4 py-1.5 rounded-lg font-bold text-sm">Track B</span>
-                <h3 class="text-2xl md:text-3xl font-bold">Snowball System</h3>
+      <!-- Track B 컨텐츠 -->
+      <div id="track-b-content" class="track-content hidden md:block">
+
+        <div id="track-b" class="scroll-mt-24">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
+            <div
+              class="bg-gradient-to-r from-emerald-600 to-teal-600 p-6 md:p-10 text-white flex flex-col md:flex-row items-start md:items-center justify-between">
+              <div>
+                <div class="flex items-center gap-4 mb-2">
+                  <span class="bg-white/20 backdrop-blur px-4 py-1.5 rounded-lg font-bold text-sm">Track B</span>
+                  <h3 class="text-2xl md:text-3xl font-bold">Snowball System</h3>
+                </div>
+                <p class="text-emerald-50 text-lg max-w-2xl">
+                  내부통제 자동화 플랫폼
+                </p>
               </div>
-              <p class="text-emerald-50 text-lg max-w-2xl">
-                내부통제 자동화 플랫폼
-              </p>
-            </div>
-            <div class="mt-6 md:mt-0">
-              <span class="text-5xl opacity-20">💻</span>
-            </div>
-          </div>
-
-          <div class="p-6 md:p-12">
-            <div class="text-center mb-10">
-              <h4 class="text-xl md:text-2xl font-bold text-slate-900 mb-4">
-                도입 환경과 요구사항에 따라 <span class="text-emerald-600">맞춤 견적</span>을 제공합니다.
-              </h4>
-              <p class="text-slate-600 mb-6">
-                기업 규모 및 통제 항목에 따른 유연한 구성을 지원하며, 클라우드와 온프레미스 중 선택 가능합니다.
-              </p>
-
+              <div class="mt-6 md:mt-0">
+                <span class="text-5xl opacity-20">💻</span>
+              </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-              <div class="bg-emerald-50/50 rounded-2xl p-6 border border-emerald-100">
-                <h4 class="font-bold text-xl mb-3 text-emerald-700 flex items-center">
-                  <span class="mr-2">☁️</span> Cloud (구독형)
+            <div class="p-6 md:p-12">
+              <div class="text-center mb-10">
+                <h4 class="text-xl md:text-2xl font-bold text-slate-900 mb-4">
+                  도입 환경과 요구사항에 따라 <span class="text-emerald-600">맞춤 견적</span>을 제공합니다.
                 </h4>
-                <ul class="text-slate-700 space-y-2 text-base pl-2">
-                  <li class="flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>초기 투자
-                    부담 최소화 (경제성)</li>
-                  <li class="flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>인프라 구축
-                    없이 즉시 운영 (신속성)</li>
-                  <li class="flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>기능
-                    업데이트 자동 적용</li>
-                </ul>
+                <p class="text-slate-600 mb-6">
+                  기업 규모 및 통제 항목에 따른 유연한 구성을 지원하며, 클라우드와 온프레미스 중 선택 가능합니다.
+                </p>
+
               </div>
 
-              <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-                <h4 class="font-bold text-xl mb-3 text-slate-700 flex items-center">
-                  <span class="mr-2">🏢</span> On-Premise (구축형)
-                </h4>
-                <ul class="text-slate-700 space-y-2 text-base pl-2">
-                  <li class="flex items-center"><span class="w-1.5 h-1.5 bg-slate-500 rounded-full mr-2"></span>내부망 운영으로
-                    보안 정책 준수</li>
-                  <li class="flex items-center"><span class="w-1.5 h-1.5 bg-slate-500 rounded-full mr-2"></span>기존
-                    ERP/레거시 시스템 직접 연계</li>
-                  <li class="flex items-center"><span class="w-1.5 h-1.5 bg-slate-500 rounded-full mr-2"></span>회사 상황에
-                    맞춘 커스터마이징</li>
-                </ul>
-              </div>
-            </div>
-            <!-- 도입 프로세스 -->
-            <div class="mb-16">
-              <h4 class="font-bold mb-10 text-slate-900 text-xl md:text-2xl text-center">도입 프로세스</h4>
-
-              <!-- 데스크톱: 4열 카드형 -->
-              <div class="hidden md:grid md:grid-cols-4 gap-6">
-                <!-- Step 1 -->
-                <div class="relative">
-                  <div
-                    class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-emerald-200 hover:shadow-md transition-all duration-300">
-                    <div
-                      class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
-                      1</div>
-                    <h5 class="font-bold text-slate-900 mb-2">상담</h5>
-                    <p class="text-slate-600 text-sm">도입 문의 및 요구사항 파악</p>
-                  </div>
-                  <!-- 화살표 (마지막 제외) -->
-                  <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 text-emerald-300 hidden lg:block">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                  </div>
+              <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-emerald-50/50 rounded-2xl p-6 border border-emerald-100">
+                  <h4 class="font-bold text-xl mb-3 text-emerald-700 flex items-center">
+                    <span class="mr-2">☁️</span> Cloud (구독형)
+                  </h4>
+                  <ul class="text-slate-700 space-y-2 text-base pl-2">
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>초기
+                      투자
+                      부담 최소화 (경제성)</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>인프라
+                      구축
+                      없이 즉시 운영 (신속성)</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>기능
+                      업데이트 자동 적용</li>
+                  </ul>
                 </div>
 
-                <!-- Step 2 -->
-                <div class="relative">
-                  <div
-                    class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-emerald-200 hover:shadow-md transition-all duration-300">
-                    <div
-                      class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
-                      2</div>
-                    <h5 class="font-bold text-slate-900 mb-2">견적 및 계약</h5>
-                    <p class="text-slate-600 text-sm">맞춤 견적 제안 및 계약</p>
-                  </div>
-                  <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 text-emerald-300 hidden lg:block">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                  </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="relative">
-                  <div
-                    class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-emerald-200 hover:shadow-md transition-all duration-300">
-                    <div
-                      class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
-                      3</div>
-                    <h5 class="font-bold text-slate-900 mb-2">구축</h5>
-                    <p class="text-slate-600 text-sm">시스템 설치, 데이터 이관, 교육</p>
-                  </div>
-                  <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 text-emerald-300 hidden lg:block">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                  </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div>
-                  <div
-                    class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-emerald-200 hover:shadow-md transition-all duration-300">
-                    <div
-                      class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
-                      4</div>
-                    <h5 class="font-bold text-slate-900 mb-2">운영</h5>
-                    <p class="text-slate-600 text-sm">본격 운영 및 유지보수 지원</p>
-                  </div>
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                  <h4 class="font-bold text-xl mb-3 text-slate-700 flex items-center">
+                    <span class="mr-2">🏢</span> On-Premise (구축형)
+                  </h4>
+                  <ul class="text-slate-700 space-y-2 text-base pl-2">
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-slate-500 rounded-full mr-2"></span>내부망
+                      운영으로
+                      보안 정책 준수</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-slate-500 rounded-full mr-2"></span>기존
+                      ERP/레거시 시스템 직접 연계</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-slate-500 rounded-full mr-2"></span>회사
+                      상황에
+                      맞춘 커스터마이징</li>
+                  </ul>
                 </div>
               </div>
+              <!-- 도입 프로세스 -->
+              <div class="mb-16">
+                <h4 class="font-bold mb-10 text-slate-900 text-xl md:text-2xl text-center">도입 프로세스</h4>
 
-              <!-- 모바일: 세로 타임라인 -->
-              <div class="md:hidden">
-                <div class="relative">
-                  <!-- 세로 라인 -->
-                  <div class="absolute left-5 top-0 bottom-0 w-0.5 bg-emerald-100"></div>
-
-                  <div class="space-y-6">
-                    <!-- Step 1 -->
-                    <div class="relative flex gap-4">
+                <!-- 데스크톱: 4열 카드형 -->
+                <div class="hidden md:grid md:grid-cols-4 gap-6">
+                  <!-- Step 1 -->
+                  <div class="relative">
+                    <div
+                      class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-emerald-200 hover:shadow-md transition-all duration-300">
                       <div
-                        class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                        class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
                         1</div>
-                      <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
-                        <h5 class="font-bold text-slate-900 mb-1">상담</h5>
-                        <p class="text-slate-600 text-sm">도입 문의 및 요구사항 파악</p>
-                      </div>
+                      <h5 class="font-bold text-slate-900 mb-2">상담</h5>
+                      <p class="text-slate-600 text-sm">도입 문의 및 요구사항 파악</p>
                     </div>
+                    <!-- 화살표 (마지막 제외) -->
+                    <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 text-emerald-300 hidden lg:block">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
 
-                    <!-- Step 2 -->
-                    <div class="relative flex gap-4">
+                  <!-- Step 2 -->
+                  <div class="relative">
+                    <div
+                      class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-emerald-200 hover:shadow-md transition-all duration-300">
                       <div
-                        class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                        class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
                         2</div>
-                      <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
-                        <h5 class="font-bold text-slate-900 mb-1">견적 및 계약</h5>
-                        <p class="text-slate-600 text-sm">맞춤 견적 제안 및 계약</p>
-                      </div>
+                      <h5 class="font-bold text-slate-900 mb-2">견적 및 계약</h5>
+                      <p class="text-slate-600 text-sm">맞춤 견적 제안 및 계약</p>
                     </div>
+                    <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 text-emerald-300 hidden lg:block">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
 
-                    <!-- Step 3 -->
-                    <div class="relative flex gap-4">
+                  <!-- Step 3 -->
+                  <div class="relative">
+                    <div
+                      class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-emerald-200 hover:shadow-md transition-all duration-300">
                       <div
-                        class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                        class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
                         3</div>
-                      <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
-                        <h5 class="font-bold text-slate-900 mb-1">구축</h5>
-                        <p class="text-slate-600 text-sm">시스템 설치, 데이터 이관, 교육</p>
-                      </div>
+                      <h5 class="font-bold text-slate-900 mb-2">구축</h5>
+                      <p class="text-slate-600 text-sm">시스템 설치, 데이터 이관, 교육</p>
                     </div>
+                    <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 text-emerald-300 hidden lg:block">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
 
-                    <!-- Step 4 -->
-                    <div class="relative flex gap-4">
+                  <!-- Step 4 -->
+                  <div>
+                    <div
+                      class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-emerald-200 hover:shadow-md transition-all duration-300">
                       <div
-                        class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                        class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
                         4</div>
-                      <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
-                        <h5 class="font-bold text-slate-900 mb-1">운영</h5>
-                        <p class="text-slate-600 text-sm">본격 운영 및 유지보수 지원</p>
+                      <h5 class="font-bold text-slate-900 mb-2">운영</h5>
+                      <p class="text-slate-600 text-sm">본격 운영 및 유지보수 지원</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 모바일: 세로 타임라인 -->
+                <div class="md:hidden">
+                  <div class="relative">
+                    <!-- 세로 라인 -->
+                    <div class="absolute left-5 top-0 bottom-0 w-0.5 bg-emerald-100"></div>
+
+                    <div class="space-y-6">
+                      <!-- Step 1 -->
+                      <div class="relative flex gap-4">
+                        <div
+                          class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                          1</div>
+                        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
+                          <h5 class="font-bold text-slate-900 mb-1">상담</h5>
+                          <p class="text-slate-600 text-sm">도입 문의 및 요구사항 파악</p>
+                        </div>
+                      </div>
+
+                      <!-- Step 2 -->
+                      <div class="relative flex gap-4">
+                        <div
+                          class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                          2</div>
+                        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
+                          <h5 class="font-bold text-slate-900 mb-1">견적 및 계약</h5>
+                          <p class="text-slate-600 text-sm">맞춤 견적 제안 및 계약</p>
+                        </div>
+                      </div>
+
+                      <!-- Step 3 -->
+                      <div class="relative flex gap-4">
+                        <div
+                          class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                          3</div>
+                        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
+                          <h5 class="font-bold text-slate-900 mb-1">구축</h5>
+                          <p class="text-slate-600 text-sm">시스템 설치, 데이터 이관, 교육</p>
+                        </div>
+                      </div>
+
+                      <!-- Step 4 -->
+                      <div class="relative flex gap-4">
+                        <div
+                          class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                          4</div>
+                        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
+                          <h5 class="font-bold text-slate-900 mb-1">운영</h5>
+                          <p class="text-slate-600 text-sm">본격 운영 및 유지보수 지원</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="border-t border-slate-100 pt-10">
-              <h4 class="font-bold mb-8 text-slate-900 text-xl md:text-2xl text-center">시스템 주요 기능</h4>
-              <div class="grid md:grid-cols-2 gap-6 md:gap-10">
-                <div class="group">
-                  <div
-                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
-                    <img src="img/dashboard.png" alt="대시보드" loading="lazy"
-                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+              <div class="border-t border-slate-100 pt-10">
+                <h4 class="font-bold mb-8 text-slate-900 text-xl md:text-2xl text-center">시스템 주요 기능</h4>
+                <div class="grid md:grid-cols-2 gap-6 md:gap-10">
+                  <div class="group">
+                    <div
+                      class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
+                      <img src="img/dashboard.png" alt="대시보드" loading="lazy"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2">1. 종합 대시보드</h5>
+                    <p class="text-slate-600 text-base md:text-sm leading-relaxed">
+                      ELC, TLC, ITGC 평가 결과를 통합 조회하고 종합 리포트를 생성합니다.
+                    </p>
                   </div>
-                  <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2">1. 종합 대시보드</h5>
-                  <p class="text-slate-600 text-base md:text-sm leading-relaxed">
-                    ELC, TLC, ITGC 평가 결과를 통합 조회하고 종합 리포트를 생성합니다.
-                  </p>
-                </div>
 
-                <div class="group">
-                  <div
-                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
-                    <img src="img/rcm.png" alt="RCM 관리" loading="lazy"
-                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                  <div class="group">
+                    <div
+                      class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
+                      <img src="img/rcm.png" alt="RCM 관리" loading="lazy"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2">2. RCM 관리</h5>
+                    <p class="text-slate-600 text-base md:text-sm leading-relaxed">
+                      위험통제매트릭스(RCM) 데이터를 중앙 관리하며, 엑셀 기반 파일 업로드 및 버전 관리를 지원합니다.
+                    </p>
                   </div>
-                  <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2">2. RCM 관리</h5>
-                  <p class="text-slate-600 text-base md:text-sm leading-relaxed">
-                    위험통제매트릭스(RCM) 데이터를 중앙 관리하며, 엑셀 기반 파일 업로드 및 버전 관리를 지원합니다.
-                  </p>
-                </div>
 
-                <div class="group">
-                  <div
-                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
-                    <img src="img/design_test.png" alt="설계 평가" loading="lazy"
-                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                  <div class="group">
+                    <div
+                      class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
+                      <img src="img/design_test.png" alt="설계 평가" loading="lazy"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2">3. 설계 평가</h5>
+                    <p class="text-slate-600 text-base md:text-sm leading-relaxed">
+                      통제활동 설명 검토, 현실 반영도 평가 후 증빙 및 결과를 입력하여 설계 효과성을 종합 판정합니다.
+                    </p>
                   </div>
-                  <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2">3. 설계 평가</h5>
-                  <p class="text-slate-600 text-base md:text-sm leading-relaxed">
-                    통제활동 설명 검토, 현실 반영도 평가 후 증빙 및 결과를 입력하여 설계 효과성을 종합 판정합니다.
-                  </p>
-                </div>
 
-                <div class="group">
-                  <div
-                    class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-4 bg-slate-100 aspect-video relative">
-                    <img src="img/operation_test.png" alt="운영 평가" loading="lazy"
-                      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                  <div class="group">
+                    <div
+                      class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-4 bg-slate-100 aspect-video relative">
+                      <img src="img/operation_test.png" alt="운영 평가" loading="lazy"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                    </div>
+                    <h5 class="font-bold text-lg text-slate-800 mb-2">4. 운영 평가</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                      테스트 절차 자동 생성, 표본 크기 자동 계산, 표본별 증빙 및 결과 입력 후 전체 결론을 자동 산출합니다.
+                    </p>
                   </div>
-                  <h5 class="font-bold text-lg text-slate-800 mb-2">4. 운영 평가</h5>
-                  <p class="text-slate-600 text-sm leading-relaxed">
-                    테스트 절차 자동 생성, 표본 크기 자동 계산, 표본별 증빙 및 결과 입력 후 전체 결론을 자동 산출합니다.
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </section>
 
@@ -1015,228 +1047,286 @@
         </p>
       </div>
 
-      <!-- 컨설팅 관련 -->
-      <div class="mb-8">
-        <h3 class="text-lg font-bold text-[#2c5265] mb-4 flex items-center gap-2">
-          <span class="w-1 h-5 bg-[#2c5265] rounded-full"></span>
-          컨설팅 서비스
-        </h3>
-        <div class="space-y-3">
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">계약 기간은 어떻게 되나요?</span>
-              <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">기본 1년 단위이며, 상황에 따라 유연하게 협의 가능합니다.</p>
+      <div class="space-y-4">
+        <!-- 컨설팅 카테고리 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <button
+            class="faq-category-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+            onclick="toggleFaqCategory(this)">
+            <div class="flex items-center gap-3">
+              <span class="w-1.5 h-6 bg-[#2c5265] rounded-full"></span>
+              <span class="font-bold text-[#2c5265] text-lg">컨설팅 서비스</span>
+              <span class="text-sm text-slate-400 font-normal">(6)</span>
             </div>
-          </div>
+            <svg class="faq-category-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
 
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">비상주인데 어떻게 소통하나요?</span>
-              <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">이메일, 메신저, 화상회의 등으로 상시 소통하며, 필요 시 또는 외부감사인 필드웍 시 함께 현장
-                방문합니다.</p>
-            </div>
-          </div>
+          <!-- 질문 목록 (처음엔 hidden) -->
+          <div class="faq-category-content hidden px-4 pb-5 border-t border-slate-50 pt-4">
+            <div class="space-y-2">
+              <!-- 질문 1 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">계약 기간은 어떻게 되나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">기본 1년 단위이며, 상황에 따라 유연하게 협의 가능합니다.</p>
+                </div>
+              </div>
 
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">중도 해지가 가능한가요?</span>
-              <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 구체적인 조건은 계약 시 협의합니다.</p>
-            </div>
-          </div>
+              <!-- 질문 2 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">비상주인데 어떻게 소통하나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">이메일, 메신저, 화상회의 등으로 상시 소통하며, 필요 시 또는 외부감사인 필드웍 시
+                    함께 현장
+                    방문합니다.</p>
+                </div>
+              </div>
 
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">기존 PA 서비스와 병행할 수 있나요?</span>
-              <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 기존 PA 범위 외 영역만 담당하는 것도 가능하며, 이 경우 비용 조정도 협의
-                가능합니다.</p>
-            </div>
-          </div>
+              <!-- 질문 3 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">중도 해지가 가능한가요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 구체적인 조건은 계약 시 협의합니다.</p>
+                </div>
+              </div>
 
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">언제부터 서비스 시작이 가능한가요?</span>
-              <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">계약 후 즉시 투입 가능합니다.</p>
-            </div>
-          </div>
+              <!-- 질문 4 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">기존 PA 서비스와 병행할 수 있나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 기존 PA 범위 외 영역만 담당하는 것도 가능하며, 이 경우 비용 조정도 협의
+                    가능합니다.</p>
+                </div>
+              </div>
 
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">어떤 시스템을 지원하나요?</span>
-              <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">SAP, Oracle, 더존 등 주요 ERP 및 IT 시스템 전반을 지원합니다.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+              <!-- 질문 5 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">언제부터 서비스 시작이 가능한가요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">계약 후 즉시 투입 가능합니다.</p>
+                </div>
+              </div>
 
-      <!-- 시스템 관련 -->
-      <div class="mb-8">
-        <h3 class="text-lg font-bold text-emerald-600 mb-4 flex items-center gap-2">
-          <span class="w-1 h-5 bg-emerald-600 rounded-full"></span>
-          시스템 서비스
-        </h3>
-        <div class="space-y-3">
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">시스템 도입 비용은 어떻게 되나요?</span>
-              <svg class="faq-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">도입 환경(클라우드/온프레미스)과 요구사항에 따라 맞춤 견적을 제공합니다. 온프레미스의 경우
-                유지보수 계약에 따라 초기 비용 조정이 가능합니다.</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">클라우드와 온프레미스 중 어떤 걸 선택해야 하나요?</span>
-              <svg class="faq-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">빠른 도입과 비용 효율성을 원하시면 클라우드, 기존 In-Scope 시스템과의 연동이 필요하시면
-                온프레미스를
-                추천드립니다.</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">In-Scope 시스템과 연동이 가능한가요?</span>
-              <svg class="faq-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">온프레미스 도입 시 SAP, Oracle, 더존 등 기존 시스템과 연동 가능합니다.</p>
+              <!-- 질문 6 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">어떤 시스템을 지원하나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">SAP, Oracle, 더존 등 주요 ERP 및 IT 시스템 전반을 지원합니다.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- 공통 -->
-      <div>
-        <h3 class="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-          <span class="w-1 h-5 bg-slate-500 rounded-full"></span>
-          공통
-        </h3>
-        <div class="space-y-3">
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">컨설팅 또는 시스템 중 하나만 신청할 수 있나요?</span>
-              <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 컨설팅만 또는 시스템만 별도로 도입하실 수 있습니다.</p>
+        <!-- 시스템 카테고리 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <button
+            class="faq-category-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+            onclick="toggleFaqCategory(this)">
+            <div class="flex items-center gap-3">
+              <span class="w-1.5 h-6 bg-emerald-600 rounded-full"></span>
+              <span class="font-bold text-emerald-600 text-lg">시스템 서비스</span>
+              <span class="text-sm text-slate-400 font-normal">(3)</span>
+            </div>
+            <svg class="faq-category-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <div class="faq-category-content hidden px-4 pb-5 border-t border-slate-50 pt-4">
+            <div class="space-y-2">
+              <!-- 질문 1 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">시스템 도입 비용은 어떻게 되나요?</span>
+                  <svg
+                    class="faq-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">도입 환경(클라우드/온프레미스)과 요구사항에 따라 맞춤 견적을 제공합니다.
+                    온프레미스의 경우
+                    유지보수 계약에 따라 초기 비용 조정이 가능합니다.</p>
+                </div>
+              </div>
+
+              <!-- 질문 2 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">클라우드와 온프레미스 중 어떤 걸 선택해야 하나요?</span>
+                  <svg
+                    class="faq-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">빠른 도입과 비용 효율성을 원하시면 클라우드, 기존 In-Scope 시스템과의 연동이
+                    필요하시면
+                    온프레미스를
+                    추천드립니다.</p>
+                </div>
+              </div>
+
+              <!-- 질문 3 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">In-Scope 시스템과 연동이 가능한가요?</span>
+                  <svg
+                    class="faq-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">온프레미스 도입 시 SAP, Oracle, 더존 등 기존 시스템과 연동 가능합니다.</p>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">컨설팅과 시스템을 함께 도입하면 할인이 있나요?</span>
-              <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">함께 도입 시 패키지 할인이 적용됩니다. 자세한 내용은 상담 시 안내드립니다.</p>
+        <!-- 공통 카테고리 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <button
+            class="faq-category-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+            onclick="toggleFaqCategory(this)">
+            <div class="flex items-center gap-3">
+              <span class="w-1.5 h-6 bg-slate-500 rounded-full"></span>
+              <span class="font-bold text-slate-700 text-lg">공통</span>
+              <span class="text-sm text-slate-400 font-normal">(4)</span>
             </div>
-          </div>
+            <svg class="faq-category-icon w-5 h-5 text-slate-500 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
 
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">견적은 어떻게 받을 수 있나요?</span>
-              <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">상담 신청 폼을 통해 문의해 주시면 맞춤 견적을 제공해 드립니다.</p>
-            </div>
-          </div>
+          <div class="faq-category-content hidden px-4 pb-5 border-t border-slate-50 pt-4">
+            <div class="space-y-2">
+              <!-- 질문 1 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">컨설팅 또는 시스템 중 하나만 신청할 수 있나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 컨설팅만 또는 시스템만 별도로 도입하실 수 있습니다.</p>
+                </div>
+              </div>
 
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <button
-              class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              onclick="toggleFaq(this)">
-              <span class="font-medium text-slate-900 text-sm md:text-base">계약 전 데모나 시연이 가능한가요?</span>
-              <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden px-5 pb-4">
-              <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 상담 시 시스템 데모 일정을 조율해 드립니다.</p>
+              <!-- 질문 2 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">컨설팅과 시스템을 함께 도입하면 할인이 있나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">함께 도입 시 패키지 할인이 적용됩니다. 자세한 내용은 상담 시 안내드립니다.</p>
+                </div>
+              </div>
+
+              <!-- 질문 3 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">견적은 어떻게 받을 수 있나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">상담 신청 폼을 통해 문의해 주시면 맞춤 견적을 제공해 드립니다.</p>
+                </div>
+              </div>
+
+              <!-- 질문 4 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">계약 전 데모나 시연이 가능한가요?</span>
+                  <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 상담 시 시스템 데모 일정을 조율해 드립니다.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1522,6 +1612,49 @@
         }
       });
     }
+
+    // Mobile Track Tabs
+    function switchTrack(track) {
+      const tabBtnA = document.getElementById('tab-btn-a');
+      const tabBtnB = document.getElementById('tab-btn-b');
+      const contentA = document.getElementById('track-a-content');
+      const contentB = document.getElementById('track-b-content');
+
+      if (track === 'a') {
+        tabBtnA.classList.add('bg-[#2c5265]', 'text-white');
+        tabBtnA.classList.remove('text-slate-500');
+        tabBtnB.classList.remove('bg-emerald-600', 'text-white');
+        tabBtnB.classList.add('text-slate-500');
+
+        contentA.classList.remove('hidden');
+        contentB.classList.add('hidden');
+        contentB.classList.remove('md:block');
+      } else {
+        tabBtnB.classList.add('bg-emerald-600', 'text-white');
+        tabBtnB.classList.remove('text-slate-500');
+        tabBtnA.classList.remove('bg-[#2c5265]', 'text-white');
+        tabBtnA.classList.add('text-slate-500');
+
+        contentB.classList.remove('hidden');
+        contentB.classList.add('md:block');
+        contentA.classList.add('hidden');
+      }
+    }
+
+    // FAQ Category Toggle
+    function toggleFaqCategory(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-category-icon');
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
     function toggleFaq(button) {
       const content = button.nextElementSibling;
       const icon = button.querySelector('.faq-icon');
@@ -1535,7 +1668,19 @@
       }
     }
 
-    // Netlify Form Submission
+    // Restore layouts on resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        const contentA = document.getElementById('track-a-content');
+        const contentB = document.getElementById('track-b-content');
+        if (contentA) contentA.classList.remove('hidden');
+        if (contentB) {
+          contentB.classList.remove('hidden');
+          contentB.classList.add('md:block');
+        }
+      }
+    });
+
     const consultationForm = document.getElementById('consultation-form');
     const formFields = document.getElementById('form-fields');
     const successMessage = document.getElementById('success-message');
@@ -1543,12 +1688,11 @@
 
     consultationForm?.addEventListener('submit', (e) => {
       e.preventDefault();
-
       const formData = new FormData(consultationForm);
 
-      // Update UI to loading state
+      // UI loading state
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<svg class="animate-spin h-5 w-5 mr-3 inline-block" viewBox="0 0 24 24">...</svg> 전송 중...';
+      submitBtn.innerHTML = '<span class="inline-block animate-spin mr-2">↻</span> 전송 중...';
 
       fetch('/', {
         method: 'POST',
