@@ -13,23 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    @keyframes fade-in-up {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fade-in-up {
-      animation: fade-in-up 0.5s ease-out forwards;
-    }
-  </style>
 </head>
 
 <body class="antialiased text-slate-800 bg-slate-50">
@@ -160,9 +143,10 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto">
+      <div
+        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto pb-6 md:pb-0 px-4 md:px-0">
         <div
-          class="group bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
+          class="min-w-[85vw] md:min-w-0 snap-center group bg-white md:bg-slate-50 rounded-2xl p-6 md:p-8 shadow-md md:shadow-none border-none md:border md:border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
           <div
             class="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-xl md:text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">
             👤</div>
@@ -173,7 +157,7 @@
         </div>
 
         <div
-          class="group bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
+          class="min-w-[85vw] md:min-w-0 snap-center group bg-white md:bg-slate-50 rounded-2xl p-6 md:p-8 shadow-md md:shadow-none border-none md:border md:border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
           <div
             class="w-12 h-12 md:w-16 md:h-16 bg-red-100 rounded-2xl flex items-center justify-center text-xl md:text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">
             ⏰</div>
@@ -206,10 +190,11 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6 lg:gap-12">
+      <div
+        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 gap-6 lg:gap-12 pb-6 md:pb-0 px-4 md:px-0">
         <!-- Feature 1: Hybrid Solution -->
         <div
-          class="bg-white/5 backdrop-blur-lg rounded-2xl md:rounded-3xl p-5 md:p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+          class="min-w-[85vw] md:min-w-0 snap-center bg-white/5 backdrop-blur-lg rounded-2xl md:rounded-3xl p-5 md:p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group shadow-lg md:shadow-none">
           <div class="flex items-start gap-4 md:gap-6">
             <div
               class="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-2xl md:text-3xl shadow-lg group-hover:scale-110 transition-transform duration-300 shrink-0">
@@ -231,7 +216,7 @@
 
         <!-- Feature 2: Expert Background -->
         <div
-          class="bg-white/5 backdrop-blur-lg rounded-2xl md:rounded-3xl p-5 md:p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+          class="min-w-[85vw] md:min-w-0 snap-center bg-white/5 backdrop-blur-lg rounded-2xl md:rounded-3xl p-5 md:p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group shadow-lg md:shadow-none">
           <div class="flex items-start gap-4 md:gap-6">
             <div
               class="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-emerald-500 to-green-400 flex items-center justify-center text-2xl md:text-3xl shadow-lg group-hover:scale-110 transition-transform duration-300 shrink-0">
@@ -323,9 +308,11 @@
                   </div>
 
                   <!-- Comparison Cards -->
-                  <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                  <div
+                    class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:gap-6 pb-6 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2">
                     <!-- Problem Card -->
-                    <div class="bg-slate-50 rounded-2xl p-5 md:p-8 border border-slate-200/50">
+                    <div
+                      class="min-w-[85vw] md:min-w-0 snap-center bg-white md:bg-slate-50 rounded-2xl p-5 md:p-8 border-none md:border md:border-slate-200/50 shadow-md md:shadow-none">
                       <div class="flex items-center gap-2 mb-5">
                         <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600">
                           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -364,7 +351,8 @@
                     </div>
 
                     <!-- Solution Card -->
-                    <div class="bg-blue-50/50 rounded-2xl p-5 md:p-8 border border-[#2c5265]/10">
+                    <div
+                      class="min-w-[85vw] md:min-w-0 snap-center bg-blue-50/50 md:bg-blue-50/50 rounded-2xl p-5 md:p-8 border-none md:border md:border-[#2c5265]/10 shadow-md md:shadow-none">
                       <div class="flex items-center gap-2 mb-5">
                         <div
                           class="w-8 h-8 rounded-full bg-[#2c5265] flex items-center justify-center text-white shadow-md">
@@ -467,89 +455,73 @@
                   </table>
                 </div>
 
-                <!-- 모바일 카드형 -->
-                <div class="md:hidden space-y-4">
+                <!-- 모바일 카드형 (가로 스크롤) -->
+                <div class="md:hidden flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-4 pb-6 px-4">
                   <!-- 각 항목을 카드로 표현 -->
-                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                    <div class="text-sm font-bold text-slate-800 mb-3">투입 시점</div>
-                    <div class="grid grid-cols-2 gap-3">
-                      <div class="bg-slate-50 rounded-lg p-3">
-                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                        <div class="text-sm text-slate-700">내부평가 시즌만</div>
+                  <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>투입 시점
+                    </div>
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">내부평가 시즌 투입</div>
                       </div>
-                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                        <div class="text-sm font-medium text-[#2c5265]">연중 상시</div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">연중 상시 밀착 지원</div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                    <div class="text-sm font-bold text-slate-800 mb-3">서비스 범위</div>
-                    <div class="grid grid-cols-2 gap-3">
-                      <div class="bg-slate-50 rounded-lg p-3">
-                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                        <div class="text-sm text-slate-700">테스트 수행/결과 정리</div>
+                  <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>서비스 범위
+                    </div>
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">단순 테스트 수행</div>
                       </div>
-                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                        <div class="text-sm font-medium text-[#2c5265]">감사 계획 ~ 종료까지</div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">계획부터 감사 종료까지</div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                    <div class="text-sm font-bold text-slate-800 mb-3">역할</div>
-                    <div class="grid grid-cols-2 gap-3">
-                      <div class="bg-slate-50 rounded-lg p-3">
-                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                        <div class="text-sm text-slate-700">내부 평가자</div>
+                  <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>전문가 역할
+                    </div>
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">외부 평가자</div>
                       </div>
-                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                        <div class="text-sm font-medium text-[#2c5265]">내부통제팀 IT담당자</div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">귀사 내부 IT 전담 인원</div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                    <div class="text-sm font-bold text-slate-800 mb-3">외부감사 대응</div>
-                    <div class="grid grid-cols-2 gap-3">
-                      <div class="bg-slate-50 rounded-lg p-3">
-                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                        <div class="text-sm text-slate-700">별도</div>
-                      </div>
-                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                        <div class="text-sm font-medium text-[#2c5265]">포함</div>
-                      </div>
+                  <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>외부감사 대응
                     </div>
-                  </div>
-
-                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                    <div class="text-sm font-bold text-slate-800 mb-3">이슈 발생 시</div>
-                    <div class="grid grid-cols-2 gap-3">
-                      <div class="bg-slate-50 rounded-lg p-3">
-                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                        <div class="text-sm text-slate-700">추가 계약 필요</div>
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">대응 불포함 (별도 계약)</div>
                       </div>
-                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                        <div class="text-sm font-medium text-[#2c5265]">즉시 대응</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                    <div class="text-sm font-bold text-slate-800 mb-3">비용 구조</div>
-                    <div class="grid grid-cols-2 gap-3">
-                      <div class="bg-slate-50 rounded-lg p-3">
-                        <div class="text-xs text-slate-500 mb-1">기존 PA</div>
-                        <div class="text-sm text-slate-700">프로젝트 단위</div>
-                      </div>
-                      <div class="bg-[#2c5265]/10 rounded-lg p-3">
-                        <div class="text-xs text-[#2c5265] mb-1">Snowball</div>
-                        <div class="text-sm font-medium text-[#2c5265]">월 정액 (예측 가능)</div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">감사인 질의 무제한 대응</div>
                       </div>
                     </div>
                   </div>
@@ -787,9 +759,11 @@
                   왜 시스템이 필요한가요?
                 </h4>
 
-                <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                <div
+                  class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:gap-6 pb-6 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2">
                   <!-- 문제 카드 -->
-                  <div class="bg-slate-50 rounded-2xl p-5 md:p-8 border border-slate-200/50">
+                  <div
+                    class="min-w-[85vw] md:min-w-0 snap-center bg-white md:bg-slate-50 rounded-2xl p-5 md:p-8 border-none md:border md:border-slate-200/50 shadow-md md:shadow-none">
                     <div class="flex items-center gap-2 mb-5">
                       <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -828,7 +802,8 @@
                   </div>
 
                   <!-- 해결 카드 -->
-                  <div class="bg-emerald-50/50 rounded-2xl p-5 md:p-8 border border-emerald-100">
+                  <div
+                    class="min-w-[85vw] md:min-w-0 snap-center bg-emerald-50/50 md:bg-emerald-50/50 rounded-2xl p-5 md:p-8 border-none md:border md:border-emerald-100 shadow-md md:shadow-none">
                     <div class="flex items-center gap-2 mb-5">
                       <div
                         class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white shadow-md">
