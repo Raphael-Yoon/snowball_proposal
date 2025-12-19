@@ -28,43 +28,35 @@
 
 <body class="antialiased text-slate-800 bg-slate-50">
   <!-- 모바일 메뉴 풀스크린 오버레이 (Z-index 최상위 확보를 위해 body 직후 배치) -->
-  <div id="mobile-menu-overlay" class="fixed inset-0 z-[9999] hidden overflow-hidden">
-    <!-- Backdrop -->
-    <div id="mobile-menu-backdrop"
-      class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-[9999] hidden bg-white flex-col overflow-hidden">
+    <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+      <span class="font-bold text-xl text-[#2c5265]">Menu</span>
+      <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-900 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
 
-    <!-- Menu Panel -->
-    <div id="mobile-menu-panel"
-      class="absolute right-0 top-0 bottom-0 w-[280px] bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col">
-      <div class="p-6 border-b border-slate-100 flex justify-between items-center">
-        <span class="font-bold text-xl text-[#2c5265]">Menu</span>
-        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-900 focus:outline-none">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+    <div class="p-6 flex flex-col space-y-4 flex-grow overflow-y-auto">
+      <a href="#pain-point"
+        class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-4 border-b border-slate-50 transition-colors">문제
+        제기</a>
+      <a href="#solutions"
+        class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-4 border-b border-slate-50 transition-colors">솔루션
+        소개</a>
+      <a href="#pricing"
+        class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-4 border-b border-slate-50 transition-colors">도입
+        비용</a>
+      <a href="#benefits"
+        class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-4 border-b border-slate-50 transition-colors">도입
+        이점</a>
+    </div>
 
-      <div class="p-6 flex flex-col space-y-4 flex-grow overflow-y-auto">
-        <a href="#pain-point"
-          class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">문제
-          제기</a>
-        <a href="#solutions"
-          class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">솔루션
-          소개</a>
-        <a href="#pricing"
-          class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">도입
-          비용</a>
-        <a href="#benefits"
-          class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">도입
-          이점</a>
-      </div>
-
-      <div class="p-6 border-t border-slate-100">
-        <a href="#consultation"
-          class="mobile-menu-link block w-full bg-[#2c5265] text-white text-center py-4 rounded-xl font-bold shadow-md hover:bg-[#1a3c4d] transition-all">상담
-          신청하기</a>
-      </div>
+    <div class="p-6 border-t border-slate-100 mb-20">
+      <a href="#consultation"
+        class="mobile-menu-link block w-full bg-[#2c5265] text-white text-center py-5 rounded-xl font-bold shadow-md hover:bg-[#1a3c4d] transition-all">상담
+        신청하기</a>
     </div>
   </div>
 
@@ -114,7 +106,7 @@
         Internal Control Solution
       </span>
       <h1
-        class="text-3xl xs:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 md:mb-8 leading-[1.1] tracking-tighter break-keep">
+        class="text-[clamp(1.75rem,8vw,4.5rem)] font-extrabold mb-6 md:mb-8 leading-[1.1] tracking-tighter break-keep">
         복잡한 내부통제,<br class="hidden sm:block" />
         <span
           class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-white to-blue-200">Snowball</span>과 함께
@@ -150,7 +142,7 @@
     <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
       <div class="text-center mb-10 md:mb-16">
         <h2
-          class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight break-keep">
+          class="text-[clamp(1.75rem,5vw,2.5rem)] md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight break-keep">
           현재 내부통제 운영의 <span class="text-red-500">Pain Point</span>
         </h2>
         <p class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto px-5 font-light break-keep">
@@ -165,7 +157,8 @@
           <div
             class="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-xl md:text-3xl mb-5 group-hover:scale-110 group-hover:bg-blue-200 transition-all duration-300 shrink-0">
             👤</div>
-          <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 break-keep">IT 전문 인력 부재</h3>
+          <h3 class="text-[clamp(1.25rem,4vw,1.5rem)] md:text-2xl font-bold mb-3 text-slate-900 break-keep">IT 전문 인력 부재
+          </h3>
           <p class="text-slate-600 leading-relaxed text-sm md:text-lg break-keep">
             내부통제팀 내 IT 전담인원을 채용하고 유지하는 데 어려움이 있으며, 높은 인건비와 이직률로 인한 업무 공백이 발생합니다.
           </p>
@@ -176,7 +169,8 @@
           <div
             class="w-12 h-12 md:w-16 md:h-16 bg-red-100 rounded-2xl flex items-center justify-center text-xl md:text-3xl mb-5 group-hover:scale-110 group-hover:bg-red-200 transition-all duration-300 shrink-0">
             ⏰</div>
-          <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 break-keep">비효율적 수동 관리</h3>
+          <h3 class="text-[clamp(1.25rem,4vw,1.5rem)] md:text-2xl font-bold mb-3 text-slate-900 break-keep">비효율적 수동 관리
+          </h3>
           <p class="text-slate-600 leading-relaxed text-sm md:text-lg break-keep">
             엑셀 기반의 수동 관리와 문서 취합 과정에서 버전 관리 오류가 빈발하며, 단순 반복 업무로 인해 핵심 리스크 관리에 집중하기 어렵습니다.
           </p>
@@ -203,7 +197,8 @@
           class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-xs md:text-sm font-medium mb-4 md:mb-6 backdrop-blur-sm text-blue-200">
           Why Snowball?
         </span>
-        <h2 class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 tracking-tight break-keep">
+        <h2
+          class="text-[clamp(1.75rem,5vw,2.5rem)] md:text-4xl lg:text-5xl font-extrabold mb-6 tracking-tight break-keep">
           왜 <span class="text-gradient-premium">Snowball</span>이어야 할까요?
         </h2>
         <p class="text-base md:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-12 break-keep">
@@ -246,7 +241,7 @@
               💎
             </div>
             <div>
-              <h3 class="text-xl md:text-2xl font-bold mb-2 text-white">유일무이한 하이브리드 솔루션</h3>
+              <h3 class="text-[clamp(1.25rem,4vw,1.5rem)] md:text-2xl font-bold mb-2 text-white">유일무이한 하이브리드 솔루션</h3>
               <p class="text-slate-300 leading-relaxed mb-4 text-sm md:text-base">
                 시스템 따로, 인력 따로? Snowball은 <span class="text-white font-bold">컨설팅</span>과 <span
                   class="text-white font-bold">시스템</span>을 완벽하게 결합하여 제공하는 유일한 파트너입니다.
@@ -268,7 +263,7 @@
               🎓
             </div>
             <div>
-              <h3 class="text-xl md:text-2xl font-bold mb-2 text-white">검증된 전문가 그룹</h3>
+              <h3 class="text-[clamp(1.25rem,4vw,1.5rem)] md:text-2xl font-bold mb-2 text-white">검증된 전문가 그룹</h3>
               <p class="text-slate-300 leading-relaxed mb-4 text-sm md:text-base break-keep">
                 엔터프라이즈 IT 현장과 Big 4 회계법인을 모두 거친 전문가가 실제 현장에서 발생할 수 있는 복잡한 이슈들을 선제적으로 관리합니다.
               </p>
@@ -297,7 +292,8 @@
     <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
       <div class="text-center mb-12 md:mb-16">
         <span class="text-[#2c5265] font-semibold tracking-wider uppercase text-sm mb-2 block">Our Solutions</span>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2 tracking-tight">
+        <h2
+          class="text-[clamp(1.75rem,5vw,2.5rem)] md:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2 tracking-tight">
           Snowball의 <span class="text-gradient-premium">두 가지 솔루션</span>
         </h2>
       </div>
@@ -310,14 +306,16 @@
           <button id="tab-btn-a"
             class="track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all bg-[#2c5265] text-white shadow-md text-center whitespace-normal"
             onclick="switchTrack('a')">
-            <span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span>
-            <span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">전문가 컨설팅</span>
+            <span class="block text-[11px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span>
+            <span class="block text-[13px] sm:text-base md:text-lg font-bold break-keep">전문가<br class="md:hidden">
+              컨설팅</span>
           </button>
           <button id="tab-btn-b"
             class="track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center whitespace-normal"
             onclick="switchTrack('b')">
-            <span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span>
-            <span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">시스템 도입</span>
+            <span class="block text-[11px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span>
+            <span class="block text-[13px] sm:text-base md:text-lg font-bold break-keep">시스템<br class="md:hidden">
+              도입</span>
           </button>
         </div>
       </div>
@@ -333,7 +331,8 @@
                 <div class="flex items-center gap-4 mb-2">
                   <span class="bg-white/20 backdrop-blur px-4 py-1.5 rounded-lg font-bold text-sm shrink-0">Track
                     A</span>
-                  <h3 class="text-xl xs:text-2xl md:text-3xl font-bold break-keep">Snowball<br class="block sm:hidden">
+                  <h3 class="text-[clamp(1.25rem,4vw,1.75rem)] md:text-3xl font-bold break-keep">Snowball<br
+                      class="block sm:hidden">
                     컨설팅 서비스</h3>
                 </div>
                 <p class="text-blue-100 text-lg max-w-2xl mt-4 break-keep">
@@ -371,16 +370,16 @@
 
                     <!-- Cost Comparison Chart -->
                     <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 max-w-2xl mx-auto md:mx-0">
-                      <div class="text-sm font-bold text-slate-800 mb-6 flex justify-between items-center">
+                      <div class="text-sm font-bold text-slate-800 mb-6 flex justify-between items-center break-keep">
                         연간 운영 비용 비교 (Estimates)
-                        <span class="text-[10px] font-normal text-slate-400">*자체 채용 인건비 및 부대비용 포함 기준</span>
+                        <span class="text-[10px] font-normal text-slate-400 ml-2">*자체 채용 및 부대비용 포함 기준</span>
                       </div>
 
                       <div class="space-y-6">
                         <!-- Direct Hire Bar -->
                         <div class="space-y-2">
                           <div class="flex justify-between text-xs font-semibold text-slate-600">
-                            <span>자체 전문가 채용 (KICPA/CISA 등)</span>
+                            <span>자체 전문가 채용</span>
                             <span class="text-slate-900 text-sm">약 1.2억 + α</span>
                           </div>
                           <div class="w-full bg-slate-200 h-8 rounded-lg overflow-hidden relative">
@@ -564,84 +563,108 @@
                   </table>
                 </div>
 
-                <div class="md:hidden">
-                  <div
-                    class="sb-carousel flex overflow-x-auto snap-x snap-mandatory scrollbar-thin space-x-4 pb-4 px-5 animate-scroll-hint pr-10">
-                    <!-- 각 항목을 카드로 표현 -->
-                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
-                      <div
-                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>투입 시점
-                      </div>
-                      <div class="space-y-4">
-                        <div class="bg-slate-50 p-4 rounded-xl">
-                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                          <div class="text-sm text-slate-600">내부평가 시즌 투입</div>
-                        </div>
-                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                          <div class="text-base font-bold text-[#2c5265]">연중 상시 밀착 지원</div>
-                        </div>
-                      </div>
+                <div class="grid grid-cols-1 gap-4 md:hidden px-5">
+                  <!-- 각 항목을 카드로 표현 (Vertical) -->
+                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>투입 시점
                     </div>
-
-                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
-                      <div
-                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>서비스 범위
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">내부평가 시즌 투입</div>
                       </div>
-                      <div class="space-y-4">
-                        <div class="bg-slate-50 p-4 rounded-xl">
-                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                          <div class="text-sm text-slate-600">단순 테스트 수행</div>
-                        </div>
-                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                          <div class="text-base font-bold text-[#2c5265]">계획부터 감사 종료까지</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
-                      <div
-                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>전문가 역할
-                      </div>
-                      <div class="space-y-4">
-                        <div class="bg-slate-50 p-4 rounded-xl">
-                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                          <div class="text-sm text-slate-600">외부 평가자</div>
-                        </div>
-                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                          <div class="text-base font-bold text-[#2c5265]">귀사 내부 IT 전담 인원</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
-                      <div
-                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>외부감사 대응
-                      </div>
-                      <div class="space-y-4">
-                        <div class="bg-slate-50 p-4 rounded-xl">
-                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                          <div class="text-sm text-slate-600">대응 불포함 (별도 계약)</div>
-                        </div>
-                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                          <div class="text-base font-bold text-[#2c5265]">감사인 질의 무제한 대응</div>
-                        </div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">연중 상시 밀착 지원</div>
                       </div>
                     </div>
                   </div>
-                  <!-- Carousel Pagination Dots -->
-                  <div class="flex justify-center gap-1.5 mt-4">
-                    <div class="carousel-dot active"></div>
-                    <div class="carousel-dot"></div>
-                    <div class="carousel-dot"></div>
-                    <div class="carousel-dot"></div>
+
+                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>서비스 범위
+                    </div>
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">단순 테스트 수행</div>
+                      </div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">계획부터 감사 종료까지</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>전문가 역할
+                    </div>
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">외부 평가자</div>
+                      </div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">귀사 내부 IT 전담 인원</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>외부감사 대응
+                    </div>
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">대응 불포함 (별도 계약)</div>
+                      </div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">감사인 질의 무제한 대응</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>이슈 발생 시
+                    </div>
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">추가 계약 필요</div>
+                      </div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">즉시 대응</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
+                    <div
+                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>비용 구조
+                    </div>
+                    <div class="space-y-4">
+                      <div class="bg-slate-50 p-4 rounded-xl">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                        <div class="text-sm text-slate-600">프로젝트 단위</div>
+                      </div>
+                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                        <div class="text-base font-bold text-[#2c5265]">월 정액 (예측 가능)</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -872,7 +895,7 @@
               <div>
                 <div class="flex items-center gap-4 mb-2">
                   <span class="bg-white/20 backdrop-blur px-4 py-1.5 rounded-lg font-bold text-sm">Track B</span>
-                  <h3 class="text-2xl md:text-3xl font-bold">Snowball System</h3>
+                  <h3 class="text-[clamp(1.25rem,4vw,1.75rem)] md:text-3xl font-bold">Snowball System</h3>
                 </div>
                 <p class="text-emerald-50 text-lg max-w-2xl">
                   내부통제 자동화 플랫폼
@@ -1232,7 +1255,7 @@
     <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
       <div class="text-center mb-10 md:mb-16 px-5">
         <h2
-          class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight break-keep">
+          class="text-[clamp(1.75rem,5vw,2.5rem)] md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight break-keep">
           Snowball 도입의 <span class="text-gradient-premium">실질적 이점</span>
         </h2>
         <p class="text-base md:text-lg text-slate-600 font-light break-keep">
@@ -1246,7 +1269,7 @@
           <div
             class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             🛡️</div>
-          <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">감사 대응력 강화</h3>
+          <h3 class="text-[clamp(1.125rem,3vw,1.25rem)] md:text-xl font-bold mb-3 text-slate-900">감사 대응력 강화</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             전문가의 감사 이슈 대응 및 지원으로 외부 감사 시 발생하는 질의와 이슈를 신속하게 해결합니다.
           </p>
@@ -1257,7 +1280,7 @@
           <div
             class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             🚀</div>
-          <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">업무 효율화</h3>
+          <h3 class="text-[clamp(1.125rem,3vw,1.25rem)] md:text-xl font-bold mb-3 text-slate-900">업무 효율화</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             반복적 수동 업무를 제거하고 자동화하여, 빠르고 정확한 평가 결과를 도출합니다.
           </p>
@@ -1268,7 +1291,7 @@
           <div
             class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             📊</div>
-          <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">운영 가시성 확보</h3>
+          <h3 class="text-[clamp(1.125rem,3vw,1.25rem)] md:text-xl font-bold mb-3 text-slate-900">운영 가시성 확보</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             실시간 대시보드를 제공하여 ICFR 전 영역의 통제 수행 현황 및 결함 현황을 즉시 파악할 수 있습니다.
           </p>
@@ -1279,7 +1302,7 @@
           <div
             class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             🎯</div>
-          <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">리스크 관리 강화</h3>
+          <h3 class="text-[clamp(1.125rem,3vw,1.25rem)] md:text-xl font-bold mb-3 text-slate-900">리스크 관리 강화</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             체계적인 결함 추적과 시정 조치 관리를 통해 내부통제 역량을 극대화하고 리스크를 최소화합니다.
           </p>
@@ -1291,7 +1314,8 @@
   <section class="py-16 md:py-24 bg-slate-50">
     <div class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
       <div class="text-center mb-10 md:mb-16">
-        <h2 class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 md:mb-4 break-keep">
+        <h2
+          class="text-[clamp(1.75rem,5vw,2.5rem)] md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 md:mb-4 break-keep">
           자주 묻는 질문
         </h2>
         <p class="text-base md:text-lg text-slate-600 break-keep">
@@ -1591,7 +1615,7 @@
   <section id="consultation" class="py-16 md:py-24 bg-[#1a3c4d] text-white relative overflow-hidden">
     <div class="absolute inset-0 bg-[url('img/pattern.png')] opacity-5"></div>
     <div class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 text-center relative z-10">
-      <h2 class="text-xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 leading-tight">
+      <h2 class="text-[clamp(1.25rem,5vw,2.25rem)] font-bold mb-6 md:mb-8 leading-tight break-keep">
         지금 바로 Snowball의 효과를 경험해보세요
       </h2>
 
@@ -1746,28 +1770,21 @@
     const menuLinks = document.querySelectorAll('.mobile-menu-link');
 
     function openMenu() {
-      menuOverlay.style.display = 'flex';
       menuOverlay.classList.remove('hidden');
+      menuOverlay.classList.add('flex');
       document.body.style.overflow = 'hidden';
-      setTimeout(() => {
-        menuBackdrop.classList.replace('opacity-0', 'opacity-100');
-        menuPanel.classList.remove('translate-x-full');
-      }, 10);
+      // No need for setTimeout for panel as it's now direct content
     }
 
     function closeMenu() {
-      menuBackdrop.classList.replace('opacity-100', 'opacity-0');
-      menuPanel.classList.add('translate-x-full');
+      menuOverlay.classList.remove('flex');
+      menuOverlay.classList.add('hidden');
       document.body.style.overflow = '';
-      setTimeout(() => {
-        menuOverlay.classList.add('hidden');
-        menuOverlay.style.display = 'none';
-      }, 300);
     }
 
     menuButton?.addEventListener('click', openMenu);
     menuClose?.addEventListener('click', closeMenu);
-    menuBackdrop?.addEventListener('click', closeMenu);
+    // Removed menuBackdrop listener as backdrop is removed
 
     // Smooth scroll and mobile menu close
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1918,10 +1935,10 @@
       if (track === 'a') {
         // Update Buttons
         tabBtnA.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all bg-[#2c5265] text-white shadow-md text-center whitespace-normal';
-        tabBtnA.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">전문가 컨설팅</span>';
+        tabBtnA.innerHTML = '<span class="block text-[11px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="block text-[13px] sm:text-base md:text-lg font-bold break-keep">전문가<br class="md:hidden"> 컨설팅</span>';
 
         tabBtnB.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center whitespace-normal';
-        tabBtnB.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">시스템 도입</span>';
+        tabBtnB.innerHTML = '<span class="block text-[11px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="block text-[13px] sm:text-base md:text-lg font-bold break-keep">시스템<br class="md:hidden"> 도입</span>';
 
         // Toggle Content
         contentA.classList.remove('hidden');
@@ -1929,10 +1946,10 @@
       } else {
         // Update Buttons
         tabBtnB.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all bg-emerald-600 text-white shadow-md text-center whitespace-normal';
-        tabBtnB.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">시스템 도입</span>';
+        tabBtnB.innerHTML = '<span class="block text-[11px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="block text-[13px] sm:text-base md:text-lg font-bold break-keep">시스템<br class="md:hidden"> 도입</span>';
 
         tabBtnA.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center whitespace-normal';
-        tabBtnA.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">전문가 컨설팅</span>';
+        tabBtnA.innerHTML = '<span class="block text-[11px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="block text-[13px] sm:text-base md:text-lg font-bold break-keep">전문가<br class="md:hidden"> 컨설팅</span>';
 
         // Toggle Content
         contentB.classList.remove('hidden');
