@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const passwordInput = document.getElementById('price-password');
 
   priceElements.forEach(el => {
-    el.addEventListener('click', () => { 
-      if (!isPriceRevealed) openPriceModal(); 
+    el.addEventListener('click', () => {
+      if (!isPriceRevealed) openPriceModal();
     });
     el.classList.add('cursor-pointer', 'decoration-dotted', 'underline', 'underline-offset-4', 'decoration-slate-400', 'hover:text-blue-600', 'transition-colors');
     el.setAttribute('title', '상세 정보 확인 (클릭)');
@@ -190,9 +190,10 @@ function _r() {
 
     if (_c[key] && _c[key][mode]) {
       const val = _d(_c[key][mode]);
+      const prefix = mode === 'm' ? '월 ' : '';
       el.style.opacity = '0';
       setTimeout(() => {
-        el.innerHTML = `<span class="font-bold text-blue-600">${val}</span>`;
+        el.innerHTML = `<span class="font-bold text-blue-600">${prefix}${val}</span>`;
         el.classList.remove('decoration-dotted', 'underline');
         el.style.opacity = '1';
       }, 200);
