@@ -297,18 +297,21 @@
         </h2>
       </div>
 
-      <!-- 모바일 탭 버튼 (md 이상에서 숨김) -->
-      <div class="md:hidden flex mb-8 bg-white rounded-xl p-1 border border-slate-200 shadow-sm relative z-20">
-        <button id="tab-btn-a"
-          class="track-tab flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all bg-[#2c5265] text-white"
-          onclick="switchTrack('a')">
-          Track A · Consulting
-        </button>
-        <button id="tab-btn-b"
-          class="track-tab flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all text-slate-500"
-          onclick="switchTrack('b')">
-          Track B · System
-        </button>
+      <!-- 트랙 전환 탭 (Sticky) -->
+      <div id="track-tabs-container"
+        class="sticky top-16 md:top-20 z-40 bg-slate-50/80 backdrop-blur-md pt-4 pb-8 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div class="flex bg-white rounded-2xl p-1.5 border border-slate-200 shadow-lg max-w-2xl mx-auto">
+          <button id="tab-btn-a"
+            class="track-tab flex-1 py-3.5 px-6 rounded-xl font-bold text-sm md:text-base transition-all bg-[#2c5265] text-white shadow-sm"
+            onclick="switchTrack('a')">
+            Track A · 전문가 컨설팅
+          </button>
+          <button id="tab-btn-b"
+            class="track-tab flex-1 py-3.5 px-6 rounded-xl font-bold text-sm md:text-base transition-all text-slate-500 hover:bg-slate-50"
+            onclick="switchTrack('b')">
+            Track B · 시스템 도입
+          </button>
+        </div>
       </div>
 
       <!-- Track A 컨텐츠 -->
@@ -830,13 +833,27 @@
                   </div>
                 </div>
               </div>
+
+              <!-- 트랙 전환 네비게이션 (A -> B) -->
+              <div class="mt-16 pt-10 border-t border-slate-100 text-center">
+                <p class="text-slate-500 mb-6 text-sm font-light">시스템을 통한 자동화 솔루션이 궁금하신가요?</p>
+                <button onclick="switchTrack('b')"
+                  class="group inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 text-white rounded-2xl font-bold shadow-xl hover:bg-emerald-700 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                  Track B(시스템 도입) 보러가기
+                  <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Track B 컨텐츠 -->
-      <div id="track-b-content" class="track-content hidden md:block">
+      <div id="track-b-content" class="track-content hidden">
 
         <div id="track-b" class="scroll-mt-24">
           <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
@@ -1178,6 +1195,20 @@
                     </p>
                   </div>
                 </div>
+              </div>
+
+              <!-- 트랙 전환 네비게이션 (B -> A) -->
+              <div class="mt-16 pt-10 border-t border-slate-100 text-center">
+                <p class="text-slate-500 mb-6 text-sm font-light">Big 4 출신 전문가의 밀착 컨설팅이 필요하신가요?</p>
+                <button onclick="switchTrack('a')"
+                  class="group inline-flex items-center gap-3 px-8 py-4 bg-[#2c5265] text-white rounded-2xl font-bold shadow-xl hover:bg-[#1a3c4d] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                  <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                  </svg>
+                  Track A(전문가 컨설팅) 보러가기
+                </button>
               </div>
             </div>
           </div>
@@ -1862,27 +1893,41 @@
     });
 
     // Mobile Track Tabs
+    // Track Switching Logic
     function switchTrack(track) {
       const tabBtnA = document.getElementById('tab-btn-a');
       const tabBtnB = document.getElementById('tab-btn-b');
       const contentA = document.getElementById('track-a-content');
       const contentB = document.getElementById('track-b-content');
+      const tabsContainer = document.getElementById('track-tabs-container');
 
       if (track === 'a') {
-        tabBtnA.classList.add('bg-[#2c5265]', 'text-white');
-        tabBtnA.classList.remove('text-slate-500');
-        tabBtnB.classList.remove('bg-[#2c5265]', 'text-white');
-        tabBtnB.classList.add('text-slate-500');
+        // Update Buttons
+        tabBtnA.className = 'track-tab flex-1 py-3.5 px-6 rounded-xl font-bold text-sm md:text-base transition-all bg-[#2c5265] text-white shadow-sm';
+        tabBtnB.className = 'track-tab flex-1 py-3.5 px-6 rounded-xl font-bold text-sm md:text-base transition-all text-slate-500 hover:bg-slate-50';
+
+        // Toggle Content
         contentA.classList.remove('hidden');
         contentB.classList.add('hidden');
       } else {
-        tabBtnB.classList.add('bg-[#2c5265]', 'text-white');
-        tabBtnB.classList.remove('text-slate-500');
-        tabBtnA.classList.remove('bg-[#2c5265]', 'text-white');
-        tabBtnA.classList.add('text-slate-500');
+        // Update Buttons
+        tabBtnB.className = 'track-tab flex-1 py-3.5 px-6 rounded-xl font-bold text-sm md:text-base transition-all bg-emerald-600 text-white shadow-sm';
+        tabBtnA.className = 'track-tab flex-1 py-3.5 px-6 rounded-xl font-bold text-sm md:text-base transition-all text-slate-500 hover:bg-slate-50';
+
+        // Toggle Content
         contentB.classList.remove('hidden');
         contentA.classList.add('hidden');
       }
+
+      // Smooth scroll to top of tabs
+      const navbarHeight = window.innerWidth >= 768 ? 80 : 64;
+      const elementPosition = tabsContainer.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
 
     // FAQ Accordion Logic
@@ -1901,11 +1946,9 @@
     }
 
     // Restore desktop view on resize
+    // Keep track state on resize
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768) {
-        document.getElementById('track-a-content')?.classList.remove('hidden');
-        document.getElementById('track-b-content')?.classList.remove('hidden');
-      }
+      // Logic for track visibility can be maintained by current active classes
     });
 
     const consultationForm = document.getElementById('consultation-form');
