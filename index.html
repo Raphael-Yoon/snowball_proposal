@@ -27,7 +27,48 @@
 </head>
 
 <body class="antialiased text-slate-800 bg-slate-50">
-  <nav id="navbar" class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full top-0 z-40 transition-all duration-300">
+  <!-- 모바일 메뉴 풀스크린 오버레이 (Z-index 최상위 확보를 위해 body 직후 배치) -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-[9999] hidden overflow-hidden">
+    <!-- Backdrop -->
+    <div id="mobile-menu-backdrop"
+      class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+
+    <!-- Menu Panel -->
+    <div id="mobile-menu-panel"
+      class="absolute right-0 top-0 bottom-0 w-[280px] bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col">
+      <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+        <span class="font-bold text-xl text-[#2c5265]">Menu</span>
+        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-900 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-6 flex flex-col space-y-4 flex-grow overflow-y-auto">
+        <a href="#pain-point"
+          class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">문제
+          제기</a>
+        <a href="#solutions"
+          class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">솔루션
+          소개</a>
+        <a href="#pricing"
+          class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">도입
+          비용</a>
+        <a href="#benefits"
+          class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">도입
+          이점</a>
+      </div>
+
+      <div class="p-6 border-t border-slate-100">
+        <a href="#consultation"
+          class="mobile-menu-link block w-full bg-[#2c5265] text-white text-center py-4 rounded-xl font-bold shadow-md hover:bg-[#1a3c4d] transition-all">상담
+          신청하기</a>
+      </div>
+    </div>
+  </div>
+
+  <nav id="navbar" class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full top-0 z-[40] transition-all duration-300">
     <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16 md:h-20 transition-all duration-300">
         <div class="flex-shrink-0">
@@ -54,47 +95,6 @@
                 d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 모바일 메뉴 풀스크린 오버레이 -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 z-[100] hidden overflow-hidden">
-      <!-- Backdrop -->
-      <div id="mobile-menu-backdrop"
-        class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
-
-      <!-- Menu Panel -->
-      <div id="mobile-menu-panel"
-        class="absolute right-0 top-0 bottom-0 w-[280px] bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col">
-        <div class="p-6 border-b border-slate-100 flex justify-between items-center">
-          <span class="font-bold text-xl text-[#2c5265]">Menu</span>
-          <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-900 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        <div class="p-6 flex flex-col space-y-4 flex-grow overflow-y-auto">
-          <a href="#pain-point"
-            class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">문제
-            제기</a>
-          <a href="#solutions"
-            class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">솔루션
-            소개</a>
-          <a href="#pricing"
-            class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">도입
-            비용</a>
-          <a href="#benefits"
-            class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">도입
-            이점</a>
-        </div>
-
-        <div class="p-6 border-t border-slate-100">
-          <a href="#consultation"
-            class="mobile-menu-link block w-full bg-[#2c5265] text-white text-center py-4 rounded-xl font-bold shadow-md hover:bg-[#1a3c4d] transition-all">상담
-            신청하기</a>
         </div>
       </div>
     </div>
@@ -306,18 +306,18 @@
       <div id="track-tabs-container"
         class="sticky top-16 md:top-20 z-40 bg-slate-50/80 backdrop-blur-md pt-4 pb-8 -mx-5 px-5 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
         <div
-          class="flex bg-white rounded-2xl p-1.5 border border-slate-200 shadow-lg max-w-2xl mx-auto overflow-hidden">
+          class="flex flex-nowrap bg-white rounded-2xl p-1.5 border border-slate-200 shadow-lg max-w-2xl mx-auto overflow-x-visible">
           <button id="tab-btn-a"
-            class="track-tab flex-1 min-w-0 shrink-0 py-3 px-2 md:py-4 md:px-6 rounded-xl transition-all bg-[#2c5265] text-white shadow-md text-center whitespace-normal"
+            class="track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all bg-[#2c5265] text-white shadow-md text-center whitespace-normal"
             onclick="switchTrack('a')">
             <span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span>
-            <span class="block text-sm md:text-lg font-bold">전문가 컨설팅</span>
+            <span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">전문가 컨설팅</span>
           </button>
           <button id="tab-btn-b"
-            class="track-tab flex-1 min-w-0 shrink-0 py-3 px-2 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center whitespace-normal"
+            class="track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center whitespace-normal"
             onclick="switchTrack('b')">
             <span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span>
-            <span class="block text-sm md:text-lg font-bold">시스템 도입</span>
+            <span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">시스템 도입</span>
           </button>
         </div>
       </div>
@@ -331,8 +331,10 @@
               class="bg-[#2c5265] p-6 md:p-10 text-white flex flex-col md:flex-row items-start md:items-center justify-between">
               <div>
                 <div class="flex items-center gap-4 mb-2">
-                  <span class="bg-white/20 backdrop-blur px-4 py-1.5 rounded-lg font-bold text-sm">Track A</span>
-                  <h3 class="text-2xl md:text-3xl font-bold">Snowball 컨설팅 서비스</h3>
+                  <span class="bg-white/20 backdrop-blur px-4 py-1.5 rounded-lg font-bold text-sm shrink-0">Track
+                    A</span>
+                  <h3 class="text-xl xs:text-2xl md:text-3xl font-bold break-keep">Snowball<br class="block sm:hidden">
+                    컨설팅 서비스</h3>
                 </div>
                 <p class="text-blue-100 text-lg max-w-2xl mt-4 break-keep">
                   "내부통제팀의 IT담당자가 되어드립니다."
@@ -1744,6 +1746,7 @@
     const menuLinks = document.querySelectorAll('.mobile-menu-link');
 
     function openMenu() {
+      menuOverlay.style.display = 'flex';
       menuOverlay.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
       setTimeout(() => {
@@ -1758,6 +1761,7 @@
       document.body.style.overflow = '';
       setTimeout(() => {
         menuOverlay.classList.add('hidden');
+        menuOverlay.style.display = 'none';
       }, 300);
     }
 
@@ -1913,22 +1917,22 @@
 
       if (track === 'a') {
         // Update Buttons
-        tabBtnA.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-2 md:py-4 md:px-6 rounded-xl transition-all bg-[#2c5265] text-white shadow-md text-center whitespace-normal';
-        tabBtnA.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="block text-sm md:text-lg font-bold">전문가 컨설팅</span>';
+        tabBtnA.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all bg-[#2c5265] text-white shadow-md text-center whitespace-normal';
+        tabBtnA.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">전문가 컨설팅</span>';
 
-        tabBtnB.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-2 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center whitespace-normal';
-        tabBtnB.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="block text-sm md:text-lg font-bold">시스템 도입</span>';
+        tabBtnB.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center whitespace-normal';
+        tabBtnB.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">시스템 도입</span>';
 
         // Toggle Content
         contentA.classList.remove('hidden');
         contentB.classList.add('hidden');
       } else {
         // Update Buttons
-        tabBtnB.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-2 md:py-4 md:px-6 rounded-xl transition-all bg-emerald-600 text-white shadow-md text-center whitespace-normal';
-        tabBtnB.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="block text-sm md:text-lg font-bold">시스템 도입</span>';
+        tabBtnB.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all bg-emerald-600 text-white shadow-md text-center whitespace-normal';
+        tabBtnB.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">시스템 도입</span>';
 
-        tabBtnA.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-2 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center whitespace-normal';
-        tabBtnA.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="block text-sm md:text-lg font-bold">전문가 컨설팅</span>';
+        tabBtnA.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-1 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center whitespace-normal';
+        tabBtnA.innerHTML = '<span class="block text-[10px] md:text-xs opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="block text-[14px] sm:text-base md:text-lg font-bold break-keep">전문가 컨설팅</span>';
 
         // Toggle Content
         contentB.classList.remove('hidden');
