@@ -121,14 +121,18 @@ body {
   font-weight: 700;
   background-color: var(--sb-primary);
   color: #ffffff;
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.2);
-  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 10px 20px rgba(44, 82, 101, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sb-btn-primary:hover {
   background-color: var(--sb-primary-dark);
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
-  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(44, 82, 101, 0.3);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.sb-btn-primary:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .sb-btn-secondary {
@@ -290,4 +294,55 @@ body {
 .scrollbar-thin::-webkit-scrollbar-thumb {
   background: rgba(44, 82, 101, 0.15);
   border-radius: 10px;
+}
+
+/* Scroll Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Form Focus State */
+.sb-input {
+  transition: all 0.2s ease;
+}
+
+.sb-input:focus {
+  border-color: #4f46e5;
+  /* indigo-600 */
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+  outline: none;
+}
+
+/* Text Gradient Utility */
+.text-gradient-premium {
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Icon Floating Animation */
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-floating {
+  animation: floating 3s ease-in-out infinite;
 }
