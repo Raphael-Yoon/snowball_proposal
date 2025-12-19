@@ -571,108 +571,120 @@
                   </table>
                 </div>
 
-                <div class="grid grid-cols-1 gap-4 md:hidden px-5">
-                  <!-- 각 항목을 카드로 표현 (Vertical) -->
-                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>투입 시점
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">내부평가 시즌 투입</div>
+                <div class="md:hidden">
+                  <div
+                    class="sb-carousel flex overflow-x-auto snap-x snap-mandatory scrollbar-thin space-x-4 pb-4 px-5 animate-scroll-hint pr-10">
+                    <!-- 각 항목을 카드로 표현 (Carousel) -->
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>투입 시점
                       </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">연중 상시 밀착 지원</div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">내부평가 시즌 투입</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">연중 상시 밀착 지원</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>서비스 범위
+                      </div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">단순 테스트 수행</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">계획부터 감사 종료까지</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>전문가 역할
+                      </div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">외부 평가자</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">귀사 내부 IT 전담 인원</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>외부감사 대응
+                      </div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">대응 불포함 (별도 계약)</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">감사인 질의 무제한 대응</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>이슈 발생 시
+                      </div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">추가 계약 필요</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">즉시 대응</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>비용 구조
+                      </div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">프로젝트 단위</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">월 정액 (예측 가능)</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>서비스 범위
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">단순 테스트 수행</div>
-                      </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">계획부터 감사 종료까지</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>전문가 역할
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">외부 평가자</div>
-                      </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">귀사 내부 IT 전담 인원</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>외부감사 대응
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">대응 불포함 (별도 계약)</div>
-                      </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">감사인 질의 무제한 대응</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>이슈 발생 시
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">추가 계약 필요</div>
-                      </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">즉시 대응</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>비용 구조
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">프로젝트 단위</div>
-                      </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">월 정액 (예측 가능)</div>
-                      </div>
-                    </div>
+                  <!-- Carousel Pagination Dots -->
+                  <div class="flex justify-center gap-1.5 mt-4">
+                    <div class="carousel-dot active"></div>
+                    <div class="carousel-dot"></div>
+                    <div class="carousel-dot"></div>
+                    <div class="carousel-dot"></div>
+                    <div class="carousel-dot"></div>
+                    <div class="carousel-dot"></div>
                   </div>
                 </div>
               </div>
