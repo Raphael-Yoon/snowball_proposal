@@ -13,6 +13,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 0.5s ease-out forwards;
+    }
+  </style>
 </head>
 
 <body class="antialiased text-slate-800 bg-slate-50">
@@ -47,24 +64,43 @@
       </div>
     </div>
 
-    <div id="mobile-menu"
-      class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full transition-all duration-300 ease-in-out opacity-0 -translate-y-2">
-      <div class="px-4 pt-2 pb-6 space-y-1">
-        <a href="#home"
-          class="block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-xl font-medium transition-colors">Home</a>
-        <a href="#track-a"
-          class="block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-xl font-medium transition-colors">Track
-          A -
-          Consulting</a>
-        <a href="#track-b"
-          class="block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-xl font-medium transition-colors">Track
-          B -
-          System</a>
-        <a href="#benefits"
-          class="block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#2c5265] rounded-xl font-medium transition-colors">Benefits</a>
-        <div class="pt-2">
-          <a href="#contact"
-            class="block px-4 py-3.5 bg-[#2c5265] text-white text-center font-bold rounded-xl shadow-md">상담 신청하기</a>
+    <!-- 모바일 메뉴 풀스크린 오버레이 -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-[100] hidden overflow-hidden">
+      <!-- Backdrop -->
+      <div id="mobile-menu-backdrop"
+        class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+
+      <!-- Menu Panel -->
+      <div id="mobile-menu-panel"
+        class="absolute right-0 top-0 bottom-0 w-[280px] bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col">
+        <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+          <span class="font-bold text-xl text-[#2c5265]">Menu</span>
+          <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-900 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="p-6 flex flex-col space-y-4 flex-grow overflow-y-auto">
+          <a href="#pain-point"
+            class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">문제
+            제기</a>
+          <a href="#solutions"
+            class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">솔루션
+            소개</a>
+          <a href="#pricing"
+            class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">도입
+            비용</a>
+          <a href="#benefits"
+            class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-2 border-b border-slate-50 transition-colors">도입
+            이점</a>
+        </div>
+
+        <div class="p-6 border-t border-slate-100">
+          <a href="#consultation"
+            class="mobile-menu-link block w-full bg-[#2c5265] text-white text-center py-4 rounded-xl font-bold shadow-md hover:bg-[#1a3c4d] transition-all">상담
+            신청하기</a>
         </div>
       </div>
     </div>
@@ -113,7 +149,7 @@
     </div>
   </section>
 
-  <section class="py-16 md:py-24 bg-white">
+  <section id="pain-point" class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10 md:mb-16">
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 md:mb-4">
@@ -217,7 +253,7 @@
     </div>
   </section>
 
-  <section class="py-16 md:py-24 bg-slate-50">
+  <section id="solutions" class="py-16 md:py-24 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 md:mb-16">
         <span class="text-[#2c5265] font-semibold tracking-wider uppercase text-sm">Our Solutions</span>
@@ -561,7 +597,7 @@
               </div>
 
               <!-- Pricing Structure -->
-              <div class="mb-12">
+              <div id="pricing" class="mb-12">
                 <h4 class="text-xl font-bold text-slate-900 mb-4">요금 체계</h4>
                 <p class="text-slate-600 mb-4 text-sm">요금은 <strong class="text-slate-900">계약 시점의 In-Scope 시스템
                     수</strong>를
@@ -1423,7 +1459,7 @@
     </div>
   </section>
 
-  <section class="py-16 md:py-24 bg-[#1a3c4d] text-white relative overflow-hidden">
+  <section id="consultation" class="py-16 md:py-24 bg-[#1a3c4d] text-white relative overflow-hidden">
     <div class="absolute inset-0 bg-[url('img/pattern.png')] opacity-5"></div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <h2 class="text-xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 leading-tight">
@@ -1552,50 +1588,50 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
+    // Mobile menu toggle (Full-screen overlay)
     const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const menuOverlay = document.getElementById('mobile-menu-overlay');
+    const menuBackdrop = document.getElementById('mobile-menu-backdrop');
+    const menuPanel = document.getElementById('mobile-menu-panel');
+    const menuLinks = document.querySelectorAll('.mobile-menu-link');
 
-    menuButton?.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.contains('hidden');
+    function openMenu() {
+      menuOverlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        menuBackdrop.classList.replace('opacity-0', 'opacity-100');
+        menuPanel.classList.remove('translate-x-full');
+      }, 10);
+    }
 
-      if (isHidden) {
-        // Open
-        mobileMenu.classList.remove('hidden');
-        // Trigger reflow
-        void mobileMenu.offsetWidth;
-        mobileMenu.classList.remove('opacity-0', '-translate-y-2');
-        mobileMenu.classList.add('opacity-100', 'translate-y-0');
-        menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Change to X icon
-      } else {
-        // Close
-        mobileMenu.classList.add('opacity-0', '-translate-y-2');
-        mobileMenu.classList.remove('opacity-100', 'translate-y-0');
-        menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Change back to Hamburger
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-        }, 300);
-      }
-    });
+    function closeMenu() {
+      menuBackdrop.classList.replace('opacity-100', 'opacity-0');
+      menuPanel.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        menuOverlay.classList.add('hidden');
+      }, 300);
+    }
 
-    // Smooth scroll
+    menuButton?.addEventListener('click', openMenu);
+    menuClose?.addEventListener('click', closeMenu);
+    menuBackdrop?.addEventListener('click', closeMenu);
+
+    // Smooth scroll and mobile menu close
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
 
-          // Close mobile menu if open
-          if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('opacity-0', '-translate-y-2');
-            mobileMenu.classList.remove('opacity-100', 'translate-y-0');
-            menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-            setTimeout(() => {
-              mobileMenu.classList.add('hidden');
-            }, 300);
+        if (target) {
+          // If menu is open, close it first
+          if (!menuOverlay.classList.contains('hidden')) {
+            closeMenu();
           }
+
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
@@ -1801,6 +1837,13 @@
         });
     });
   </script>
+  <!-- 모바일 하단 고정 CTA -->
+  <div
+    class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-slate-200 z-[50] animate-fade-in-up">
+    <a href="#consultation"
+      class="block w-full bg-indigo-600 text-white text-center py-4 rounded-xl font-bold shadow-lg active:scale-95 transition-all">무료
+      상담 신청하기</a>
+  </div>
 </body>
 
 </html>
