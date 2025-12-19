@@ -1,14 +1,14 @@
 /* Smooth scroll */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: #1f2937;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #1f2937;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Scroll Snap only on Desktop (768px and above) */
@@ -34,21 +34,21 @@ body {
 } */
 
 .bg-pattern {
-    background-image: radial-gradient(#ffffff 1px, transparent 1px);
-    background-size: 20px 20px;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #2c5265 0%, #1a3c4d 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #2c5265 0%, #1a3c4d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ==== Snowball Design System ==== */
@@ -95,7 +95,8 @@ body {
 .sb-card:hover {
   box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
   transform: translateY(-4px);
-  border-color: rgba(59, 130, 246, 0.4); /* blue-ish */
+  border-color: rgba(59, 130, 246, 0.4);
+  /* blue-ish */
 }
 
 .sb-card-icon {
@@ -177,6 +178,37 @@ body {
     linear-gradient(135deg, #2c5265, #152a38);
 }
 
+/* Animations */
+@keyframes grow-x {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.animate-grow-x {
+  animation: grow-x 1.5s ease-out forwards;
+}
+
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-count-up {
+  animation: count-up 0.8s ease-out forwards;
+}
+
 /* Navbar scrolled state */
 .sb-nav-scrolled {
   background-color: #ffffff;
@@ -189,6 +221,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
