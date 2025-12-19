@@ -144,7 +144,7 @@
       </div>
 
       <div
-        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto pb-6 md:pb-0 px-4 md:px-0">
+        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto pb-4 md:pb-0 px-4 md:px-0 animate-scroll-hint pr-10 md:pr-0">
         <div
           class="min-w-[85vw] md:min-w-0 snap-center group bg-white md:bg-slate-50 rounded-2xl p-6 md:p-8 shadow-md md:shadow-none border-none md:border md:border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
           <div
@@ -166,6 +166,12 @@
             엑셀 기반의 수동 관리와 문서 취합 과정에서 버전 관리 오류가 빈발하며, 단순 반복 업무로 인해 핵심 리스크 관리에 집중하기 어렵습니다.
           </p>
         </div>
+      </div>
+
+      <!-- Carousel Pagination Dots -->
+      <div class="flex justify-center gap-2 mt-4 md:hidden">
+        <div class="carousel-dot active"></div>
+        <div class="carousel-dot"></div>
       </div>
     </div>
   </section>
@@ -215,7 +221,7 @@
       </div>
 
       <div
-        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 gap-6 lg:gap-12 pb-6 md:pb-0 px-4 md:px-0">
+        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-2 gap-6 lg:gap-12 pb-4 md:pb-0 px-4 md:px-0 animate-scroll-hint pr-10 md:pr-0">
         <!-- Feature 1: Hybrid Solution -->
         <div
           class="min-w-[85vw] md:min-w-0 snap-center bg-white/5 backdrop-blur-lg rounded-2xl md:rounded-3xl p-5 md:p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group shadow-lg md:shadow-none">
@@ -270,6 +276,12 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Carousel Pagination Dots -->
+      <div class="flex justify-center gap-2 mt-6 md:hidden">
+        <div class="carousel-dot active"></div>
+        <div class="carousel-dot"></div>
       </div>
     </div>
   </section>
@@ -385,7 +397,7 @@
 
                   <!-- Comparison Cards -->
                   <div
-                    class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:gap-6 pb-6 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2">
+                    class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin gap-4 md:gap-6 pb-4 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2 animate-scroll-hint pr-10 md:pr-0">
                     <!-- Problem Card -->
                     <div
                       class="min-w-[85vw] md:min-w-0 snap-center bg-white md:bg-slate-50 rounded-2xl p-5 md:p-8 border-none md:border md:border-slate-200/50 shadow-md md:shadow-none">
@@ -467,6 +479,12 @@
                     </div>
                   </div>
 
+                  <!-- Carousel Pagination Dots -->
+                  <div class="flex justify-center gap-2 mt-4 md:hidden">
+                    <div class="carousel-dot active"></div>
+                    <div class="carousel-dot"></div>
+                  </div>
+
                   <!-- Final Callout -->
                   <div
                     class="mt-6 bg-gradient-to-r from-[#2c5265] to-[#1a3c4d] rounded-2xl p-6 md:p-8 text-white text-center shadow-xl">
@@ -531,75 +549,84 @@
                   </table>
                 </div>
 
-                <!-- 모바일 카드형 (가로 스크롤) -->
-                <div class="md:hidden flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-4 pb-6 px-4">
-                  <!-- 각 항목을 카드로 표현 -->
-                  <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>투입 시점
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">내부평가 시즌 투입</div>
+                <div class="md:hidden">
+                  <div
+                    class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin space-x-4 pb-4 px-4 animate-scroll-hint pr-10">
+                    <!-- 각 항목을 카드로 표현 -->
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>투입 시점
                       </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">연중 상시 밀착 지원</div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">내부평가 시즌 투입</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">연중 상시 밀착 지원</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>서비스 범위
+                      </div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">단순 테스트 수행</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">계획부터 감사 종료까지</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>전문가 역할
+                      </div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">외부 평가자</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">귀사 내부 IT 전담 인원</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
+                      <div
+                        class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>외부감사 대응
+                      </div>
+                      <div class="space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                          <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
+                          <div class="text-sm text-slate-600">대응 불포함 (별도 계약)</div>
+                        </div>
+                        <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
+                          <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
+                          <div class="text-base font-bold text-[#2c5265]">감사인 질의 무제한 대응</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>서비스 범위
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">단순 테스트 수행</div>
-                      </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">계획부터 감사 종료까지</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>전문가 역할
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">외부 평가자</div>
-                      </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">귀사 내부 IT 전담 인원</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
-                    <div
-                      class="text-lg font-bold text-[#2c5265] mb-4 border-b border-slate-100 pb-2 flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 bg-[#2c5265] rounded-full"></span>외부감사 대응
-                    </div>
-                    <div class="space-y-4">
-                      <div class="bg-slate-50 p-4 rounded-xl">
-                        <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Legacy PA</div>
-                        <div class="text-sm text-slate-600">대응 불포함 (별도 계약)</div>
-                      </div>
-                      <div class="bg-[#2c5265]/5 p-4 rounded-xl border border-[#2c5265]/10">
-                        <div class="text-[10px] text-[#2c5265] uppercase font-bold mb-1">Snowball</div>
-                        <div class="text-base font-bold text-[#2c5265]">감사인 질의 무제한 대응</div>
-                      </div>
-                    </div>
+                  <!-- Carousel Pagination Dots -->
+                  <div class="flex justify-center gap-1.5 mt-4">
+                    <div class="carousel-dot active"></div>
+                    <div class="carousel-dot"></div>
+                    <div class="carousel-dot"></div>
+                    <div class="carousel-dot"></div>
                   </div>
                 </div>
               </div>
@@ -836,7 +863,7 @@
                 </h4>
 
                 <div
-                  class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:gap-6 pb-6 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2">
+                  class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin gap-4 md:gap-6 pb-4 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2 animate-scroll-hint pr-10 md:pr-0">
                   <!-- 문제 카드 -->
                   <div
                     class="min-w-[85vw] md:min-w-0 snap-center bg-white md:bg-slate-50 rounded-2xl p-5 md:p-8 border-none md:border md:border-slate-200/50 shadow-md md:shadow-none">
@@ -916,6 +943,12 @@
                       </li>
                     </ul>
                   </div>
+                </div>
+
+                <!-- Carousel Pagination Dots -->
+                <div class="flex justify-center gap-2 mt-4 md:hidden">
+                  <div class="carousel-dot active"></div>
+                  <div class="carousel-dot"></div>
                 </div>
               </div>
 

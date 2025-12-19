@@ -241,3 +241,53 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Pagination Dots */
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  /* slate-300 */
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  width: 16px;
+  border-radius: 3px;
+  background-color: #2c5265;
+  /* sb-primary */
+}
+
+@keyframes scroll-hint-bounce {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-15px);
+  }
+
+  40% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-hint {
+  animation: scroll-hint-bounce 1.5s ease-in-out 1.2s 1;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(44, 82, 101, 0.15);
+  border-radius: 10px;
+}
