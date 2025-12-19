@@ -1852,7 +1852,9 @@
       <p class="text-slate-600 mb-6 text-sm">상세 견적 확인을 위한 인증 코드를 입력해 주세요.</p>
       <input type="password" id="price-password"
         class="w-full px-4 py-3 border border-slate-300 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-[#2c5265] focus:border-transparent transition-all"
-        placeholder="Code 입력" onkeyup="if(window.event.keyCode==13){checkPricePassword()}">
+        placeholder="인증코드 4자리 입력" inputmode="numeric" pattern="[0-9]*"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+        onkeyup="if(window.event.keyCode==13){checkPricePassword()}">
       <div class="flex gap-3">
         <button onclick="closePriceModal()"
           class="flex-1 px-4 py-2.5 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 font-medium transition-colors">취소</button>
