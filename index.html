@@ -72,8 +72,10 @@
 
         <div class="hidden md:flex space-x-8 items-center">
           <a href="#home" class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Home</a>
-          <a href="#track-a" class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Track A</a>
-          <a href="#track-b" class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Track B</a>
+          <a href="#track-a" onclick="event.preventDefault(); switchTrack('a')"
+            class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Track A</a>
+          <a href="#track-b" onclick="event.preventDefault(); switchTrack('b')"
+            class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Track B</a>
           <a href="#benefits" class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Benefits</a>
           <a href="#contact"
             class="px-5 py-2.5 bg-[#2c5265] text-white rounded-full font-medium hover:bg-[#1a3c4d] transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact</a>
@@ -120,11 +122,11 @@
       </p>
 
       <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mt-6 md:mt-8 px-5 md:px-0">
-        <a href="#track-a"
+        <a href="#track-a" onclick="event.preventDefault(); switchTrack('a')"
           class="px-6 py-4 md:px-8 md:py-4 bg-white text-[#2c5265] font-bold rounded-xl shadow-xl hover:shadow-2xl hover:bg-blue-50 transition-all transform hover:-translate-y-1 text-center">
           Track A (Consulting) 보기
         </a>
-        <a href="#track-b"
+        <a href="#track-b" onclick="event.preventDefault(); switchTrack('b')"
           class="px-6 py-4 md:px-8 md:py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold rounded-xl hover:bg-white/20 transition-all transform hover:-translate-y-1 text-center">
           Track B (System) 보기
         </a>
@@ -867,9 +869,7 @@
                   </div>
                   <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
                     <h5 class="font-bold text-slate-800 mb-1">요금 산정 기준</h5>
-                    <p class="text-slate-600 text-sm">계약 시점의 In-Scope 시스템 수 기준<br><span
-                        class="text-xs text-slate-500">(서비스 수행
-                        중 회사의 요청에 따른 Scope 조정 시 변동 가능)</span></p>
+                    <p class="text-slate-600 text-sm">계약 시점의 In-Scope 시스템 수 기준</p>
                   </div>
                   <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
                     <h5 class="font-bold text-slate-800 mb-1">계약 기간</h5>
@@ -2037,9 +2037,10 @@
         contentA.classList.add('hidden');
       }
 
-      // Smooth scroll to top of tabs
+      // Smooth scroll to top of solutions section
+      const targetSection = document.getElementById('solutions');
       const navbarHeight = window.innerWidth >= 768 ? 80 : 64;
-      const elementPosition = tabsContainer.getBoundingClientRect().top + window.pageYOffset;
+      const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - navbarHeight;
 
       window.scrollTo({
