@@ -144,7 +144,7 @@
       </div>
 
       <div
-        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto pb-4 md:pb-0 px-4 md:px-0 animate-scroll-hint pr-10 md:pr-0">
+        class="sb-carousel flex overflow-x-auto snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto pb-4 md:pb-0 px-4 md:px-0 animate-scroll-hint pr-10 md:pr-0">
         <div
           class="min-w-[85vw] md:min-w-0 snap-center group bg-white md:bg-slate-50 rounded-2xl p-6 md:p-8 shadow-md md:shadow-none border-none md:border md:border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
           <div
@@ -221,7 +221,7 @@
       </div>
 
       <div
-        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-2 gap-6 lg:gap-12 pb-4 md:pb-0 px-4 md:px-0 animate-scroll-hint pr-10 md:pr-0">
+        class="sb-carousel flex overflow-x-auto snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-2 gap-6 lg:gap-12 pb-4 md:pb-0 px-4 md:px-0 animate-scroll-hint pr-10 md:pr-0">
         <!-- Feature 1: Hybrid Solution -->
         <div
           class="min-w-[85vw] md:min-w-0 snap-center bg-white/5 backdrop-blur-lg rounded-2xl md:rounded-3xl p-5 md:p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group shadow-lg md:shadow-none">
@@ -397,7 +397,7 @@
 
                   <!-- Comparison Cards -->
                   <div
-                    class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin gap-4 md:gap-6 pb-4 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2 animate-scroll-hint pr-10 md:pr-0">
+                    class="sb-carousel flex overflow-x-auto snap-x snap-mandatory scrollbar-thin gap-4 md:gap-6 pb-4 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2 animate-scroll-hint pr-10 md:pr-0">
                     <!-- Problem Card -->
                     <div
                       class="min-w-[85vw] md:min-w-0 snap-center bg-white md:bg-slate-50 rounded-2xl p-5 md:p-8 border-none md:border md:border-slate-200/50 shadow-md md:shadow-none">
@@ -551,7 +551,7 @@
 
                 <div class="md:hidden">
                   <div
-                    class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin space-x-4 pb-4 px-4 animate-scroll-hint pr-10">
+                    class="sb-carousel flex overflow-x-auto snap-x snap-mandatory scrollbar-thin space-x-4 pb-4 px-4 animate-scroll-hint pr-10">
                     <!-- 각 항목을 카드로 표현 -->
                     <div class="min-w-[85vw] snap-center bg-white rounded-2xl shadow-md p-6 border-none">
                       <div
@@ -863,7 +863,7 @@
                 </h4>
 
                 <div
-                  class="flex overflow-x-auto snap-x snap-mandatory scrollbar-thin gap-4 md:gap-6 pb-4 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2 animate-scroll-hint pr-10 md:pr-0">
+                  class="sb-carousel flex overflow-x-auto snap-x snap-mandatory scrollbar-thin gap-4 md:gap-6 pb-4 md:pb-0 px-4 md:px-0 md:grid md:grid-cols-2 animate-scroll-hint pr-10 md:pr-0">
                   <!-- 문제 카드 -->
                   <div
                     class="min-w-[85vw] md:min-w-0 snap-center bg-white md:bg-slate-50 rounded-2xl p-5 md:p-8 border-none md:border md:border-slate-200/50 shadow-md md:shadow-none">
@@ -1822,6 +1822,23 @@
       });
     }
 
+    // Carousel Pagination Dots Sync
+    document.querySelectorAll('.sb-carousel').forEach(carousel => {
+      carousel.addEventListener('scroll', () => {
+        // Calculate index based on card width (each card is min-w-[85vw])
+        // carousel.scrollLeft / cardWidth
+        const cardWidth = carousel.querySelector('div').offsetWidth + 16; // width + gap
+        const index = Math.round(carousel.scrollLeft / cardWidth);
+        const dotsContainer = carousel.nextElementSibling;
+        if (dotsContainer && dotsContainer.classList.contains('justify-center')) {
+          const dots = dotsContainer.querySelectorAll('.carousel-dot');
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+          });
+        }
+      });
+    });
+
     // Mobile Track Tabs
     function switchTrack(track) {
       const tabBtnA = document.getElementById('tab-btn-a');
@@ -1832,61 +1849,40 @@
       if (track === 'a') {
         tabBtnA.classList.add('bg-[#2c5265]', 'text-white');
         tabBtnA.classList.remove('text-slate-500');
-        tabBtnB.classList.remove('bg-emerald-600', 'text-white');
+        tabBtnB.classList.remove('bg-[#2c5265]', 'text-white');
         tabBtnB.classList.add('text-slate-500');
-
         contentA.classList.remove('hidden');
         contentB.classList.add('hidden');
-        contentB.classList.remove('md:block');
       } else {
-        tabBtnB.classList.add('bg-emerald-600', 'text-white');
+        tabBtnB.classList.add('bg-[#2c5265]', 'text-white');
         tabBtnB.classList.remove('text-slate-500');
         tabBtnA.classList.remove('bg-[#2c5265]', 'text-white');
         tabBtnA.classList.add('text-slate-500');
-
         contentB.classList.remove('hidden');
-        contentB.classList.add('md:block');
         contentA.classList.add('hidden');
       }
     }
 
-    // FAQ Category Toggle
+    // FAQ Accordion Logic
     function toggleFaqCategory(button) {
       const content = button.nextElementSibling;
       const icon = button.querySelector('.faq-category-icon');
-
-      if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        icon.classList.add('rotate-180');
-      } else {
-        content.classList.add('hidden');
-        icon.classList.remove('rotate-180');
-      }
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
     }
 
     function toggleFaq(button) {
       const content = button.nextElementSibling;
       const icon = button.querySelector('.faq-icon');
-
-      if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        icon.classList.add('rotate-180');
-      } else {
-        content.classList.add('hidden');
-        icon.classList.remove('rotate-180');
-      }
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
     }
 
-    // Restore layouts on resize
+    // Restore desktop view on resize
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 768) {
-        const contentA = document.getElementById('track-a-content');
-        const contentB = document.getElementById('track-b-content');
-        if (contentA) contentA.classList.remove('hidden');
-        if (contentB) {
-          contentB.classList.remove('hidden');
-          contentB.classList.add('md:block');
-        }
+        document.getElementById('track-a-content')?.classList.remove('hidden');
+        document.getElementById('track-b-content')?.classList.remove('hidden');
       }
     });
 
