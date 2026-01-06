@@ -1383,7 +1383,7 @@
       </div>
 
       <div class="space-y-4">
-        <!-- 컨설팅 카테고리 -->
+        <!-- 1. 공통 서비스 (General) -->
         <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
           <button
             class="faq-category-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
@@ -1391,34 +1391,134 @@
             <div class="flex items-center gap-3">
               <span class="w-1.5 h-6 bg-[#2c5265] rounded-full"></span>
               <span class="font-bold text-[#2c5265] text-lg">컨설팅 서비스</span>
-              <span class="text-sm text-slate-400 font-normal">(9)</span>
+              <span class="text-sm text-slate-400 font-normal">(8)</span>
             </div>
-            <svg class="faq-category-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300"
+            <svg class="faq-category-icon w-5 h-5 text-slate-500 transform transition-transform duration-300"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
-
-          <!-- 질문 목록 (처음엔 hidden) -->
           <div class="faq-category-content hidden px-5 pb-5 border-t border-slate-50 pt-4">
             <div class="space-y-2">
-              <!-- 질문: 지원하는 업무 영역 (New) -->
+              <!-- 질문 1 -->
               <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
                 <button
                   class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
                   onclick="toggleFaq(this)">
-                  <span class="font-bold text-[#2c5265] text-sm md:text-base break-keep">지원하는 업무 영역은 어디까지인가요?</span>
-                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
+                  <span class="font-medium text-slate-900 text-sm md:text-base break-keep"><span
+                      class="text-slate-600 font-bold mr-1">[감사 대응]</span> 감사인과 의견이 충돌할 경우에도 지원이 가능한가요?</span>
+                  <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-300 shrink-0 ml-2"
                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 <div class="faq-content hidden px-5 pb-4">
                   <p class="text-slate-600 text-sm leading-relaxed break-keep">
-                    <strong>내부통제팀 내에 IT 담당자를 별도로 채용했을 때 수행하게 될 모든 업무 영역을 Snowball이 완벽히 대신합니다.</strong> 단순 가이드를 넘어 RCM(Risk Control Matrix) 설계 및 최적화, 연간 감사 준비와 실질적인 대응, 상시 통제 모니터링 수행 등 ITGC(IT일반통제) 운영 전반을 직접 책임집니다. 전문 인력 채용에 따른 리소스 부담은 없애고, 외부 감사 통과를 위한 실무적인 핵심 역할을 저희가 직접 수행해 드리는 것이 서비스의 본질입니다.
+                    네, 가능합니다. 단순히 시스템을 제공하는 데 그치지 않고, 감사인이 문제 삼는 쟁점에 대해 통제 논리, 보완 통제, 운영 증빙을 중심으로 '설명 구조'를 함께 정리해 드립니다.
+                    필요 시 외부감사인 필드웍 과정에서도 실무 대응을 밀착 지원합니다.
                   </p>
                 </div>
               </div>
+
+              <!-- 질문 2: 준비 상태 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base break-keep"><span
+                      class="text-slate-600 font-bold mr-1">[준비 상태]</span> 내부통제가 완벽하지 않은 상태에서도 도입이 가능한가요?</span>
+                  <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed break-keep">
+                    물론입니다. 처음부터 완성된 기업은 없습니다. 현재 수준을 기준으로 우선순위를 정해 단계적으로 보완합니다. 미흡한 영역은 즉시 개선 항목과 중장기 로드맵으로 구분하여 현실적인
+                    대안을 제시합니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 질문 3: 현업 부담 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base break-keep"><span
+                      class="text-slate-600 font-bold mr-1">[현업 부담]</span> 현업 업무 부담이 오히려 늘어나지는 않나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed break-keep">
+                    아닙니다. 오히려 불필요한 반복 작업과 소명 업무를 줄이는 것이 핵심 목적입니다. RCM과 증빙 구조를 사전에 최적화하여 감사 대응 시 현업에 가중되는 추가 요청과 부담을
+                    최소화합니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 질문 4: 프로세스 변화 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base break-keep"><span
+                      class="text-slate-600 font-bold mr-1">[프로세스 변화]</span> 기존 업무 프로세스를 전면적으로 변경해야 하나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed break-keep">
+                    그렇지 않습니다. 기존 프로세스를 최대한 존중하며 통제 포인트만 명확히 정리합니다. 업무 방식을 바꾸기보다 '통제의 표현 방식과 구조'를 정돈하는 데 초점을 두며, 필요한 경우에만
+                    최소한의 보완을 권고합니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 질문 5: 기대 효과 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base break-keep"><span
+                      class="text-slate-600 font-bold mr-1">[기대 효과]</span> 도입 후 기대할 수 있는 정량적인 효과는 무엇인가요?</span>
+                  <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed break-keep">
+                    감사 지적 및 소명 시간의 획기적 단축, 통제 운영 현황의 실시간 가시성 확보, 그리고 무엇보다 반복되는 지적 이슈에 대한 '재발 방지' 효과가 가장 큽니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. 컨설팅 서비스 (Track A) -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <button
+            class="faq-category-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+            onclick="toggleFaqCategory(this)">
+            <div class="flex items-center gap-3">
+              <span class="w-1.5 h-6 bg-[#2c5265] rounded-full"></span>
+              <span class="font-bold text-[#2c5265] text-lg">컨설팅 서비스 (Track A)</span>
+              <span class="text-sm text-slate-400 font-normal">(7)</span>
+            </div>
+            <svg class="faq-category-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-category-content hidden px-5 pb-5 border-t border-slate-50 pt-4">
+            <div class="space-y-2" id="faq-consulting-list">
               <!-- 질문 1 -->
               <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
                 <button
@@ -1434,7 +1534,6 @@
                   <p class="text-slate-600 text-sm leading-relaxed">기본 1년 단위이며, 상황에 따라 유연하게 협의 가능합니다.</p>
                 </div>
               </div>
-
               <!-- 질문 2 -->
               <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
                 <button
@@ -1447,112 +1546,8 @@
                   </svg>
                 </button>
                 <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">이메일, 메신저, 화상회의 등으로 상시 소통하며, 필요 시 또는 외부감사인 필드웍 시
-                    함께 현장
-                    방문합니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 3 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">중도 해지가 가능한가요?</span>
-                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 구체적인 조건은 계약 시 협의합니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 4 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base break-keep whitespace-normal">기존 PA 서비스와
-                    병행할 수 있나요?</span>
-                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-4"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed break-keep whitespace-normal">가능합니다. 기존 PA 범위 외 영역만
-                    담당하는 것도 가능하며, 이 경우 비용 조정도 협의 가능합니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 5 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">언제부터 서비스 시작이 가능한가요?</span>
-                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">계약 후 즉시 투입 가능합니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 7 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">외부감사 시 직접 대응해주나요?</span>
-                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed break-keep">네, 외부감사인 필드웍 시 함께 현장에서 대응합니다. 감사인 질의 대응 및
-                    이슈 해결까지
-                    지원합니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 8 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">감사법인과의 관계에서 이해충돌 문제는 없나요?</span>
-                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">Snowball은 특정 감사법인 소속이 아닌 독립적인 서비스 제공자입니다. 오히려 Big 4
-                    경험을 바탕으로 감사인의 관점과 논리를 이해하고 있어, 귀사의 입장에서 효과적인 소명 전략을 수립할 수 있습니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 9 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">ITGC 외에 ELC, TLC 등 다른 내부통제 영역도
-                    지원하나요?</span>
-                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">현재 컨설팅 서비스는 ITGC 영역에 특화되어 있습니다. 다만, 시스템(Track B)은
-                    ELC, TLC, ITGC 전 영역의 평가 결과를 통합 관리할 수 있도록 설계되어 있습니다.</p>
+                  <p class="text-slate-600 text-sm leading-relaxed">이메일, 메신저, 화상회의 등으로 상시 소통하며, 필요 시 또는 외부감사인 필드웍 시 함께
+                    현장 방문합니다.</p>
                 </div>
               </div>
             </div>
@@ -1577,43 +1572,114 @@
 
           <div class="faq-category-content hidden px-5 pb-5 border-t border-slate-50 pt-4">
             <div class="space-y-2">
-              <!-- 질문: 지원하는 업무 영역 (New) -->
+              <!-- 질문 1 -->
               <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
                 <button
                   class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
                   onclick="toggleFaq(this)">
-                  <span class="font-bold text-[#2c5265] text-sm md:text-base break-keep">지원하는 업무 영역은 어디까지인가요?</span>
+                  <span class="font-medium text-slate-900 text-sm md:text-base">기존 PA 서비스와 병행할 수 있나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-4"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 기존 PA 범위 외 영역만 담당하는 것도 가능하며, 이 경우 비용 조정도 협의
+                    가능합니다.</p>
+                </div>
+              </div>
+              <!-- 질문 4 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">ITGC 외에 ELC, TLC 등 다른 내부통제 영역도
+                    지원하나요?</span>
                   <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed break-keep">
-                    <strong>내부통제팀 내에 IT 담당자를 별도로 채용했을 때 수행하게 될 모든 업무 영역을 Snowball이 완벽히 대신합니다.</strong> 단순 가이드를 넘어 RCM(Risk Control Matrix) 설계 및 최적화, 연간 감사 준비와 실질적인 대응, 상시 통제 모니터링 수행 등 ITGC(IT일반통제) 운영 전반을 직접 책임집니다. 전문 인력 채용에 따른 리소스 부담은 없애고, 외부 감사 통과를 위한 실무적인 핵심 역할을 저희가 직접 수행해 드리는 것이 서비스의 본질입니다.
-                  </p>
+                  <p class="text-slate-600 text-sm leading-relaxed">현재 컨설팅 서비스는 ITGC 영역에 특화되어 있습니다. 다만, 시스템(Track B)은
+                    ELC, TLC, ITGC 전 영역의 평가 결과를 통합 관리할 수 있도록 설계되어 있습니다.</p>
                 </div>
               </div>
-              <!-- 질문 1 -->
+
+              <!-- 질문 5: 과거 이슈 검토 -->
               <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
                 <button
                   class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
                   onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">시스템 도입 비용은 어떻게 되나요?</span>
-                  <svg
-                    class="faq-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0 ml-2"
+                  <span class="font-medium text-slate-900 text-sm md:text-base">과거 감사에서 지적받은 사항들도 봐주시나요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">도입 환경(클라우드/온프레미스)과 요구사항에 따라 맞춤 견적을 제공합니다.
-                    온프레미스의 경우
-                    유지보수 계약에 따라 초기 비용 조정이 가능합니다.</p>
+                  <p class="text-slate-600 text-sm leading-relaxed">네, 당연합니다. 과거 지적사항(Management Letter)을 최우선적으로 분석하여 재발
+                    방지 대책을 수립하고, 감사인에게 개선 결과를 명확히 소명할 수 있도록 지원합니다.</p>
                 </div>
               </div>
 
-              <!-- 질문 2 -->
+              <!-- 질문 6: 서비스 차이 (연간 밀착 케어) -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">단순 평가 대행 서비스와 무엇이 다른가요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed break-keep">일회성 평가로 끝나는 것이 아닙니다. <span
+                      class="font-bold text-[#2c5265]">Snowball은 감사 계획 수립부터 기말 감사 대응(Fieldwork)까지 전 과정을 책임지는 '연간 밀착
+                      서비스'입니다.</span> 단순 인력 파견이 아닌, 이슈 발생 시 즉각 대응 가능한 파트너십을 제공합니다.</p>
+                </div>
+              </div>
+
+              <!-- 질문 7: 인력 부족 대응 -->
+              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
+                <button
+                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
+                  onclick="toggleFaq(this)">
+                  <span class="font-medium text-slate-900 text-sm md:text-base">내부 담당자가 부족한데 진행이 될까요?</span>
+                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-4">
+                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. Snowball 서비스는 최소한의 현업 리소스로 운영되도록 설계되었습니다. 평가
+                    및 증빙 정리는 저희가 주도하고, 현업은 확인 및 승인 위주의 업무만 수행하도록 프로세스를 최적화해 드립니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. 시스템 서비스 (Track B) -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <button
+            class="faq-category-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+            onclick="toggleFaqCategory(this)">
+            <div class="flex items-center gap-3">
+              <span class="w-1.5 h-6 bg-emerald-600 rounded-full"></span>
+              <span class="font-bold text-emerald-600 text-lg">시스템 서비스 (Track B)</span>
+              <span class="text-sm text-slate-400 font-normal">(3)</span>
+            </div>
+            <svg class="faq-category-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <div class="faq-category-content hidden px-5 pb-5 border-t border-slate-50 pt-4">
+            <div class="space-y-2">
+              <!-- 질문 1 -->
               <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
                 <button
                   class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
@@ -1633,24 +1699,7 @@
                 </div>
               </div>
 
-              <!-- 질문 3 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">In-Scope 시스템과 연동이 가능한가요?</span>
-                  <svg
-                    class="faq-icon w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">온프레미스 도입 시 SAP, Oracle, 더존 등 기존 시스템과 연동 가능합니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 4 -->
+              <!-- 질문 2 -->
               <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
                 <button
                   class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
@@ -1669,7 +1718,7 @@
                 </div>
               </div>
 
-              <!-- 질문 5 -->
+              <!-- 질문 3 -->
               <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
                 <button
                   class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
@@ -1683,127 +1732,8 @@
                 </button>
                 <div class="faq-content hidden px-5 pb-4">
                   <p class="text-slate-600 text-sm leading-relaxed">네, 시스템 구축 단계에서 실무자 대상 교육을 제공합니다. 운영 중에도 추가 교육이나 문의
-                    사항에 대해 지원해 드립니다.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 공통 카테고리 -->
-        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-          <button
-            class="faq-category-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-            onclick="toggleFaqCategory(this)">
-            <div class="flex items-center gap-3">
-              <span class="w-1.5 h-6 bg-slate-500 rounded-full"></span>
-              <span class="font-bold text-slate-700 text-lg">공통</span>
-              <span class="text-sm text-slate-400 font-normal">(5)</span>
-            </div>
-            <svg class="faq-category-icon w-5 h-5 text-slate-500 transform transition-transform duration-300"
-              fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-
-          <div class="faq-category-content hidden px-5 pb-5 border-t border-slate-50 pt-4">
-            <div class="space-y-2">
-              <!-- 질문: 지원하는 업무 영역 (New) -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-bold text-[#2c5265] text-sm md:text-base break-keep">지원하는 업무 영역은 어디까지인가요?</span>
-                  <svg class="faq-icon w-5 h-5 text-[#2c5265] transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed break-keep">
-                    <strong>내부통제팀 내에 IT 담당자를 별도로 채용했을 때 수행하게 될 모든 업무 영역을 Snowball이 완벽히 대신합니다.</strong> 단순 가이드를 넘어 RCM(Risk Control Matrix) 설계 및 최적화, 연간 감사 준비와 실질적인 대응, 상시 통제 모니터링 수행 등 ITGC(IT일반통제) 운영 전반을 직접 책임집니다. 전문 인력 채용에 따른 리소스 부담은 없애고, 외부 감사 통과를 위한 실무적인 핵심 역할을 저희가 직접 수행해 드리는 것이 서비스의 본질입니다.
-                  </p>
-                </div>
-              </div>
-              <!-- 질문 1 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">컨설팅 또는 시스템 중 하나만 신청할 수 있나요?</span>
-                  <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 컨설팅만 또는 시스템만 별도로 도입하실 수 있습니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 2 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">컨설팅과 시스템을 함께 도입하면 할인이 있나요?</span>
-                  <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">함께 도입 시 패키지 할인이 적용됩니다. 자세한 내용은 상담 시 안내드립니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 3 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">견적은 어떻게 받을 수 있나요?</span>
-                  <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">상담 신청 폼을 통해 문의해 주시면 맞춤 견적을 제공해 드립니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 4 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">계약 전 데모나 시연이 가능한가요?</span>
-                  <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 상담 시 시스템 데모 일정을 조율해 드립니다.</p>
-                </div>
-              </div>
-
-              <!-- 질문 5 -->
-              <div class="bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100">
-                <button
-                  class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition-colors"
-                  onclick="toggleFaq(this)">
-                  <span class="font-medium text-slate-900 text-sm md:text-base">상장 예정 기업(IPO 준비 중)도 서비스 이용이
-                    가능한가요?</span>
-                  <svg class="faq-icon w-5 h-5 text-slate-500 transform transition-transform duration-300 shrink-0 ml-2"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="faq-content hidden px-5 pb-4">
-                  <p class="text-slate-600 text-sm leading-relaxed">가능합니다. 오히려 상장 전 단계에서 내부통제 체계를 선제적으로 구축해 두시면, 상장 후
-                    외부감사 대응이 훨씬 수월해집니다. IPO를 준비 중인 기업을 위한 맞춤 컨설팅도 제공하고 있습니다.</p>
+                    사항에
+                    대해 지원해 드립니다.</p>
                 </div>
               </div>
             </div>
