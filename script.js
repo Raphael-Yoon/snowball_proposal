@@ -49,19 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Cookie Consent Banner Logic
-  const cookieBanner = document.getElementById('cookie-banner');
-  const acceptCookiesButton = document.getElementById('accept-cookies');
-
-  if (!localStorage.getItem('cookieAccepted')) {
-    cookieBanner?.classList.remove('hidden');
-  }
-
-  acceptCookiesButton?.addEventListener('click', () => {
-    localStorage.setItem('cookieAccepted', 'true');
-    cookieBanner?.classList.add('hidden');
-  });
-
   // Price Modal Interaction
   const priceElements = document.querySelectorAll('.secret-price');
   const passwordInput = document.getElementById('price-password');
