@@ -1,9 +1,9 @@
 // Obfuscated Config
 const _d = (s) => new TextDecoder().decode(Uint8Array.from(atob(s), c => c.charCodeAt(0)));
 const _c = {
-  s: { m: 'MzAw66eMIOybkA==', y: 'Myw2MDDrp4wg7JuQ' },
-  p: { m: 'NDAw66eMIOybkA==', y: 'NCw4MDDrp4wg7JuQ' },
-  e: { m: '67OE64+EIO2YkeydmA==', y: '67OE64+EIO2YkeydmA==' }
+  s: { y: 'Myw2MDDrp4wg7JuQICjstJ3slaEp' }, // 3,600만 원 (총액)
+  p: { y: 'NCw4MDDrp4wg7JuQICjstJ3slaEp' }, // 4,800만 원 (총액)
+  e: { y: '67OE64+EIO2YkeydmA==' }      // 별도 문의
 };
 
 // UI Interaction Logic
@@ -51,14 +51,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Price Modal Interaction
   const priceElements = document.querySelectorAll('.secret-price');
-  const passwordInput = document.getElementById('price-password');
+  const installmentTriggers = document.querySelectorAll('.price-installment-trigger');
+  const installmentModal = document.getElementById('installment-modal');
 
   priceElements.forEach(el => {
-    el.addEventListener('click', () => {
-      if (!isPriceRevealed) openPriceModal();
+    el.addEventListener('click', (e) => {
+      if (!isPriceRevealed) {
+        e.stopPropagation();
+        openPriceModal();
+      }
     });
     el.classList.add('cursor-pointer', 'decoration-dotted', 'underline', 'underline-offset-4', 'decoration-slate-400', 'hover:text-blue-600', 'transition-colors');
     el.setAttribute('title', '상세 정보 확인 (클릭)');
+  });
+
+  // Installment Info Trigger (Tooltip/Popover)
+  function showInstallment(e) {
+    if (!installmentModal) return;
+    // Only show if it's not a secret price or if price is revealed
+    const isSecret = e.currentTarget.classList.contains('secret-price');
+    if (!isSecret || isPriceRevealed) {
+      installmentModal.classList.remove('hidden');
+      installmentModal.classList.add('flex');
+    }
+  }
+
+  installmentTriggers.forEach(el => {
+    el.addEventListener('click', showInstallment);
+    // Optional: Hover support for desktop
+    el.addEventListener('mouseenter', (e) => {
+      if (window.innerWidth >= 768) {
+        // Show subtle hint or just use click for clarity as requested
+      }
+    });
   });
 
   // Carousel Pagination Dots Sync
@@ -171,18 +196,28 @@ function _r() {
   const priceElements = document.querySelectorAll('.secret-price');
   priceElements.forEach(el => {
     const tier = el.dataset.tier;
-    const type = el.dataset.type;
+    const type = el.dataset.type || 'yearly';
     const key = tier === 'standard' ? 's' : (tier === 'premium' ? 'p' : 'e');
     const mode = type === 'monthly' ? 'm' : 'y';
 
     if (_c[key] && _c[key][mode]) {
       const val = _d(_c[key][mode]);
-      const prefix = mode === 'm' ? '월 ' : '';
       el.style.opacity = '0';
       setTimeout(() => {
-        el.innerHTML = `<span class="font-bold text-blue-600">${prefix}${val}</span>`;
+        // Regex to split numeric/unit part (e.g., "3,600만 원") and metadata
+        const match = val.match(/^([\d,]+만\s*원)\s*(.+)/);
+        if (match) {
+          el.innerHTML = `<span class="flex items-baseline md:justify-end gap-1.5">
+            <span class="text-lg md:text-xl font-bold text-blue-600 leading-none">${match[1]}</span>
+            <span class="text-xs text-slate-400 font-medium whitespace-nowrap leading-none">${match[2]}</span>
+          </span>`;
+        } else {
+          el.innerHTML = `<span class="font-bold text-blue-600">${val}</span>`;
+        }
         el.classList.remove('decoration-dotted', 'underline');
+        el.classList.add('price-installment-trigger');
         el.style.opacity = '1';
+        el.setAttribute('title', '분납 안내 확인 (클릭)');
       }, 200);
     }
   });
