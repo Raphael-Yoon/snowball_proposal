@@ -51,9 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Price Modal Interaction
   const priceElements = document.querySelectorAll('.secret-price');
-  const installmentTriggers = document.querySelectorAll('.price-installment-trigger');
-  const installmentModal = document.getElementById('installment-modal');
-
   priceElements.forEach(el => {
     el.addEventListener('click', (e) => {
       if (!isPriceRevealed) {
@@ -63,27 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     el.classList.add('cursor-pointer', 'decoration-dotted', 'underline', 'underline-offset-4', 'decoration-slate-400', 'hover:text-blue-600', 'transition-colors');
     el.setAttribute('title', '상세 정보 확인 (클릭)');
-  });
-
-  // Installment Info Trigger (Tooltip/Popover)
-  function showInstallment(e) {
-    if (!installmentModal) return;
-    // Only show if it's not a secret price or if price is revealed
-    const isSecret = e.currentTarget.classList.contains('secret-price');
-    if (!isSecret || isPriceRevealed) {
-      installmentModal.classList.remove('hidden');
-      installmentModal.classList.add('flex');
-    }
-  }
-
-  installmentTriggers.forEach(el => {
-    el.addEventListener('click', showInstallment);
-    // Optional: Hover support for desktop
-    el.addEventListener('mouseenter', (e) => {
-      if (window.innerWidth >= 768) {
-        // Show subtle hint or just use click for clarity as requested
-      }
-    });
   });
 
   // Carousel Pagination Dots Sync
