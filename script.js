@@ -266,10 +266,10 @@ function selectTier(value) {
   const select = document.querySelector('select[name="systems"]');
   if (select) select.value = value;
 
-  const form = document.getElementById('consultation-form');
-  if (form) {
+  const section = document.getElementById('consultation');
+  if (section) {
     const navbarHeight = window.innerWidth >= 768 ? 80 : 64;
-    const pos = form.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+    const pos = section.offsetTop - navbarHeight;
     window.scrollTo({ top: pos, behavior: 'smooth' });
   }
 
