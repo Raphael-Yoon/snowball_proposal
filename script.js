@@ -275,7 +275,7 @@ function selectTier(value) {
   const textarea = document.querySelector('textarea[name="message"]');
   if (textarea && messages[value]) textarea.value = messages[value];
 
-  const contact = document.getElementById('contact');
+  const contact = document.getElementById('consultation');
   if (contact) {
     const navbarHeight = window.innerWidth >= 768 ? 80 : 64;
     const pos = contact.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
