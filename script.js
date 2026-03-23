@@ -202,31 +202,43 @@ function _r() {
 function switchTrack(track) {
   const tabBtnA = document.getElementById('tab-btn-a');
   const tabBtnB = document.getElementById('tab-btn-b');
+  const tabBtnC = document.getElementById('tab-btn-c');
   const contentA = document.getElementById('track-a-content');
   const contentB = document.getElementById('track-b-content');
+  const contentC = document.getElementById('track-c-content');
+
+  const inactiveClass = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-0.5 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center';
+  const inactiveA = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">전문가 컨설팅</span></div>';
+  const inactiveB = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">자동화 시스템 구축</span></div>';
+  const inactiveC = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track C</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">공시 전용 시스템</span></div>';
+
+  // 모든 탭·콘텐츠 초기화
+  [tabBtnA, tabBtnB, tabBtnC].forEach(btn => { if (btn) btn.className = inactiveClass; });
+  if (tabBtnA) tabBtnA.innerHTML = inactiveA;
+  if (tabBtnB) tabBtnB.innerHTML = inactiveB;
+  if (tabBtnC) tabBtnC.innerHTML = inactiveC;
+  contentA?.classList.add('hidden');
+  contentB?.classList.add('hidden');
+  contentC?.classList.add('hidden');
 
   if (track === 'a') {
     if (tabBtnA) {
       tabBtnA.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-0.5 md:py-4 md:px-6 rounded-xl transition-all bg-[#2c5265] text-white shadow-md text-center';
-      tabBtnA.innerHTML = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">전문가 컨설팅</span></div>';
-    }
-    if (tabBtnB) {
-      tabBtnB.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-0.5 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center';
-      tabBtnB.innerHTML = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">시스템 도입</span></div>';
+      tabBtnA.innerHTML = inactiveA;
     }
     contentA?.classList.remove('hidden');
-    contentB?.classList.add('hidden');
-  } else {
+  } else if (track === 'b') {
     if (tabBtnB) {
       tabBtnB.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-0.5 md:py-4 md:px-6 rounded-xl transition-all bg-emerald-600 text-white shadow-md text-center';
-      tabBtnB.innerHTML = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">시스템 도입</span></div>';
-    }
-    if (tabBtnA) {
-      tabBtnA.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-0.5 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center';
-      tabBtnA.innerHTML = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">전문가 컨설팅</span></div>';
+      tabBtnB.innerHTML = inactiveB;
     }
     contentB?.classList.remove('hidden');
-    contentA?.classList.add('hidden');
+  } else {
+    if (tabBtnC) {
+      tabBtnC.className = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-0.5 md:py-4 md:px-6 rounded-xl transition-all bg-indigo-600 text-white shadow-md text-center';
+      tabBtnC.innerHTML = inactiveC;
+    }
+    contentC?.classList.remove('hidden');
   }
 
   // Smooth scroll to top of solutions section

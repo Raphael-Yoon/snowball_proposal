@@ -48,6 +48,9 @@
       <a href="#track-b" onclick="event.preventDefault(); switchTrack('b')"
         class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-4 border-b border-slate-50 transition-colors">자동화
         시스템 구축 (Track B)</a>
+      <a href="#track-c" onclick="event.preventDefault(); switchTrack('c')"
+        class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-4 border-b border-slate-50 transition-colors">정보보호공시
+        전용 시스템 (Track C)</a>
       <a href="#benefits"
         class="mobile-menu-link text-lg font-medium text-slate-700 hover:text-[#2c5265] py-4 border-b border-slate-50 transition-colors">도입
         이점</a>
@@ -78,6 +81,8 @@
             class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Track A</a>
           <a href="#track-b" onclick="event.preventDefault(); switchTrack('b')"
             class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Track B</a>
+          <a href="#track-c" onclick="event.preventDefault(); switchTrack('c')"
+            class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Track C</a>
           <a href="#benefits" class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">Benefits</a>
           <a href="#faq" class="text-slate-600 hover:text-[#2c5265] font-medium transition-colors">FAQ</a>
 
@@ -113,11 +118,11 @@
       </span>
       <!-- 상장사 정보보호공시 의무화 긴급 공지 배지 -->
       <div class="mb-4">
-        <span
-          class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-red-500/90 border border-red-400 text-xs md:text-sm font-bold text-white shadow-lg animate-pulse">
+        <button onclick="switchTrack('c')"
+          class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-red-500/90 border border-red-400 text-xs md:text-sm font-bold text-white shadow-lg animate-pulse hover:bg-red-600/90 transition-colors cursor-pointer">
           <span class="text-base">⚠️</span>
-          모든 상장사 정보보호공시 의무화 완벽 대응 가이드 포함
-        </span>
+          모든 상장사 정보보호공시 의무화 완벽 대응 가이드 포함 →
+        </button>
       </div>
       <h1
         class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 md:mb-8 leading-[1.1] tracking-tighter break-keep whitespace-normal">
@@ -355,6 +360,14 @@
             <div class="flex flex-col items-center justify-center">
               <span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track B</span>
               <span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">자동화 시스템 구축</span>
+            </div>
+          </button>
+          <button id="tab-btn-c"
+            class="track-tab flex-1 min-w-0 shrink-0 py-3 px-0.5 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center"
+            onclick="switchTrack('c')">
+            <div class="flex flex-col items-center justify-center">
+              <span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track C</span>
+              <span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">공시 전용 시스템</span>
             </div>
           </button>
         </div>
@@ -1320,23 +1333,392 @@
                 </div>
               </div>
 
-              <!-- 트랙 전환 네비게이션 (B -> A) -->
-              <div class="mt-16 pt-10 border-t border-slate-100 text-center">
-                <p class="text-slate-500 mb-6 text-sm font-light">Big 4 출신 전문가의 밀착 컨설팅이 필요하신가요?</p>
-                <button onclick="switchTrack('a')"
-                  class="group inline-flex items-center gap-3 px-8 py-4 bg-[#2c5265] text-white rounded-2xl font-bold shadow-xl hover:bg-[#1a3c4d] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                  <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-                  </svg>
-                  Track A: 전문가 컨설팅 보러가기
-                </button>
+              <!-- 트랙 전환 네비게이션 (B -> A, B -> C) -->
+              <div class="mt-16 pt-10 border-t border-slate-100">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button onclick="switchTrack('a')"
+                    class="group inline-flex items-center justify-center gap-3 px-6 py-4 bg-[#2c5265] text-white rounded-2xl font-bold shadow-xl hover:bg-[#1a3c4d] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                    </svg>
+                    Track A: 전문가 컨설팅 보러가기
+                  </button>
+                  <button onclick="switchTrack('c')"
+                    class="group inline-flex items-center justify-center gap-3 px-6 py-4 bg-indigo-600 text-white rounded-2xl font-bold shadow-xl hover:bg-indigo-700 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    Track C: 정보보호공시 전용 시스템 보러가기
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+      </div>
+
+      <!-- Track C 콘텐츠 -->
+      <div id="track-c-content" class="track-content hidden">
+        <div id="track-c" class="scroll-mt-24">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
+            <div
+              class="bg-gradient-to-r from-indigo-600 to-violet-600 p-6 md:p-10 text-white flex flex-col md:flex-row items-start md:items-center justify-between">
+              <div>
+                <div class="flex items-center gap-4 mb-2">
+                  <span class="bg-white/20 backdrop-blur px-5 py-1.5 rounded-lg font-bold text-sm shrink-0">Track
+                    C</span>
+                  <h3 class="text-lg sm:text-xl md:text-2xl font-bold break-keep whitespace-normal leading-tight">
+                    복잡한 정보보호공시,<br class="md:hidden"> 전용 시스템이 A부터 Z까지 완성합니다</h3>
+                </div>
+                <p class="text-indigo-100 text-sm md:text-lg max-w-2xl font-light opacity-90 break-keep mt-4">
+                  법정 의무를 이행하는 가장 정확하고 빠른 방법.<br class="hidden md:block">
+                  29개 공시 항목을 구조화된 질문 흐름으로 입력하고, 제출 전 자동 검증으로 오류 없이 완성하세요.
+                </p>
+              </div>
+              <div class="mt-6 md:mt-0">
+                <span class="text-5xl opacity-20">🛡️</span>
+              </div>
+            </div>
+
+            <div class="p-6 md:p-12">
+              <!-- 문제-해결 구조 -->
+              <div class="mb-12">
+                <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                  <span class="w-1 h-6 bg-indigo-600 rounded-full"></span>
+                  왜 전용 시스템이 필요한가요?
+                </h4>
+
+                <div
+                  class="sb-carousel flex overflow-x-auto snap-x snap-mandatory scrollbar-thin gap-4 md:gap-6 pb-4 md:pb-0 px-5 md:px-0 md:grid md:grid-cols-2 animate-scroll-hint pr-10 md:pr-0">
+                  <!-- 문제 카드 -->
+                  <div
+                    class="min-w-[85vw] md:min-w-0 snap-center bg-white md:bg-slate-50 rounded-2xl p-5 md:p-8 border-none md:border md:border-slate-200/50 shadow-md md:shadow-none">
+                    <div class="flex items-center gap-2 mb-5">
+                      <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <span class="font-bold text-slate-800 text-lg">엑셀 기반 공시 관리의 한계</span>
+                    </div>
+                    <ul class="space-y-4">
+                      <li class="flex gap-3">
+                        <span
+                          class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">1</span>
+                        <div class="text-sm md:text-base text-slate-600">
+                          <strong class="text-slate-900 block mb-0.5">항목 간 검증 부재</strong>
+                          수치 오류·논리 충돌을 제출 전에 발견하기 어려움
+                        </div>
+                      </li>
+                      <li class="flex gap-3">
+                        <span
+                          class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">2</span>
+                        <div class="text-sm md:text-base text-slate-600">
+                          <strong class="text-slate-900 block mb-0.5">증빙 관리 분산</strong>
+                          PDF·이미지 등 증빙 파일이 여러 폴더에 흩어져 추적 곤란
+                        </div>
+                      </li>
+                      <li class="flex gap-3">
+                        <span
+                          class="shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200 shadow-sm">3</span>
+                        <div class="text-sm md:text-base text-slate-600">
+                          <strong class="text-slate-900 block mb-0.5">연도별 이력 단절</strong>
+                          담당자 교체 시 전년도 공시 데이터 파악에 과도한 시간 소요
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- 해결 카드 -->
+                  <div
+                    class="min-w-[85vw] md:min-w-0 snap-center bg-indigo-50/50 rounded-2xl p-5 md:p-8 border-none md:border md:border-indigo-100 shadow-md md:shadow-none">
+                    <div class="flex items-center gap-2 mb-5">
+                      <div
+                        class="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center text-white shadow-md">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <span class="font-bold text-indigo-700 text-lg">infosd가 해결합니다</span>
+                    </div>
+                    <ul class="space-y-4">
+                      <li class="flex gap-3">
+                        <span class="shrink-0 text-xl">🔍</span>
+                        <div class="text-sm md:text-base text-slate-700">
+                          <strong class="text-indigo-700 block mb-0.5">제출 전 자동 검증</strong>
+                          항목 간 논리 충돌·법적 기준 미충족을 실시간으로 감지하고 경고합니다.
+                        </div>
+                      </li>
+                      <li class="flex gap-3">
+                        <span class="shrink-0 text-xl">📎</span>
+                        <div class="text-sm md:text-base text-slate-700">
+                          <strong class="text-indigo-700 block mb-0.5">증빙 일괄 관리</strong>
+                          공시 항목별 증빙 파일을 시스템 안에서 업로드·보관·조회합니다.
+                        </div>
+                      </li>
+                      <li class="flex gap-3">
+                        <span class="shrink-0 text-xl">📅</span>
+                        <div class="text-sm md:text-base text-slate-700">
+                          <strong class="text-indigo-700 block mb-0.5">연도별 이력 관리</strong>
+                          회사·연도별 공시 데이터를 체계적으로 축적하고 비교 조회합니다.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Carousel Pagination Dots -->
+                <div class="flex justify-center gap-2 mt-4 md:hidden">
+                  <div class="carousel-dot active"></div>
+                  <div class="carousel-dot"></div>
+                </div>
+              </div>
+
+              <!-- 시스템 주요 기능 -->
+              <div class="border-t border-slate-100 pt-10 mb-12">
+                <h4 class="font-bold mb-8 text-slate-900 text-xl md:text-2xl text-center">시스템 주요 기능</h4>
+                <div class="grid md:grid-cols-2 gap-6 md:gap-10">
+                  <div class="group">
+                    <div
+                      class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
+                      <img src="img/infosd_investment.png" alt="정보보호 투자 관리" loading="lazy"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2 break-keep">1. 정보보호 투자 관리</h5>
+                    <p class="text-slate-600 text-base md:text-sm leading-relaxed break-keep">
+                      항목별로 입력하면, IT 부문 대비 정보보호 투자 비율이 자동 산정됩니다. 감가상각비·서비스비용·인건비를 세분화하고, 향후 투자 계획까지 체계적으로 관리합니다.
+                    </p>
+                  </div>
+
+                  <div class="group">
+                    <div
+                      class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
+                      <img src="img/infosd_personnel.png" alt="정보보호 인력 현황" loading="lazy"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2 break-keep">2. 정보보호 인력 현황</h5>
+                    <p class="text-slate-600 text-base md:text-sm leading-relaxed break-keep">
+                      내부·외주 전담 인력과 CISO/CPO 지정 현황을 체계적으로 정리하여 입력합니다. 정보기술인력(C) 대비 전담 인력 비율을 자동 산정하고, CISO 활동 내역도 기록합니다.
+                    </p>
+                  </div>
+
+                  <div class="group">
+                    <div
+                      class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
+                      <img src="img/infosd_certification.png" alt="정보보호 인증 이력" loading="lazy"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2 break-keep">3. 정보보호 인증 이력</h5>
+                    <p class="text-slate-600 text-base md:text-sm leading-relaxed break-keep">
+                      ISMS-P, ISO 27001 등 보유 인증을 연도별로 관리합니다. 인증 취득 이력을 체계적으로 아카이빙하고, 관련 증빙 파일을 항목에 직접 연결하여 보관합니다.
+                    </p>
+                  </div>
+
+                  <div class="group">
+                    <div
+                      class="overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-3 md:mb-4 bg-slate-100 aspect-video relative">
+                      <img src="img/infosd_activity.png" alt="정보보호 활동 기록" loading="lazy"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg text-slate-800 mb-1.5 md:mb-2 break-keep">4. 정보보호 활동 기록</h5>
+                    <p class="text-slate-600 text-base md:text-sm leading-relaxed break-keep">
+                      교육·훈련, 취약점 분석, 제로트러스트, SBOM, C-TAS, 모의훈련 등 10개 세부 활동 항목을 입력하고, 항목별 증빙 파일(PDF·Excel·HWP 등)을 업로드하여 관리합니다.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 최종 검토 화면 — 전체 폭 -->
+                <div class="mt-8 md:mt-10 group">
+                  <div
+                    class="overflow-hidden rounded-xl shadow-lg border-2 border-indigo-200 mb-4 bg-gradient-to-r from-indigo-50 to-violet-50 p-6 md:p-8 relative">
+                    <div class="absolute top-4 right-4">
+                      <span
+                        class="inline-block px-3 py-1 bg-indigo-600 text-white text-xs font-bold rounded-full">제출 오류
+                        방지</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start gap-6">
+                      <div
+                        class="w-full md:w-1/2 overflow-hidden rounded-xl shadow-lg border border-indigo-100 shrink-0">
+                        <img src="img/infosd_review.png" alt="공시 전 자동 검증" loading="lazy"
+                          class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                      </div>
+                      <div class="flex-1">
+                        <h5 class="font-bold text-lg md:text-xl text-slate-800 mb-2 break-keep">5. 공시 전 자동 검증 및 리포트</h5>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed break-keep mb-4">
+                          29개 항목 입력이 완료되면 시스템이 항목 간 논리 충돌, 필수 입력 누락, 법적 기준 미충족 여부를 자동 점검합니다. 연도별 공시 데이터를 비교해 변동 추이도 한눈에 파악합니다.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                          <span
+                            class="inline-flex items-center gap-1 px-3 py-1.5 bg-white/80 rounded-lg text-xs font-medium text-slate-700 border border-slate-200"><span
+                              class="text-indigo-500">✓</span> 항목 간 논리 충돌 자동 감지</span>
+                          <span
+                            class="inline-flex items-center gap-1 px-3 py-1.5 bg-white/80 rounded-lg text-xs font-medium text-slate-700 border border-slate-200"><span
+                              class="text-indigo-500">✓</span> 법적 기준 미충족 경고</span>
+                          <span
+                            class="inline-flex items-center gap-1 px-3 py-1.5 bg-white/80 rounded-lg text-xs font-medium text-slate-700 border border-slate-200"><span
+                              class="text-indigo-500">✓</span> 공시 완성도 100% 확인</span>
+                          <span
+                            class="inline-flex items-center gap-1 px-3 py-1.5 bg-white/80 rounded-lg text-xs font-medium text-slate-700 border border-slate-200"><span
+                              class="text-indigo-500">✓</span> 회사별 독립 데이터 관리</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 도입 프로세스 -->
+              <div class="mb-16">
+                <h4 class="font-bold mb-10 text-slate-900 text-xl md:text-2xl text-center">도입 프로세스</h4>
+
+                <!-- 데스크톱: 4열 카드형 -->
+                <div class="hidden md:grid md:grid-cols-4 gap-6">
+                  <div class="relative">
+                    <div
+                      class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-indigo-200 hover:shadow-md transition-all duration-300">
+                      <div
+                        class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
+                        1</div>
+                      <h5 class="font-bold text-slate-900 mb-2">상담</h5>
+                      <p class="text-slate-600 text-sm">도입 문의 및 요구사항 파악</p>
+                    </div>
+                    <div
+                      class="absolute top-1/2 -right-3 transform -translate-y-1/2 text-indigo-300 hidden lg:block">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-indigo-200 hover:shadow-md transition-all duration-300">
+                      <div
+                        class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
+                        2</div>
+                      <h5 class="font-bold text-slate-900 mb-2">견적 및 계약</h5>
+                      <p class="text-slate-600 text-sm">맞춤 견적 제안 및 계약</p>
+                    </div>
+                    <div
+                      class="absolute top-1/2 -right-3 transform -translate-y-1/2 text-indigo-300 hidden lg:block">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-indigo-200 hover:shadow-md transition-all duration-300">
+                      <div
+                        class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
+                        3</div>
+                      <h5 class="font-bold text-slate-900 mb-2">구축</h5>
+                      <p class="text-slate-600 text-sm">시스템 설치, 데이터 이관, 교육</p>
+                    </div>
+                    <div
+                      class="absolute top-1/2 -right-3 transform -translate-y-1/2 text-indigo-300 hidden lg:block">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm h-full hover:border-indigo-200 hover:shadow-md transition-all duration-300">
+                      <div
+                        class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
+                        4</div>
+                      <h5 class="font-bold text-slate-900 mb-2">운영</h5>
+                      <p class="text-slate-600 text-sm">본격 운영 및 유지보수 지원</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 모바일: 세로 타임라인 -->
+                <div class="md:hidden">
+                  <div class="relative">
+                    <div class="absolute left-5 top-0 bottom-0 w-0.5 bg-indigo-100"></div>
+                    <div class="space-y-6">
+                      <div class="relative flex gap-4">
+                        <div
+                          class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                          1</div>
+                        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
+                          <h5 class="font-bold text-slate-900 mb-1">상담</h5>
+                          <p class="text-slate-600 text-sm">도입 문의 및 요구사항 파악</p>
+                        </div>
+                      </div>
+                      <div class="relative flex gap-4">
+                        <div
+                          class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                          2</div>
+                        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
+                          <h5 class="font-bold text-slate-900 mb-1">견적 및 계약</h5>
+                          <p class="text-slate-600 text-sm">맞춤 견적 제안 및 계약</p>
+                        </div>
+                      </div>
+                      <div class="relative flex gap-4">
+                        <div
+                          class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                          3</div>
+                        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
+                          <h5 class="font-bold text-slate-900 mb-1">구축</h5>
+                          <p class="text-slate-600 text-sm">시스템 설치, 데이터 이관, 교육</p>
+                        </div>
+                      </div>
+                      <div class="relative flex gap-4">
+                        <div
+                          class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-sm">
+                          4</div>
+                        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex-1">
+                          <h5 class="font-bold text-slate-900 mb-1">운영</h5>
+                          <p class="text-slate-600 text-sm">본격 운영 및 유지보수 지원</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 트랙 전환 네비게이션 (C -> A, C -> B) -->
+              <div class="mt-16 pt-10 border-t border-slate-100">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button onclick="switchTrack('a')"
+                    class="group inline-flex items-center justify-center gap-3 px-6 py-4 bg-[#2c5265] text-white rounded-2xl font-bold shadow-xl hover:bg-[#1a3c4d] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                    </svg>
+                    Track A: 전문가 컨설팅 보러가기
+                  </button>
+                  <button onclick="switchTrack('b')"
+                    class="group inline-flex items-center justify-center gap-3 px-6 py-4 bg-emerald-600 text-white rounded-2xl font-bold shadow-xl hover:bg-emerald-700 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                    </svg>
+                    Track B: ITGC 시스템 보러가기
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
