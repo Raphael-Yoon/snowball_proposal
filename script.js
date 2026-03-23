@@ -265,6 +265,16 @@ function toggleFaq(button) {
 function selectTier(value) {
   const select = document.querySelector('select[name="systems"]');
   if (select) select.value = value;
+
+  const messages = {
+    '1':   'ITGC 감사를 처음 도입하려 합니다. 어떤 방식으로 접근하면 좋을지 가벼운 상담을 요청드립니다.',
+    '2-3': 'ITGC 감사 범위가 늘어나면서 수동 관리의 한계를 느끼고 있습니다. 효율적인 방법을 찾고 있어 상담을 요청드립니다.',
+    '4-6': '다수 시스템에 걸친 ITGC 감사를 일관되게 관리하기가 어렵습니다. 체계적인 접근 방안을 찾고 있습니다.',
+    '7+':  '전사 규모의 ITGC 감사 환경에 맞는 솔루션이 필요합니다. 요건과 적용 범위에 대해 상세한 상담을 요청드립니다.'
+  };
+  const textarea = document.querySelector('textarea[name="message"]');
+  if (textarea && messages[value]) textarea.value = messages[value];
+
   const contact = document.getElementById('contact');
   if (contact) {
     const navbarHeight = window.innerWidth >= 768 ? 80 : 64;
