@@ -260,3 +260,15 @@ function toggleFaq(button) {
     icon.classList.toggle('rotate-180');
   }
 }
+
+
+function selectTier(value) {
+  const select = document.querySelector('select[name="systems"]');
+  if (select) select.value = value;
+  const contact = document.getElementById('contact');
+  if (contact) {
+    const navbarHeight = window.innerWidth >= 768 ? 80 : 64;
+    const pos = contact.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+    window.scrollTo({ top: pos, behavior: 'smooth' });
+  }
+}
