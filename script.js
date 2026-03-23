@@ -209,8 +209,8 @@ function switchTrack(track) {
 
   const inactiveClass = 'track-tab flex-1 min-w-0 shrink-0 py-3 px-0.5 md:py-4 md:px-6 rounded-xl transition-all text-slate-500 hover:bg-slate-50 text-center';
   const inactiveA = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track A</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">전문가 컨설팅</span></div>';
-  const inactiveB = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">자동화 시스템 구축</span></div>';
-  const inactiveC = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track C</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">공시 전용 시스템</span></div>';
+  const inactiveB = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track B</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">내부통제 시스템</span></div>';
+  const inactiveC = '<div class="flex flex-col items-center justify-center"><span class="text-[11px] opacity-80 uppercase tracking-widest mb-0.5">Track C</span><span class="text-[13px] sm:text-base md:text-lg font-bold break-keep whitespace-normal">정보보호공시 시스템</span></div>';
 
   // 모든 탭·콘텐츠 초기화
   [tabBtnA, tabBtnB, tabBtnC].forEach(btn => { if (btn) btn.className = inactiveClass; });
